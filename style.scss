@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@import "variables";
+@import "typography";
+@import "grid";
+@import "layout";
+
+body {
+  background: $background-color;
+  color: $primary-color;
+}
+a {
+  color: $highlight-color;
+  &:visited {
+    color: desaturate($highlight-color, 40%)
+  }
+  &:hover {
+    color: lighten($highlight-color, 15%);
+  }
+}
+.wrapper {
+  //border: 1px solid #e6e6e6;
+}
+//.container { overflow: auto; }

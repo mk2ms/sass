@@ -1,0 +1,36 @@
+@import "variables";
+$internal-spacing: 20px;
+//Box components
+.solid-box {
+  padding: $internal-spacing;
+}
+.vertical-spacing {
+  margin-top: $internal-spacing;
+  margin-bottom: $internal-spacing;
+}
+.nav, nav {
+  .main-nav {
+    //background-color: #009DDC;// map-get($color, 'primary');
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    > li {
+      display: inline-block;
+      margin-left: -0.7ex;
+      list-style: none;
+      a {
+        display: inline-block;
+        //font-weight: 700;
+        padding: $internal-spacing;
+        //text-decoration: none;
+        &:hover,
+        &:focus, {
+          //background-color: darken(map-get($color, 'primary'),10);
+          .dropdown {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

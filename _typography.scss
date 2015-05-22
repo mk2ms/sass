@@ -1,0 +1,43 @@
+body {
+  font: {
+    size: $font-size;
+    family: $primary-font;
+    weight: 400;
+  }
+  word-spacing: .12em;
+}
+// regra abaixo: Somente em páginas de leitura
+p {
+  font: {
+    family: $primary-font;
+  }
+  line-height: 1.52;
+  margin: 0;
+  @at-root .article & {
+    margin-top: 1em;
+  }
+}
+// Headers
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+  margin: 1em 0 .7em 0;
+}
+$fibonacci: 1;
+$fibonacci-last: 1;
+$fibonacci-aux: $fibonacci;
+$fibonacci-start: 8;
+@for $i from 6 through 1 {
+  #{h + $i} {
+    font-size: percentage(($fibonacci-start+$fibonacci+$fibonacci-last)/10);
+    @if $i < 3 {
+      letter-spacing: -#{3-$i +'px'};
+      line-height: 1 + ($i/10);
+    }
+  }
+  $fibonacci-aux: $fibonacci;
+  $fibonacci: $fibonacci + $fibonacci-last;
+  $fibonacci-last: $fibonacci-aux;
+}
+h6 {
+  text-transform: uppercase;
+}

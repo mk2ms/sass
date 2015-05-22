@@ -1,0 +1,39 @@
+// Grid script
+$grid-base-width: 1144px;
+$grid-gutter: 20px;
+$wrapper-name: '.wrapper';
+$grid-name: '.grid-container';
+$grid-item-name: '.grid-item';
+$size-name: '.size';
+$percentual-grid: '.percentual-grid';
+
+.center-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+.row, #{$grid-name} {
+  overflow: auto;
+}
+
+#{$grid-name} { margin-left: -$grid-gutter; }
+#{$grid-item-name} {
+  float: left;
+  > #{$wrapper-name} {
+    margin-left: $grid-gutter;
+  }
+}
+
+@for $i from 16 through 1 {
+  #{$size-name+'-'+$i} {
+    width: (($grid-base-width+$grid-gutter) / $i);
+  }
+}
+@for $i from 1 through 10 {
+  #{$percentual-grid+'-'+$i*10} {
+    width: #{$i*10 + '%'};
+  }
+}
+#{$percentual-grid+'-25'} { width: 25%; }
+#{$percentual-grid+'-1-3'} { width: 33.3333%; }
+#{$percentual-grid+'-2-3'} { width: 66.6666%; }
+#{$percentual-grid+'-75'} { width: 75%; }
