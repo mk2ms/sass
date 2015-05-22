@@ -9,11 +9,11 @@ p {
   line-height: 1.52;
   margin: 0; }
   .article p {
-    margin-top: 1em; }
+    margin: 1em 0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  margin: 1em 0 .7em 0; }
+  margin: 0 0 .7em 0; }
 
 h6 {
   font-size: 100%; }
@@ -171,10 +171,10 @@ body {
   color: #000; }
 
 a {
-  color: #f90; }
+  color: #009DDC; }
   a:visited {
-    color: #cc8f33; }
+    color: #2c8ab0; }
   a:hover {
-    color: #ffb84d; }
+    color: #2ac2ff; }
 
 /*# sourceMappingURL=style.css.map */
