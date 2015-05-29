@@ -1,16 +1,13 @@
 body {
   font: {
-    size: $font-size;
+    size: $base-font-size;
     family: $primary-font;
     weight: 400;
   }
-  word-spacing: .12em;
+  word-spacing: .1em;
 }
 // regra abaixo: Somente em páginas de leitura
 p {
-  font: {
-    family: $primary-font;
-  }
   line-height: 1.52;
   margin: 0;
   @at-root .article & {
@@ -20,7 +17,15 @@ p {
 // Headers
 h1,h2,h3,h4,h5,h6 {
   font-weight: 700;
-  margin: 0 0 .7em 0;
+  margin: 0;
+}
+.article {
+  h1,h2,h3,h4,h5,h6 {
+    margin: 2em 0 .7em 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 $fibonacci: 1;
 $fibonacci-last: 1;
@@ -40,4 +45,17 @@ $fibonacci-start: 8;
 }
 h6 {
   text-transform: uppercase;
+}
+
+.small-text {
+  font-size: 85%;
+}
+.big-text {
+  font-size: 150%;
+}
+.very-big-text {
+  font-size: 225%;
+}
+.huge-text {
+  font-size: 400%;
 }

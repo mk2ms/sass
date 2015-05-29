@@ -3,10 +3,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title></title>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-    <!--<link href='http://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700' rel='stylesheet' type='text/css'>-->
-    <!--<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,500' rel='stylesheet' type='text/css'>-->
-    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:700' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700' rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -64,38 +64,38 @@
         </div>
     </div>
 </div>
-<h3>Responsive Layout</h3>
+<h3>Percentage Layout</h3>
 <div class="row">
     <div class="grid-container">
-        <div class="percentual-grid-10 grid-item">
-            <div class="wrapper">percentual-grid-10</div>
+        <div class="percentage-grid-10 grid-item">
+            <div class="wrapper">percentage-grid-10</div>
         </div>
-        <div class="percentual-grid-20 grid-item">
-            <div class="wrapper">percentual-grid-20</div>
+        <div class="percentage-grid-20 grid-item">
+            <div class="wrapper">percentage-grid-20</div>
         </div>
-        <div class="percentual-grid-30 grid-item">
-            <div class="wrapper">percentual-grid-30</div>
+        <div class="percentage-grid-30 grid-item">
+            <div class="wrapper">percentage-grid-30</div>
         </div>
-        <div class="percentual-grid-40 grid-item">
-            <div class="wrapper">percentual-grid-40</div>
+        <div class="percentage-grid-40 grid-item">
+            <div class="wrapper">percentage-grid-40</div>
         </div>
-        <div class="percentual-grid-50 grid-item">
-            <div class="wrapper">percentual-grid-50</div>
+        <div class="percentage-grid-50 grid-item">
+            <div class="wrapper">percentage-grid-50</div>
         </div>
-        <div class="percentual-grid-60 grid-item">
-            <div class="wrapper">percentual-grid-60</div>
+        <div class="percentage-grid-60 grid-item">
+            <div class="wrapper">percentage-grid-60</div>
         </div>
-        <div class="percentual-grid-70 grid-item">
-            <div class="wrapper">percentual-grid-70</div>
+        <div class="percentage-grid-70 grid-item">
+            <div class="wrapper">percentage-grid-70</div>
         </div>
-        <div class="percentual-grid-80 grid-item">
-            <div class="wrapper">percentual-grid-80</div>
+        <div class="percentage-grid-80 grid-item">
+            <div class="wrapper">percentage-grid-80</div>
         </div>
-        <div class="percentual-grid-90 grid-item">
-            <div class="wrapper">percentual-grid-90</div>
+        <div class="percentage-grid-90 grid-item">
+            <div class="wrapper">percentage-grid-90</div>
         </div>
-        <div class="percentual-grid-100 grid-item">
-            <div class="wrapper">percentual-grid-100</div>
+        <div class="percentage-grid-100 grid-item">
+            <div class="wrapper">percentage-grid-100</div>
         </div>
     </div>
 </div>
@@ -105,8 +105,8 @@
         <ul class="main-nav">
             <li><a href="#1" accesskey="1">Principal</a></li>
             <li><a href="#2" accesskey="2">Institucional</a></li>
-            <li><a href="#3" accesskey="3">Procuradorias</a></li>
-            <li><a href="#4" accesskey="4">Promotorias</a></li>
+            <li><a href="#3" accesskey="3" class="has-dropdown">Procuradorias</a></li>
+            <li><a href="#4" accesskey="4" class="has-dropdown">Promotorias</a></li>
             <li><a href="#5" accesskey="5">Atos e Normas</a></li>
             <li><a href="#6" accesskey="6">Licitação</a></li>
             <li><a href="#7" accesskey="7">Links</a></li>
@@ -116,12 +116,21 @@
     </div>
 </div>
 <div class="row">
-    <div class="center-container percentual-grid-50">
+    <div class="breadcrumb percentage-grid-50 center-container">
+        <ul class="main-breadcrumb ">
+            <li><a href="#1" accesskey="1">Principal</a></li>
+            <li><a href="#2" accesskey="2">Institucional</a></li>
+            <li><a href="#3" accesskey="3" class="has-dropdown">Procuradorias</a></li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="center-container percentage-grid-50">
         <h1>Header #1 Is longer than anything on Earth, so I cannot keep laying my letters here</h1>
         <!--<h2>Header #2</h2>-->
-        <div class="grid-container">
-            <div class="grid-item percentual-grid-70">
-<!--                <div class="wrapper">
+        <div class="grid-container vertical-spacing">
+            <div class="grid-item percentage-grid-70">
+                <!--<div class="wrapper">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi autem dolores enim est, illo ipsum molestiae nemo odio placeat provident quam quisquam reprehenderit sunt tenetur, vel velit voluptate voluptatum. A at consequatur distinctio dolor fuga fugiat, harum labore molestiae nisi officia pariatur quo tempore totam. A autem commodi distinctio doloribus hic laborum maxime non sequi voluptatem voluptatibus. Itaque, quia.Blanditiis consectetur fuga impedit libero molestias nihil reprehenderit tempora. Debitis dignissimos doloremque ducimus magni non</p>
                     <ul>
                         <li>You hold the gun</li>
@@ -177,13 +186,13 @@
                     <p>Cabe ainda, ao Ministério Público, através de suas ações, fazer cumprir o artigo 225 da Constituição Federal, para que todos possam ter direito ao meio ambiente ecologicamente equilibrado, bem de uso comum do povo e essencial à sadia qualidade de vida, impondo-se ao Poder Público e à coletividade o dever de defendê-lo e preservá- lo para as presentes e futuras gerações.</p>
                 </div>
             </div>
-            <div class="grid-item percentual-grid-30">
+            <div class="grid-item percentage-grid-30">
                 <div class="wrapper" style="background: #fafafa;">
                    <!-- <h6>Contact</h6>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi asperiores corporis dolorem esse, facilis impedit perferendis perspiciatis repellat totam? Atque debitis nesciunt obcaecati perspiciatis quaerat quas quibusdam recusandae, totam.</p>
                     <h6>Nada Ver sudaí</h6>
                     <p>Eis que surge um componente diferente por aqui!</p>
-                    <table class="percentual-grid-100">
+                    <table class="percentage-grid-name-100">
                         <thead>
                         <tr>
                             <th>Título</th>
@@ -203,6 +212,7 @@
                     </table>-->
                     <div class="solid-box">
                         <p>The Sass Way covers the latest news and topics on handcrafting CSS with Sass and Compass. We use an open publishing model and rely on contributions from the Sass community via our GitHub project.</p>
+                        <p>Este é o <span class="huge-text">420º</span> arquivo configurado!</p>
                     </div>
                     <a href="#444" style="display: block; padding: 10px; text-align: center; background: #e6e6e6;">Link</a>
                 </div>
@@ -213,13 +223,13 @@
 <div class="row" id="access-3-column">
     <div class="container">
         <h2>Teste major Tom</h2>
-        <div class="grid-item percentual-grid-1-3" style="background: #2ac2ff; height: 300px;">
+        <div class="grid-item percentage-grid-1-3" style="background: #2ac2ff; height: 300px;">
             Coluna 1
         </div>
-        <div class="grid-item percentual-grid-1-3">
+        <div class="grid-item percentage-grid-1-3">
             Coluna 2, do Pablo essa
         </div>
-        <div class="grid-item percentual-grid-1-3" style="background: #ffff00; height: 300px;">
+        <div class="grid-item percentage-grid-1-3" style="background: #ffff00; height: 300px;">
             Coluna 4
         </div>
     </div>

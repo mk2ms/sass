@@ -1,15 +1,34 @@
 // Defaults Variables
 $primary-color: #000;
 $background-color: #fff;
-$highlight-color: #009DDC;
-$color: (
+
+$colors: (
   'primary': #009DDC,
   'secondary': #00A160,
-  'neutral': #C7C8CA
+  'neutral': #C7C8CA,
+  'inverted': #fff
 );
+$highlight-color: lighten(map-get($colors,'primary'), 15%);
+$shy-color: desaturate(map-get($colors,'primary'), 40%);
+$inverted-color: map-get($colors,'inverted');
+
 $primary-font:  'Source Sans Pro', Helvetica, Arial, sans-serif;
 $secondary-font: 'Merriweather Sans', Georgia, Times, serif;
-$font-size: 16px;
-$propriedade: 'border';
+$base-font-size: 16px;
 $icon-name: 'icon';
+$ie-compatibility: 0;
 // End of Defaults
+
+// Layout variables
+$internal-spacing: 20px;
+
+
+// Grid System
+$grid-fixed-width: 1144px;
+$grid-gutter-size: 20px;
+$wrapper-name: '.wrapper';
+$grid-name: '.grid-container';
+$grid-item-name: '.grid-item';
+$size-name: '.size';
+$percentage-grid-name: '.percentage-grid';
+$fluid-grid-name: '.fluid-grid';

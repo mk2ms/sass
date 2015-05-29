@@ -1,31 +1,87 @@
-@import "variables";
-$internal-spacing: 20px;
-//Box components
+// Mixin adds inline-block display attribute
+// Fix IE7 bug, adding hacks (only if $ie-compatibility value is set equal 1 in main _variables.css file)
+@mixin reset-spacing {
+  margin: 0;
+  padding: 0;
+}
+@mixin inline-block-box($ie-mode: $ie-compatibility) {
+  @if ($ie-mode == 1) {
+    *display: inline;
+    *zoom: 1;
+  }
+  display: inline-block;
+}
+// adds vertical spacing outside the element, accepts any measurement value as argument
+@mixin vertical-spacing($spacing: $internal-spacing) {
+  margin-top: $spacing;
+  margin-bottom: $spacing;
+}
+// adds inner spacing, accepts any measurement value as argument
+@mixin solid-box($spacing: $internal-spacing) {
+  padding: $spacing;
+}
+// horizontal centering of a container inside its parent element (only works with a set width container)
+@mixin center-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin arrow-down($size: 1em, $color: $primary-color) {
+  border: $size solid transparent;
+  border-top-color: $color;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+}
+// --------------------------
+// End of @mixin declarations
+// --------------------------
+
+.row, #{$grid-name} {
+  overflow: auto;
+}
+.center-container {
+  @include center-container();
+}
 .solid-box {
-  padding: $internal-spacing;
+  @include solid-box();
 }
 .vertical-spacing {
-  margin-top: $internal-spacing;
-  margin-bottom: $internal-spacing;
+  @include vertical-spacing();
 }
+
+// --------------------------
+// Navigation
+// --------------------------
 .nav, nav {
   .main-nav {
-    //background-color: #009DDC;// map-get($color, 'primary');
-    margin: 0;
-    padding: 0;
+    @include reset-spacing();
     text-align: center;
+    background: map-get($colors, 'primary');
     > li {
-      display: inline-block;
+      @include inline-block-box();
       margin-left: -0.7ex;
       list-style: none;
       a {
-        display: inline-block;
-        //font-weight: 700;
+        @include inline-block-box();
+        color: $inverted-color;
+        text-decoration: none;
         padding: $internal-spacing;
-        //text-decoration: none;
+        position: relative;
+        &.has-dropdown::after {
+          @include arrow-down(.4em, $inverted-color);
+          right: .3em;
+          position: absolute;
+          top: 50%;
+        }
+        &.has-dropdown:hover::after,
+        &.has-dropdown:focus::after {
+          @include arrow-down(.4em, $highlight-color);
+        }
         &:hover,
         &:focus, {
           //background-color: darken(map-get($color, 'primary'),10);
+          color: $highlight-color;
           .dropdown {
             display: block;
           }
@@ -34,3 +90,13 @@ $internal-spacing: 20px;
     }
   }
 }
+.breadcrumb {
+
+  .main-breadcrumb {
+    @include reset-spacing();
+    > li {
+      @include inline-block-box();
+    }
+  }
+}
+// Vertical navigation
