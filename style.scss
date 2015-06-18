@@ -1,24 +1,122 @@
 @charset "UTF-8";
 
 @import "variables";
-@import "typography";
 @import "layout";
+@import "typography";
 @import "grid";
+@import "components";
 
 body {
-  background: $background-color;
-  color: $primary-color;
+    background: $background-color;
+    color: $body-text-color;
 }
+
 a {
-  color: map-get($colors,'primary');
-  &:visited {
-    color: $shy-color;
-  }
-  &:hover {
-    color: $highlight-color;
-  }
+    color: $color-link;
+    &:visited {
+        color: $color-shy;
+    }
+    &:hover {
+        color: $color-highlight;
+    }
 }
+
 .wrapper {
-  //border: 1px solid #e6e6e6;
+    //border: 1px solid #e6e6e6;
 }
-//.container { overflow: auto; }
+
+#nav-access-keys,
+#utility-bar {
+    text-align: right;
+}
+
+#utility-bar {
+    background-color: darken($color-primary, 15%);
+
+    .button, button {
+        @extend .button-transparent;
+    }
+
+}
+
+.header .toolbar {
+    font-size: 87.5%;
+}
+
+.header .toolbar {
+    font-size: 81.25%;
+}
+
+#nav-access-keys {
+    @include solid-box($internal-spacing/2 0);
+    a {
+        text-decoration: none;
+        margin-right: $internal-spacing;
+    }
+}
+
+
+.hotkey {
+    @include inline-block-box();
+    @include solid-box(.25em .6em);
+    border: 1px solid $color-border;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.main-nav {
+    border-bottom: 2px solid $color-primary;
+    font-size: 87.5%;
+    text-align: center;
+}
+
+.main-nav .current-menuitem .caption {
+    background: $color-primary;
+    color: $color-inverted;
+}
+
+.widget-title {
+    border-bottom: $border-default-setting;
+    padding-bottom: .3em;
+}
+
+.sidebar .widget {
+    //border-bottom: $border-default-setting;
+    //@include solid-box($internal-spacing 0);
+    margin-bottom: $internal-spacing*2;
+}
+
+.mpms-news {
+
+    h3 {
+        color: $color-primary;
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+        line-height: 1.1;
+    }
+
+    p {
+        font-size: 94%;
+    }
+
+}
+
+.def-title {
+    font-weight: 600;
+}
+
+/*
+.main-nav {
+  .caption {
+    color: map-get($colors, 'inverted');
+  }
+  .current-menuitem .caption {
+    color: map-get($colors, 'primary');
+  }
+  .menuitem[aria-haspopup='true'] .caption::after {
+    border-top-color: map-get($colors, 'inverted');
+  }
+  .current-menuitem {
+    background-color: map-get($colors, 'inverted');
+  }
+}*/

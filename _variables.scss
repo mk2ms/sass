@@ -1,23 +1,37 @@
 // Defaults Variables
-$primary-color: #000;
-$background-color: #fff;
-
-$colors: (
+$ie-compatibility: 0;
+/*$colors: (
   'primary': #009DDC,
   'secondary': #00A160,
   'neutral': #C7C8CA,
-  'inverted': #fff
-);
-$highlight-color: lighten(map-get($colors,'primary'), 15%);
-$shy-color: desaturate(map-get($colors,'primary'), 40%);
-$inverted-color: map-get($colors,'inverted');
+  'inverted': #fff,
+  'border': #ccc
+);*/
+$body-text-color:  #000;
+$background-color: #fff;
+$color-primary:    #009DDC;
+$color-secondary:  #00A160;
+$color-neutral:    #C7C8CA;
+$color-inverted:   #fff;
+$color-border:     #ccc;
+$color-highlight:  lighten($color-primary, 15%);
+$color-shy:        desaturate($color-primary, 40%);
+$color-link:       $color-primary;
+$color-success:    $color-secondary;
+$color-warning:    #F7931E;
+$color-error:      #C1272D;
+$color-info:       $color-primary;
+$color-disabled:   $color-neutral;
 
-$primary-font:  'Source Sans Pro', Helvetica, Arial, sans-serif;
-$secondary-font: 'Merriweather Sans', Georgia, Times, serif;
-$base-font-size: 16px;
+
+// Font
+$font-primary:    'Raleway', Helvetica, Arial, sans-serif;
+$font-secondary:  'PT Serif', Georgia, Times, serif;
+$font-base-size: 16px;
+$font-base-weight: 400;
+$base-line-height: 1.6;
 $icon-name: 'icon';
-$ie-compatibility: 0;
-// End of Defaults
+
 
 // Layout variables
 $internal-spacing: 20px;
@@ -32,3 +46,14 @@ $grid-item-name: '.grid-item';
 $size-name: '.size';
 $percentage-grid-name: '.percentage-grid';
 $fluid-grid-name: '.fluid-grid';
+
+
+// Default theme variables
+$theme-widget-doubleSpacing: 1;
+$border-default-setting: 1px solid $color-border;
+
+
+// Responsive utility configs
+$visible-class-name: '.visible';
+$hidden-class-name: '.hidden';
+// End of Defaults

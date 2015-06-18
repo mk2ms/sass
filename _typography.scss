@@ -1,61 +1,99 @@
-body {
-  font: {
-    size: $base-font-size;
-    family: $primary-font;
-    weight: 400;
-  }
-  word-spacing: .1em;
+@mixin small-uppercase-title() {
+    font-size: 75%;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
 }
+
+
+body {
+    font: {
+        size: $font-base-size;
+        family: $font-primary;
+        weight: $font-base-weight;
+    }
+    word-spacing: .1em;
+}
+
 // regra abaixo: Somente em páginas de leitura
 p {
-  line-height: 1.52;
-  margin: 0;
-  @at-root .article & {
-    margin: 1em 0;
-  }
-}
-// Headers
-h1,h2,h3,h4,h5,h6 {
-  font-weight: 700;
-  margin: 0;
-}
-.article {
-  h1,h2,h3,h4,h5,h6 {
-    margin: 2em 0 .7em 0;
-    &:first-child {
-      margin-top: 0;
+    line-height: $base-line-height;
+    margin: 0;
+    @at-root .article & {
+        margin: 0 0 1.6em;
     }
-  }
 }
+
+// Headers
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin: 0;
+}
+
+.article, article {
+    font-family: $font-secondary;
+    word-spacing: 0;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 2em 0 .8em 0;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+}
+
+strong {
+    font-weight: 600;
+}
+
+
+// Fibonacci for headers font-size (golden ratio)
 $fibonacci: 1;
 $fibonacci-last: 1;
 $fibonacci-aux: $fibonacci;
 $fibonacci-start: 8;
 @for $i from 6 through 1 {
-  #{h + $i} {
-    font-size: percentage(($fibonacci-start+$fibonacci+$fibonacci-last)/10);
-    @if $i < 3 {
-      letter-spacing: -#{3-$i +'px'};
-      line-height: 1 + ($i/10);
+    #{h + $i} {
+        font-size: percentage(($fibonacci-start+$fibonacci+$fibonacci-last)/10);
+        @if $i < 3 {
+            letter-spacing: -#{3-$i +'px'};
+            line-height: 1 + ($i/10);
+        }
     }
-  }
-  $fibonacci-aux: $fibonacci;
-  $fibonacci: $fibonacci + $fibonacci-last;
-  $fibonacci-last: $fibonacci-aux;
+    $fibonacci-aux: $fibonacci;
+    $fibonacci: $fibonacci + $fibonacci-last;
+    $fibonacci-last: $fibonacci-aux;
 }
+
 h6 {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .small-text {
-  font-size: 85%;
+    font-size: 85%;
 }
+
 .big-text {
-  font-size: 150%;
+    font-size: 150%;
 }
+
 .very-big-text {
-  font-size: 225%;
+    font-size: 225%;
 }
+
 .huge-text {
-  font-size: 400%;
+    font-size: 400%;
+}
+
+.footnotes {
+    @include solid-box($internal-spacing/2 0);
+    margin: $internal-spacing 0;
+    border-top: 2px solid $color-border;
+    padding-left: 2em;
+    font-size: 82%;
+}
+.footnotes p {
+    margin-bottom: 1em;
+    line-height: 1.2;
 }

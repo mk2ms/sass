@@ -1,0 +1,211 @@
+@mixin widget() {
+    /*$vertical-spacing: $internal-spacing;
+    @if ($theme-widget-doubleSpacing == 1) {
+      $vertical-spacing: $internal-spacing *2;
+    }
+    @include vertical-spacing($vertical-spacing);
+  */
+    .widget-title {
+        @include small-uppercase-title;
+        margin-bottom: $internal-spacing;
+    }
+}
+
+.widget {
+    @include widget;
+}
+/*---------------------------*\
+   #NAVIGATION
+\*---------------------------*/
+
+.nav {
+    @include reset-spacing();
+}
+
+    .nav-item {
+        @include inline-block-box();
+        margin-left: -0.7ex;
+        list-style: none;
+        position: relative;
+    }
+
+        .nav-caption {
+            @include inline-block-box();
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        [aria-haspopup="true"] {
+
+            .nav-caption::after {
+                @include arrow('down', .4em, $color-primary);
+                position: absolute;
+                right: .3em;
+                top:   50%;
+            }
+
+            .nav-caption:focus::after, .nav-caption:hover::after {
+                @include arrow('down', .4em, $color-highlight);
+            }
+
+        }
+
+    .nav-current {
+        .nav-caption,
+        .nav-caption:focus, .nav-caption:hover {
+            cursor: default;
+        }
+    }
+
+
+.main-nav {
+
+    .nav-caption {
+        font-weight: 600;
+        padding: $internal-spacing;
+    }
+
+    .nav-current {
+
+        .nav-caption {
+            background: $color-primary;
+            color: $color-inverted;
+        }
+
+    }
+
+}
+
+/*---------------------------*\
+   #BREADCRUMB
+\*---------------------------*/
+
+.main-breadcrumb {
+    @include reset-spacing();
+}
+
+.breadcrumb-item {
+    @include solid-box(.7em .5em .7em 0);
+    font-size: 81.25%;
+}
+
+.breadcrumb-item::after {
+    content: '/';
+    font-weight: 700;
+    float: right;
+    margin-left: .7em;
+    margin-top:  .1em;
+}
+
+.breadcrumb-item {
+    color: $color-neutral;
+}
+
+.breadcrumb-item.nav-current::after {
+    display: none;
+}
+
+.nav-root {
+    /*
+    content: ">>";
+    float: left;
+    margin-right: $internal-spacing/2;
+      */
+}
+
+// Vertical navigation
+
+.toolbar {
+    @include inline-block-box();
+}
+
+
+
+
+
+/*---------------------------*\
+   #LISTS
+\*---------------------------*/
+
+.def-list, .icon-list {
+    @include reset-spacing();
+    list-style-type: none;
+}
+
+.list-item,
+.media-item {
+    @include clear-block;
+}
+
+.side-by-side {
+
+}
+
+    .media-subject {
+        float: left;
+        margin-right: $internal-spacing;
+    }
+    .media-content { @include clear-block; }
+
+    .def-list-item {
+        margin-bottom: $internal-spacing/2;
+    }
+
+        .def-title {
+            float: left;
+            margin-right: $internal-spacing;
+            text-align: right;
+            min-width: 40%;
+        }
+
+        .def-description {
+            @include clear-block;
+            font-size: 92%;
+        }
+
+        .icon-caption {
+            //color: $color-secondary;
+            //height: 64px;
+            //vertical-align: middle;
+
+            .caption {
+
+            }
+
+        }
+
+
+//TODO move to the 'base' section
+.button, button {
+    @include inline-block-box();
+    border: 0;
+    background-color: $color-primary;
+    color: $color-inverted;
+    line-height: 1;
+    padding: .5em .8em;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button-transparent {
+    background-color: transparent;
+}
+
+.button-success {
+    background-color: $color-success;
+}
+
+.button-block {
+    display: block;
+    text-align: center;
+}
+
+.action-bar {
+    text-align: right;
+}
+
+hr {
+    height: 0;
+    border: none;
+    border-top: $border-default-setting;
+}

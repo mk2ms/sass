@@ -1,102 +1,77 @@
 // Mixin adds inline-block display attribute
 // Fix IE7 bug, adding hacks (only if $ie-compatibility value is set equal 1 in main _variables.css file)
-@mixin reset-spacing {
-  margin: 0;
-  padding: 0;
+@mixin reset-spacing() {
+    margin:  0;
+    padding: 0;
 }
+
 @mixin inline-block-box($ie-mode: $ie-compatibility) {
-  @if ($ie-mode == 1) {
-    *display: inline;
-    *zoom: 1;
-  }
-  display: inline-block;
+    @if ($ie-mode == 1) {
+        *display: inline;
+        *zoom: 1;
+    }
+    display: inline-block;
 }
+
+@mixin clear-block() {
+    overflow: auto;
+}
+
 // adds vertical spacing outside the element, accepts any measurement value as argument
+// *** applicable only in (inline-)block elements
 @mixin vertical-spacing($spacing: $internal-spacing) {
-  margin-top: $spacing;
-  margin-bottom: $spacing;
+    margin-top: $spacing;
+    margin-bottom: $spacing;
 }
+
 // adds inner spacing, accepts any measurement value as argument
 @mixin solid-box($spacing: $internal-spacing) {
-  padding: $spacing;
+    padding: $spacing;
 }
+
 // horizontal centering of a container inside its parent element (only works with a set width container)
 @mixin center-container {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left:  auto;
+    margin-right: auto;
 }
-@mixin arrow-down($size: 1em, $color: $primary-color) {
-  border: $size solid transparent;
-  border-top-color: $color;
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
+
+@mixin arrow($direction: 'down', $size: 1em, $color: $body-text-color) {
+    border: $size solid transparent;
+    display: block;
+    content: "";
+    width:  0;
+    height: 0;
+    @if $direction == 'up' {
+        border-bottom-color: $color;
+    } @else if $direction == 'right' {
+        border-left-color: $color;
+    } @else if $direction == 'down' {
+        border-top-color: $color;
+    } @else {
+        border-right-color: $color;
+    }
 }
+
 // --------------------------
 // End of @mixin declarations
 // --------------------------
 
-.row, #{$grid-name} {
-  overflow: auto;
-}
 .center-container {
-  @include center-container();
+    @include center-container();
 }
+
 .solid-box {
-  @include solid-box();
+    @include solid-box();
 }
+
+.solid-box-half {
+    @include solid-box($internal-spacing/2);
+}
+
 .vertical-spacing {
-  @include vertical-spacing();
+    @include vertical-spacing();
 }
 
-// --------------------------
-// Navigation
-// --------------------------
-.nav, nav {
-  .main-nav {
-    @include reset-spacing();
-    text-align: center;
-    background: map-get($colors, 'primary');
-    > li {
-      @include inline-block-box();
-      margin-left: -0.7ex;
-      list-style: none;
-      a {
-        @include inline-block-box();
-        color: $inverted-color;
-        text-decoration: none;
-        padding: $internal-spacing;
-        position: relative;
-        &.has-dropdown::after {
-          @include arrow-down(.4em, $inverted-color);
-          right: .3em;
-          position: absolute;
-          top: 50%;
-        }
-        &.has-dropdown:hover::after,
-        &.has-dropdown:focus::after {
-          @include arrow-down(.4em, $highlight-color);
-        }
-        &:hover,
-        &:focus, {
-          //background-color: darken(map-get($color, 'primary'),10);
-          color: $highlight-color;
-          .dropdown {
-            display: block;
-          }
-        }
-      }
-    }
-  }
+.vertical-spacing-2x {
+    @include vertical-spacing($internal-spacing*2)
 }
-.breadcrumb {
-
-  .main-breadcrumb {
-    @include reset-spacing();
-    > li {
-      @include inline-block-box();
-    }
-  }
-}
-// Vertical navigation
