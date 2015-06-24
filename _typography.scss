@@ -1,10 +1,11 @@
-@mixin small-uppercase-title() {
-    font-size: 75%;
-    font-weight: 700;
+@mixin small-uppercase-title($font-weight: 700) {
+    font: {
+        size: 75%;
+        weight: $font-weight;
+    }
     letter-spacing: 0;
     text-transform: uppercase;
 }
-
 
 body {
     font: {
@@ -31,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .article, article {
-    font-family: $font-secondary;
+    //font-family: $font-secondary;
     word-spacing: 0;
 
     h1, h2, h3, h4, h5, h6 {
@@ -70,19 +71,19 @@ h6 {
     text-transform: uppercase;
 }
 
-.small-text {
+.text--small {
     font-size: 85%;
 }
 
-.big-text {
+.text--big {
     font-size: 150%;
 }
 
-.very-big-text {
+.text--very-big {
     font-size: 225%;
 }
 
-.huge-text {
+.text--huge {
     font-size: 400%;
 }
 

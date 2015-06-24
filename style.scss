@@ -26,7 +26,8 @@ a {
 }
 
 #nav-access-keys,
-#utility-bar {
+#utility-bar,
+.tab-list {
     text-align: right;
 }
 
@@ -34,7 +35,7 @@ a {
     background-color: darken($color-primary, 15%);
 
     .button, button {
-        @extend .button-transparent;
+        @extend .button--transparent;
     }
 
 }
@@ -70,20 +71,20 @@ a {
     text-align: center;
 }
 
-.main-nav .current-menuitem .caption {
+.main-nav .nav__current .caption {
     background: $color-primary;
     color: $color-inverted;
 }
 
-.widget-title {
+.widget__title {
     border-bottom: $border-default-setting;
-    padding-bottom: .3em;
+    padding-bottom: .1em;
 }
 
 .sidebar .widget {
     //border-bottom: $border-default-setting;
     //@include solid-box($internal-spacing 0);
-    margin-bottom: $internal-spacing*2;
+    margin-bottom: $internal-spacing*3;
 }
 
 .mpms-news {
@@ -101,10 +102,18 @@ a {
 
 }
 
-.def-title {
+.def__title {
     font-weight: 600;
 }
 
+.label {
+    @include inline-block-box();
+    @include solid-box(.3em .4em);
+    @include border-radius(.5em);
+    background: lighten($color-neutral,10);
+    color: $body-text-color;
+    font-weight: $font-base-weight;
+}
 /*
 .main-nav {
   .caption {

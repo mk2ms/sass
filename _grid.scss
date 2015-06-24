@@ -28,29 +28,29 @@
 }
 
 @for $i from 16 through 1 {
-    #{$size-name+'-'+$i} {
+    #{$size-name+'--'+$i} {
         width: (($grid-fixed-width+$grid-gutter-size) / $i);
     }
 }
 
 @for $i from 1 through 10 {
-    #{$percentage-grid-name+'-'+$i*10} {
+    #{$percentage-grid-name+'--'+$i*10} {
         width: #{$i*10 + '%'};
     }
 }
 
-#{$percentage-grid-name+'-25'}, #{$percentage-grid-name+'-'+'1-4'} {
+#{$percentage-grid-name+'--25'}, #{$percentage-grid-name+'--'+'1-4'} {
     width: 25%;
 }
 
-#{$percentage-grid-name+'-1-3'} {
+#{$percentage-grid-name+'--1-3'} {
     width: 33.3333%;
 }
 
-#{$percentage-grid-name+'-2-3'} {
+#{$percentage-grid-name+'--2-3'} {
     width: 66.6666%;
 }
 
-#{$percentage-grid-name+'-75'} {
+#{$percentage-grid-name+'--75'} {
     width: 75%;
 }

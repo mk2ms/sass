@@ -7,21 +7,22 @@ $ie-compatibility: 0;
   'inverted': #fff,
   'border': #ccc
 );*/
-$body-text-color:  #000;
-$background-color: #fff;
-$color-primary:    #009DDC;
-$color-secondary:  #00A160;
-$color-neutral:    #C7C8CA;
-$color-inverted:   #fff;
-$color-border:     #ccc;
-$color-highlight:  lighten($color-primary, 15%);
-$color-shy:        desaturate($color-primary, 40%);
-$color-link:       $color-primary;
-$color-success:    $color-secondary;
-$color-warning:    #F7931E;
-$color-error:      #C1272D;
-$color-info:       $color-primary;
-$color-disabled:   $color-neutral;
+$body-text-color:   #000;
+$background-color:  #fff;
+$color-primary:     #009DDC;
+$color-secondary:   #00A160;
+$color-neutral:     #C7C8CA;
+$color-label:       #666;
+$color-inverted:    #fff;
+$color-border:      #ccc;
+$color-highlight:   lighten($color-primary, 15%);
+$color-shy:         desaturate($color-primary, 40%);
+$color-link:        $color-primary;
+$color-success:     $color-secondary;
+$color-warning:     #F7931E;
+$color-error:       #C1272D;
+$color-info:        $color-primary;
+$color-disabled:    $color-neutral;
 
 
 // Font
@@ -41,8 +42,8 @@ $internal-spacing: 20px;
 $grid-fixed-width: 1144px;
 $grid-gutter-size: 20px;
 $wrapper-name: '.wrapper';
-$grid-name: '.grid-container';
-$grid-item-name: '.grid-item';
+$grid-name: '.grid__container';
+$grid-item-name: '.grid__item';
 $size-name: '.size';
 $percentage-grid-name: '.percentage-grid';
 $fluid-grid-name: '.fluid-grid';

@@ -35,6 +35,14 @@
     margin-right: auto;
 }
 
+@mixin panel($background, $border-color) {
+    background-color: $background;
+    border-style: solid;
+    border-color: $border-color;
+    border-width: 1px 1px 3px 1px;
+}
+
+
 @mixin arrow($direction: 'down', $size: 1em, $color: $body-text-color) {
     border: $size solid transparent;
     display: block;
@@ -52,6 +60,12 @@
     }
 }
 
+@mixin border-radius($size: 50%){
+            border-radius:  $size;
+    -webkit-border-radius:  $size;
+       -moz-border-radius:  $size;
+}
+
 // --------------------------
 // End of @mixin declarations
 // --------------------------
@@ -63,8 +77,19 @@
 .solid-box {
     @include solid-box();
 }
+/*
 
-.solid-box-half {
+.panel-style {
+    @include panel(lighten($color-neutral, 20), lighten($color-border, 10));
+}
+
+    .panel-style--primary {
+        background-color: lighten($color-primary, 50);
+        border-color: lighten($color-primary, 30);
+    }
+*/
+
+.solid-box--half {
     @include solid-box($internal-spacing/2);
 }
 
@@ -72,6 +97,14 @@
     @include vertical-spacing();
 }
 
-.vertical-spacing-2x {
+.vertical-spacing--2x {
     @include vertical-spacing($internal-spacing*2)
+}
+
+.horizontal-alignment--right {
+    text-align: right;
+}
+
+.spacing-right {
+    margin-right: $internal-spacing;
 }
