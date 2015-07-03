@@ -1,4 +1,4 @@
-@mixin small-uppercase-title($font-weight: 700) {
+@mixin small-uppercase-title($font-weight: $font-feature-weight) {
     font: {
         size: 75%;
         weight: $font-weight;
@@ -27,7 +27,7 @@ p {
 
 // Headers
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
+    font-weight: $font-heading-weight;
     margin: 0;
 }
 
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 strong {
-    font-weight: 600;
+    font-weight: $font-feature-weight;
 }
 
 
@@ -71,22 +71,6 @@ h6 {
     text-transform: uppercase;
 }
 
-.text--small {
-    font-size: 85%;
-}
-
-.text--big {
-    font-size: 150%;
-}
-
-.text--very-big {
-    font-size: 225%;
-}
-
-.text--huge {
-    font-size: 400%;
-}
-
 .footnotes {
     @include solid-box($internal-spacing/2 0);
     margin: $internal-spacing 0;
@@ -98,3 +82,4 @@ h6 {
     margin-bottom: 1em;
     line-height: 1.2;
 }
+

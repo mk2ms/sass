@@ -43,23 +43,6 @@
 }
 
 
-@mixin arrow($direction: 'down', $size: 1em, $color: $body-text-color) {
-    border: $size solid transparent;
-    display: block;
-    content: "";
-    width:  0;
-    height: 0;
-    @if $direction == 'up' {
-        border-bottom-color: $color;
-    } @else if $direction == 'right' {
-        border-left-color: $color;
-    } @else if $direction == 'down' {
-        border-top-color: $color;
-    } @else {
-        border-right-color: $color;
-    }
-}
-
 @mixin border-radius($size: 50%){
             border-radius:  $size;
     -webkit-border-radius:  $size;
@@ -105,6 +88,53 @@
     text-align: right;
 }
 
+
+.spacing-right--half {
+    margin-right: $internal-spacing/2;
+}
+
 .spacing-right {
     margin-right: $internal-spacing;
 }
+
+.spacing-right--2x {
+    margin-right: $internal-spacing*2;
+}
+
+.spacing-left--half {
+    margin-left: $internal-spacing/2;
+}
+
+.spacing-left {
+    margin-left: $internal-spacing;
+}
+
+.spacing-left--2x {
+    margin-left: $internal-spacing*2;
+}
+
+
+
+.section__title {
+    margin-bottom: 1.5em;
+}
+
+.action-bar {
+    margin-top: 1.5em;
+}
+
+
+/*---------------------------*\
+   #UTILITIES
+\*---------------------------*/
+
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.full-wide { width: 100%; }

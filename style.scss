@@ -2,9 +2,11 @@
 
 @import "variables";
 @import "layout";
-@import "typography";
 @import "grid";
+@import "typography";
 @import "components";
+@import "../font-awesome-4.3.0/css/font-awesome.min.css";
+@import "helpers";
 
 body {
     background: $background-color;
@@ -20,9 +22,19 @@ a {
         color: $color-highlight;
     }
 }
+.page__header {
+    border-top: 5px solid $color-secondary;
+}
 
 .wrapper {
     //border: 1px solid #e6e6e6;
+}
+
+.slot-breadcrumb {
+    //background: #fafafa;
+    //margin: $internal-spacing 0;
+    padding: $internal-spacing/2 0;
+    //border-bottom: 1px solid #e6e6e6;
 }
 
 #nav-access-keys,
@@ -32,29 +44,30 @@ a {
 }
 
 #utility-bar {
-    background-color: darken($color-primary, 15%);
+    //background: lighten($color-neutral, 15);
+    //border-bottom: 1px solid $color-neutral;
 
     .button, button {
-        @extend .button--transparent;
+        @extend .button--neutral, .button--borderless, .button--transparent;
     }
-
+    font-size: 82.5%;
 }
 
-.header .toolbar {
-    font-size: 87.5%;
-}
-
-.header .toolbar {
-    font-size: 81.25%;
-}
+#accessibility-panel { float: left; }
 
 #nav-access-keys {
     @include solid-box($internal-spacing/2 0);
+    font-size: 87.5%;
+    display: none;
+
     a {
+        color: $color-label;
         text-decoration: none;
         margin-right: $internal-spacing;
     }
 }
+
+//#main-search { display: none; }
 
 
 .hotkey {
@@ -66,9 +79,10 @@ a {
 }
 
 .main-nav {
-    border-bottom: 2px solid $color-primary;
-    font-size: 87.5%;
+    border-bottom: 1px solid $color-primary;
+    font-size: 81.25%;
     text-align: center;
+    //text-transform: uppercase;
 }
 
 .main-nav .nav__current .caption {
@@ -77,7 +91,7 @@ a {
 }
 
 .widget__title {
-    border-bottom: $border-default-setting;
+    border-bottom: $border-secondary-setting;
     padding-bottom: .1em;
 }
 
@@ -102,30 +116,87 @@ a {
 
 }
 
-.def__title {
+.def__title,
+.calendar-like {
     font-weight: 600;
 }
 
-.label {
-    @include inline-block-box();
-    @include solid-box(.3em .4em);
-    @include border-radius(.5em);
-    background: lighten($color-neutral,10);
-    color: $body-text-color;
-    font-weight: $font-base-weight;
+.date-list .media-item {
+    margin-bottom: $internal-spacing/2;
 }
-/*
-.main-nav {
-  .caption {
-    color: map-get($colors, 'inverted');
-  }
-  .current-menuitem .caption {
-    color: map-get($colors, 'primary');
-  }
-  .menuitem[aria-haspopup='true'] .caption::after {
-    border-top-color: map-get($colors, 'inverted');
-  }
-  .current-menuitem {
-    background-color: map-get($colors, 'inverted');
-  }
-}*/
+
+.date-list .media__subject { margin-right: 20px; }
+
+.calendar-like {
+    background: lighten($color-neutral, 15);
+    color: $body-text-color;
+    text-align: center;
+}
+
+.calendar-like__day,
+.calendar-like__month {
+    padding: $internal-spacing/4 $internal-spacing/2
+}
+.calendar-like__month {
+    @include small-uppercase-title();
+}
+.calendar-like__day {
+    background: $color-label;
+    color: $color-inverted;
+    font-size: 125%;
+    //border-bottom: $border-default-setting;
+}
+
+.calendar__month {
+    margin-top: 40px;
+}
+
+.calendar__month-name {
+    line-height: 2;
+    @include small-uppercase-title(700);
+    font-size: 100%;
+}
+
+.calendar__week-day {
+    width: percentage(1/70);
+    @include small-uppercase-title();
+    padding: 1em 0;
+}
+
+.calendar__day { text-align: center; }
+    .calendar__day > .caption, .calendar__week-day > .caption{
+        display: block;
+        padding-bottom: .7em;
+        padding-top:    .7em;
+        text-align: center;
+    }
+
+
+.action-bar {
+    border-top: $border-default-setting;
+    padding: $internal-spacing 0;
+    text-align: right;
+}
+
+
+
+/* Main-search */
+.form--search {
+    @include inline-block-box();
+    @include border-radius(35px);
+    border: 1px solid $color-primary;
+}
+    #main-search-term {
+        border: 0;
+        padding: .5em;
+    }
+
+
+.search-as-icon {
+    text-indent: -9999px;
+
+    &::after {
+        font-family: FontAwesome, sans-serif;
+        content: '\f002'
+    }
+}

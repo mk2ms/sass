@@ -15,26 +15,48 @@
     }
 }
 
+
+@mixin arrow($direction: 'down', $size: 1em, $color: $body-text-color) {
+    border: $size solid transparent;
+    display: block;
+    content: "";
+    width:  0;
+    height: 0;
+    @if $direction == 'up' {
+        border-bottom-color: $color;
+    } @else if $direction == 'right' {
+        border-left-color: $color;
+    } @else if $direction == 'down' {
+        border-top-color: $color;
+    } @else {
+        border-right-color: $color;
+    }
+}
+
+
+
 @mixin button-like($foreground: $color-primary, $background: $color-inverted, $border: 'normal') {
 
-    @if $border == 'no-border' {
-        border-color: $background;
-    }
-    @else {
-        border-color: $foreground;
-    }
-    background-color: $background;
-    color: $foreground;
-
-    &:focus, &:hover {
+    &, &:visited {
         @if $border == 'no-border' {
-            border-color:   lighten($background, 15);
+            border-color: $background;
         }
         @else {
-            border-color:   lighten($foreground, 15);
+            border-color: $foreground;
+        }
+
+        background-color: $background;
+        color: $foreground;
+    }
+    &:focus, &:hover {
+        @if $border == 'no-border' {
+            border-color: lighten($background, 15);
+        }
+        @else {
+            border-color: lighten($foreground, 15);
         }
         background-color: lighten($background, 15);
-        color:          lighten($foreground, 15);
+        color: lighten($foreground, 15);
         outline: none;
 
     }
@@ -55,6 +77,7 @@
 
 .nav {
     @include reset-spacing();
+    margin-left: 0.7ex;
 }
 
     .nav__item {
@@ -76,7 +99,7 @@
                 @include arrow('down', .4em, $color-primary);
                 position: absolute;
                 right: .3em;
-                top:   50%;
+                top:   45%;
             }
 
             .nav__caption:focus::after, .nav__caption:hover::after {
@@ -86,10 +109,12 @@
         }
 
     .nav__current {
+
         .nav__caption,
         .nav__caption:focus, .nav__caption:hover {
             cursor: default;
         }
+
     }
 
 
@@ -97,14 +122,14 @@
 
     .nav__caption {
         font-weight: 600;
-        padding: $internal-spacing;
+        padding: 1.5em;
     }
 
     .nav__current {
 
         .nav__caption {
-            background: $color-primary;
-            color: $color-inverted;
+            border-bottom: 5px solid $color-primary;
+            color: $color-primary;
         }
 
     }
@@ -113,7 +138,7 @@
 
 
 .nav-tab {
-    @include vertical-spacing($internal-spacing*3);
+    margin: 0 0 $internal-spacing*3;
 }
 
     .tab__caption {
@@ -125,7 +150,7 @@
     .nav__current {
 
         .tab__caption {
-            color: $color-primary;
+            color: $color-highlight;
         }
 
     }
@@ -146,10 +171,6 @@
    #BREADCRUMB
 \*---------------------------*/
 
-.main-breadcrumb {
-    @include reset-spacing();
-}
-
     .breadcrumb__item {
         @include solid-box(.7em .5em .7em 0);
         font-size: 81.25%;
@@ -164,11 +185,17 @@
         }
 
     .breadcrumb__item {
-        color: $color-neutral;
+        color: $color-label;
     }
 
     .breadcrumb__item.nav__current::after {
         display: none;
+    }
+
+    .breadcrumb__root::before {
+        content: "\f015";
+        font-family: FontAwesome, sans-serif;
+        color: $color-primary;
     }
 
 .nav-root {
@@ -184,17 +211,20 @@
 
 .toolbar {
     @include inline-block-box();
+
+    .separator {
+        border-left: $border-default-setting;
+        margin-right: .7ex;
+    }
+
 }
-
-
-
 
 
 /*---------------------------*\
    #LISTS
 \*---------------------------*/
 
-.def-list, .icon-list, .tab-list {
+.def-list, .icon-list, .tab-list, .date-list {
     @include reset-spacing();
     list-style-type: none;
 }
@@ -234,18 +264,14 @@
         size: 87.5%;
     };
     line-height: 1;
-    padding: .5em .8em;
+    padding: .65em .8em;
     text-decoration: none;
     text-align: center;
+
 }
 
     .button--inverted {
         @include button-like($color-inverted, $color-primary, 'no-border');
-    }
-
-    .button--transparent {
-        background-color:   transparent;
-        border-color:       transparent;
     }
 
     .button--success {
@@ -268,9 +294,13 @@
         display: block;
     }
 
-.action-bar {
-    text-align: right;
-}
+    .button--transparent {
+        background-color:   transparent;
+    }
+
+    .button--borderless {
+        border-color:       transparent;
+    }
 
 hr {
     height: 0;
