@@ -27,11 +27,13 @@ $color-disabled:    $color-neutral;
 
 // Font
 $font-primary:    'Raleway', Helvetica, Arial, sans-serif;
-$font-secondary:  'PT Serif', Georgia, Times, serif;
+$font-secondary:  'Crimson Text', Georgia, Times, serif;
 $font-base-size: 16px;
 $font-base-weight: 400;
-$font-feature-weight: 700;
-$font-heading-weight: 600;
+$font-feature-weight: 600;
+$font-heading-weight: 800;
+$font-strong-weight: 800;
+$font-main-section-weight: 800;
 $base-line-height: 1.6;
 $icon-name: 'icon';
 
@@ -49,6 +51,7 @@ $grid-item-name: '.grid__item';
 $size-name: '.size';
 $percentage-grid-name: '.percentage-grid';
 $fluid-grid-name: '.fluid-grid';
+$block-size-name: '.block-size';
 
 
 // Default theme variables

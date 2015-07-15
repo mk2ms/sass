@@ -23,7 +23,11 @@ a {
     }
 }
 .page__header {
-    border-top: 5px solid $color-secondary;
+    //border-top: 5px solid $color-secondary;
+    .toolbar {
+        vertical-align: top;
+    }
+// TODO remover linha acima
 }
 
 .wrapper {
@@ -50,7 +54,6 @@ a {
     .button, button {
         @extend .button--neutral, .button--borderless, .button--transparent;
     }
-    font-size: 82.5%;
 }
 
 #accessibility-panel { float: left; }
@@ -103,77 +106,23 @@ a {
 
 .mpms-news {
 
-    h3 {
+    &__title {
         color: $color-primary;
         margin-top: 0.5em;
         margin-bottom: 1em;
         line-height: 1.1;
     }
 
-    p {
-        font-size: 94%;
+    &__description {
+        font-size: 82.5%;
     }
 
 }
 
-.def__title,
-.calendar-like {
-    font-weight: 600;
-}
-
-.date-list .media-item {
-    margin-bottom: $internal-spacing/2;
-}
-
-.date-list .media__subject { margin-right: 20px; }
-
-.calendar-like {
-    background: lighten($color-neutral, 15);
-    color: $body-text-color;
-    text-align: center;
-}
-
-.calendar-like__day,
-.calendar-like__month {
-    padding: $internal-spacing/4 $internal-spacing/2
-}
-.calendar-like__month {
-    @include small-uppercase-title();
-}
-.calendar-like__day {
-    background: $color-label;
-    color: $color-inverted;
-    font-size: 125%;
-    //border-bottom: $border-default-setting;
-}
-
-.calendar__month {
-    margin-top: 40px;
-}
-
-.calendar__month-name {
-    line-height: 2;
-    @include small-uppercase-title(700);
-    font-size: 100%;
-}
-
-.calendar__week-day {
-    width: percentage(1/70);
-    @include small-uppercase-title();
-    padding: 1em 0;
-}
-
-.calendar__day { text-align: center; }
-    .calendar__day > .caption, .calendar__week-day > .caption{
-        display: block;
-        padding-bottom: .7em;
-        padding-top:    .7em;
-        text-align: center;
-    }
 
 
 .action-bar {
-    border-top: $border-default-setting;
+    border-top: $border-secondary-setting;
     padding: $internal-spacing 0;
     text-align: right;
 }
@@ -183,20 +132,52 @@ a {
 /* Main-search */
 .form--search {
     @include inline-block-box();
-    @include border-radius(35px);
-    border: 1px solid $color-primary;
+    //position: absolute;
+    //top:    0;
+    //right:  0;
 }
-    #main-search-term {
-        border: 0;
-        padding: .5em;
+
+    .search__main-form {
+        @include border-radius(20px);
+        background: $color-secondary;
+        color: $color-inverted;
+        padding-left: .8em;
+
+        ::-webkit-input-placeholder {
+            color: $color-inverted;
+        }
+
+        :-moz-placeholder {
+            color: $color-inverted;
+        }
+
+        ::-moz-placeholder {
+            color: $color-inverted;
+        }
+
+        :-ms-input-placeholder {
+            color: $color-inverted;
+        }
+
+        .button {
+            @include border-radius(20px);
+        }
+
     }
 
+        .search__keyword {
+            background: transparent;
+            border: 0;
+            padding: .3em .5em;
 
-.search-as-icon {
-    text-indent: -9999px;
+            &:focus {
+                outline: 0;
+                border-bottom-color: $color-secondary;
+            }
+        }
 
-    &::after {
-        font-family: FontAwesome, sans-serif;
-        content: '\f002'
+
+    .search__powered-by-google {
+        margin-top: $internal-spacing/2;
+        text-align: right;
     }
-}

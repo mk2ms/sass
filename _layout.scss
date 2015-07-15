@@ -14,7 +14,7 @@
 }
 
 @mixin clear-block() {
-    overflow: auto;
+    overflow: hidden;
 }
 
 // adds vertical spacing outside the element, accepts any measurement value as argument
@@ -55,6 +55,8 @@
 
 .center-container {
     @include center-container();
+    position: relative;
+    // TODO remove the live above
 }
 
 .solid-box {
@@ -115,9 +117,22 @@
 
 
 
-.section__title {
+.page__section {
+
+    @include vertical-spacing($internal-spacing * 4);
+
+    &--half, &--sub {
+        @include vertical-spacing($internal-spacing * 2);
+    }
+
+}
+
+
+.section__title,
+.section__sub-title {
     margin-bottom: 1.5em;
 }
+
 
 .action-bar {
     margin-top: 1.5em;
@@ -138,3 +153,4 @@
 }
 
 .full-wide { width: 100%; }
+

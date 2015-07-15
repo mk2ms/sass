@@ -7,6 +7,11 @@
     text-transform: uppercase;
 }
 
+
+
+
+
+
 body {
     font: {
         size: $font-base-size;
@@ -32,7 +37,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .article, article {
-    //font-family: $font-secondary;
     word-spacing: 0;
 
     h1, h2, h3, h4, h5, h6 {
@@ -44,8 +48,26 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+
+.reading-mode {
+
+    &.article, article {
+        font-family: $font-secondary;
+        font-size: 112.5%;
+        word-spacing: .1em;
+
+        p {
+            margin: 0 0 1.4em;
+            line-height: 1.4;
+        }
+
+    }
+
+}
+
+
 strong {
-    font-weight: $font-feature-weight;
+    font-weight: $font-strong-weight;
 }
 
 
@@ -71,15 +93,47 @@ h6 {
     text-transform: uppercase;
 }
 
+
 .footnotes {
     @include solid-box($internal-spacing/2 0);
     margin: $internal-spacing 0;
     border-top: 2px solid $color-border;
     padding-left: 2em;
     font-size: 82%;
-}
-.footnotes p {
-    margin-bottom: 1em;
-    line-height: 1.2;
+
+    &__note {
+        margin-bottom: 1em;
+        line-height: 1.2;
+    }
+
 }
 
+/*
+.first-paragraph::first-letter {
+    float: left;
+    font-size: 450%;
+    line-height: .9;
+    padding-right: .5ex;
+    font-family: $font-secondary;
+    font-weight: $font-feature-weight;
+}
+*/
+
+
+.section {
+
+    &__title {
+        font-weight: $font-main-section-weight;
+    }
+
+    &__sub-title {
+
+    }
+
+    &__sub-sub-title {
+        font-size: 93.75%;
+        font-weight: $font-feature-weight;
+        text-transform: uppercase;
+    }
+
+}

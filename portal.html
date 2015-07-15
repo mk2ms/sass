@@ -5,10 +5,7 @@
     <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Hind:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Hind:600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Hind:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <title>MPMS Portal</title>
@@ -33,17 +30,16 @@
                                     <ins class="fa  fa-minus"></ins>
                                 </button>-->
                 <button id="accessibility-highContrast" title="Modo alto-contraste">
-                    <ins class="fa  fa-adjust"></ins>
-
+                    <ins class="fa  fa-adjust"></ins> Alto contraste
                 </button>
             </div>
 
             <div id="social-media-panel" class="toolbar" role="toolbar">
-                <a href="/contato" class="button" role="button">
+                <!--<a href="/contato" class="button" role="button">
                     <ins class="fa  fa-envelope"></ins>
                     <span class="caption">Fale Conosco</span>
-                </a>
-                <ins class="separator" role="separator" aria-hidden="true"></ins>
+                </a>-->
+                <!--<ins class="separator" role="separator" aria-hidden="true"></ins>
                 <a href="/facebook" class="button suppressed-caption" role="button" title="Facebook">
                     <ins class="fa  fa-facebook-official"></ins>
                     <span class="caption">Facebook</span>
@@ -55,8 +51,16 @@
                 <a href="/youtube" class="button suppressed-caption" role="button" title="Youtube">
                     <ins class="fa  fa-youtube"></ins>
                     <span class="caption">Youtube</span>
-                </a>
+                </a>-->
             </div>
+            <div id="main-search" class="form--search">
+                <form action="/pesquisar" name="main-search" role="search" class="search__main-form">
+                    <label for="main-search-term" title="Palavra-chave" aria-label="Palavra-chave"><ins class="fa fa-search"></ins></label>
+                    <input type="search" name="q" autocomplete="off" id="main-search-term" size="25" placeholder="digite aqui" class="search__keyword"><button type="submit" class="button  button--neutral  button--inverted">Buscar</button>
+                </form>
+                <div class="search__powered-by-google"><img src="https://www.google.com/cse/images/google_custom_search_smwide.gif" alt="Google"></div>
+            </div>
+
 
         </div>
     </div>
@@ -75,13 +79,6 @@
                 <img src="logotipo.png" alt="" />
             </h1>
 
-            <div id="main-search" class="form--search">
-                <form action="/pesquisar" name="main-search" role="search">
-                    <label for="main-search-term">Palavra-chave</label>
-                    <input type="search" name="q" autocomplete="off" id="main-search-term" placeholder="digite aqui"><input type="submit" value="Buscar">
-                    <div><img src="https://www.google.com/cse/images/google_custom_search_smwide.gif" alt="Google"></div>
-                </form>
-            </div>
 
         </div>
     </div>
@@ -111,22 +108,28 @@
                 <div class="grid__item  percentage-grid--2-3">
                     <div class="wrapper" style="padding-right: 60px;">
                         <div class="grid__container  mpms-news ">
-                            <div class="grid__item  percentage-grid--50">
+                            <div class="grid__item  percentage-grid--100">
                                 <div class="wrapper">
-                                    <img src="http://www.mpms.mp.br/portal/imagens/image5653.jpg" style="width: 100%">
+                                    <div class="mpms-news__item">
+                                        <div class="mpms-news__figure">
+                                            <img src="http://www.mpms.mp.br/portal/imagens/image5653.jpg" style="width: 100%">
+                                        </div>
                                     <!--<img src="http://i1.kym-cdn.com/photos/images/original/000/002/080/mmm_pizza.gif" style="width: 100%">-->
-                                    <h3>Procurador-Geral de Justiça do Estado recebe a visita do futuro Defensor Público-Geral do Estado</h3>
-                                    <!--<p>O Procurador-Geral de Justiça do Estado de Mato Grosso do Sul, Humberto de Matos Brittes, recebeu, na tarde de segunda-feira (1º/6), a visita do Defensor Público Luciano Montalli, que na oportunidade formalizou convite para a sua posse no cargo de Defensor Público-Geral do Estado para o biênio 2015/2017. Leia mais...</p>-->
+                                        <div class="mpms-news__labels">
+                                            <h3 class="mpms-news__title">Procurador-Geral de Justiça do Estado recebe a visita do futuro Defensor Público-Geral do Estado</h3>
+                                            <p class="mpms-news__description">O Procurador-Geral de Justiça do Estado de Mato Grosso do Sul, Humberto de Matos Brittes, recebeu, na tarde de segunda-feira (1º/6), a visita do Defensor Público Luciano Montalli, que na oportunidade formalizou convite para a sua posse no cargo de Defensor Público-Geral do Estado para o biênio 2015/2017. Leia mais...</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="grid__item  percentage-grid--50">
+                            <!--<div class="grid__item  percentage-grid&#45;&#45;50">
                                 <div class="wrapper">
                                     <img src="http://www.mpms.mp.br/portal/imagens/image5650.jpg" style="width: 100%;">
-                                    <!--<img src="http://i.imgur.com/AEj7sPm.gif" style="width: 100%;">-->
-                                    <h3>Procuradora de Justiça prestigia abertura de evento em comemoração ao Mês do Meio Ambiente</h3>
-                                    <!--<p>Na segunda-feira (1º/6) foi realizada, no Auditório do Instituto de Meio Ambiente de Mato Grosso do Sul (Imasul), a abertura da extensa agenda em comemoração ao Mês do Meio Ambiente. Com a participação do governador Reinaldo Azambuja, foram entregues licenças ambientais, bem como assinada a autorização para aquisição de bens...</p>-->
+                                    &lt;!&ndash;<img src="http://i.imgur.com/AEj7sPm.gif" style="width: 100%;">&ndash;&gt;
+                                    <h3 class="mpms-news__title">Procuradora de Justiça prestigia abertura de evento em comemoração ao Mês do Meio Ambiente</h3>
+                                    <p class="mpms-news__description">Na segunda-feira (1º/6) foi realizada, no Auditório do Instituto de Meio Ambiente de Mato Grosso do Sul (Imasul), a abertura da extensa agenda em comemoração ao Mês do Meio Ambiente. Com a participação do governador Reinaldo Azambuja, foram entregues licenças ambientais, bem como assinada a autorização para aquisição de bens...</p>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="grid__item  percentage-grid--100">
                                 <div class="widget  wrapper">
                                     <h2 class="widget__title"><span class="caption">Mais destaques</span></h2>
@@ -185,9 +188,9 @@
                             <h2 class="widget__title"><span class="caption">Diário Oficial</span></h2>
 
                             <div class="media-item  icon-item">
-                                <div class="media__subject  spacing-right">
+                                <div class="media__subject">
                                     <!--<img src="https://diariomunicipal.org/static/img/icons/apple-touch-icon-144x144.png" alt="Diário Oficial" height="64" />-->
-                                    <ins class="fa  fa-4x  fa-file-text"></ins>
+                                    <ins class="fa  fa-4x  fa-file-text-o"></ins>
                                 </div>
                                 <div class="media__content">
                                     <p>Publicação Nº 1059</p>
@@ -220,32 +223,32 @@
                                 </li>
                             </ul>
                             <div class="footnotes">
-                                <p><strong>Fonte:</strong> Dados de 01/01/2015 até 15/06/2015 @ 09:00:09</p>
+                                <p class="footnotes__note"><strong>Fonte:</strong> Dados de 01/01/2015 até 15/06/2015 @ 09:00:09</p>
                             </div>
                         </div>
                         <div class="widget" id="area-cidadao">
                             <h3 class="widget__title"><span class="caption">Cidadão</span></h3>
                             <ul class="icon-list">
                                 <li class="list__item">
-                                    <div class="icon__img  media__subject  spacing-right"><img width="60" src="../temp/system-entidades-big-icon.png" alt=""/></div>
+                                    <div class="icon__img  media__subject"><img width="60" src="../temp/system-entidades-big-icon.png" alt=""/></div>
                                     <div class="icon__caption  media__content"><span class="caption">Lei de Acesso a Informação (LAI)</span></div>
                                 </li>
                                 <li class="list__item">
-                                    <div class="icon__img  media__subject  spacing-right"><img width="60" src="../temp/system-sd-big-icon.png" alt=""/></div>
+                                    <div class="icon__img  media__subject"><img width="60" src="../temp/system-sd-big-icon.png" alt=""/></div>
                                     <div class="icon__caption  media__content">
                                         <span class="caption">Lei de Responsabilidade Fiscal (LRF)</span>
                                     </div>
                                 </li>
                                 <li class="list__item">
-                                    <div class="icon__img  media__subject  spacing-right"><img width="60" src="../temp/system-simp-big-icon.png" alt=""/></div>
+                                    <div class="icon__img  media__subject"><img width="60" src="../temp/system-simp-big-icon.png" alt=""/></div>
                                     <div class="icon__caption  media__content"><span class="caption">Ouvidoria</span></div>
                                 </li>
                                 <li class="list__item">
-                                    <div class="icon__img  media__subject  spacing-right"><img width="60" src="../temp/system-spo-big-icon.png" alt=""/></div>
+                                    <div class="icon__img  media__subject"><img width="60" src="../temp/system-spo-big-icon.png" alt=""/></div>
                                     <div class="icon__caption  media__content"><span class="caption">Entidades Beneficiárias - TAC</span></div>
                                 </li>
                                 <li class="list__item">
-                                    <div class="icon__img  media__subject  spacing-right"></div>
+                                    <div class="icon__img  media__subject"></div>
                                     <div class="icon__caption  media__content"><span class="caption">Consulta de Procedimentos</span></div>
                                 </li>
                             </ul>

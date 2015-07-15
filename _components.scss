@@ -8,7 +8,7 @@
     .widget__title {
         font: {
             size: 87.5%;
-            weight: 700;
+            weight: $font-feature-weight;
         }
         letter-spacing: 0;
         margin-bottom: $internal-spacing;
@@ -38,17 +38,21 @@
 @mixin button-like($foreground: $color-primary, $background: $color-inverted, $border: 'normal') {
 
     &, &:visited {
+
         @if $border == 'no-border' {
             border-color: $background;
         }
         @else {
             border-color: $foreground;
         }
-
         background-color: $background;
         color: $foreground;
+
     }
+
+
     &:focus, &:hover {
+
         @if $border == 'no-border' {
             border-color: lighten($background, 15);
         }
@@ -60,6 +64,40 @@
         outline: none;
 
     }
+
+}
+
+@mixin button-like-style($text-color: $color-primary, $background-color: $color-inverted, $border: 'normal') {
+
+    &, &:visited {
+
+        @if $border == 'no-border' {
+            border-color: $background;
+        }
+        @else {
+            border-color: $foreground;
+        }
+        background-color: $background;
+        color: $foreground;
+
+    }
+
+
+    &:focus, &:hover {
+
+        @if $border == 'no-border' {
+            border-color: lighten($background, 15);
+        }
+        @else {
+            border-color: lighten($foreground, 15);
+        }
+        background-color: lighten($background, 15);
+        color: lighten($foreground, 15);
+        outline: none;
+
+    }
+
+    @content;
 
 }
 
@@ -142,7 +180,7 @@
 }
 
     .tab__caption {
-        @include small-uppercase-title;
+        @include small-uppercase-title($font-heading-weight);
         color: $color-label;
         padding: .3em 1em;
     }
@@ -220,6 +258,9 @@
 }
 
 
+
+
+
 /*---------------------------*\
    #LISTS
 \*---------------------------*/
@@ -236,6 +277,7 @@
 
     .media__subject, .def__title {
         float: left;
+        margin-right: $internal-spacing;
     }
 
     .def-list__item {
@@ -270,10 +312,6 @@
 
 }
 
-    .button--inverted {
-        @include button-like($color-inverted, $color-primary, 'no-border');
-    }
-
     .button--success {
         @include button-like($color-success);
     }
@@ -288,6 +326,27 @@
 
     .button--neutral {
         @include button-like($color-label);
+    }
+
+    .button--inverted {
+        @include button-like($color-inverted, $color-primary, 'no-border');
+
+        &.button--success {
+            @include button-like($color-inverted, $color-success, 'no-border');
+        }
+
+        &.button--error {
+            @include button-like($color-inverted, $color-error, 'no-border');
+        }
+
+        &.button--warning {
+            @include button-like($color-inverted, $color-warning, 'no-border');
+        }
+
+        &.button--neutral {
+            @include button-like($color-inverted, $color-label, 'no-border');
+        }
+
     }
 
     .button--block {
@@ -306,4 +365,80 @@ hr {
     height: 0;
     border: none;
     border-top: $border-default-setting;
+}
+
+
+form {
+
+}
+
+
+/* #TABLE */
+.table {
+
+}
+
+
+
+
+/* #Calendar Components */
+
+
+.calendar {
+
+    &__month-name {
+        line-height: 2;
+        @include small-uppercase-title($font-heading-weight);
+        font-size: 100%;
+    }
+
+    &__week-day {
+        width: percentage(1/70);
+        @include small-uppercase-title();
+        padding: 1em 0;
+    }
+
+    &__day, &__day > .caption, &__week-day > .caption { text-align: center; }
+
+    &__day > .caption, &__week-day > .caption {
+        display: block;
+        padding-bottom: .7em;
+        padding-top:    .7em;
+    }
+
+}
+
+
+/*TODO reposition this selector */
+.date-list .media-item {
+    margin-bottom: $internal-spacing/2;
+}
+
+
+.calendar-like {
+
+}
+
+
+.calendar-like {
+
+    background: lighten($color-neutral, 15);
+    color: $body-text-color;
+    text-align: center;
+
+    &__day,
+    &__month {
+        padding: $internal-spacing/4 $internal-spacing/2;
+    }
+
+    &__day {
+        background: $color-label;
+        color: $color-inverted;
+        font-size: 125%;
+    }
+
+    &__month {
+        @include small-uppercase-title();
+    }
+
 }

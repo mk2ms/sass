@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="top-of-the-page" class="header  page__header">
+    <div id="utility-bar" class="row solid-box--half">
+        <div class="size--1 center-container">
+
+            <div id="accessibility-panel" class="toolbar" role="toolbar">
+                <a href="/mapa-do-site" class="button" role="button">
+                    <ins class="fa  fa-sitemap"></ins>
+                    <span class="caption">Mapa do Site</span>
+                </a>
+                <ins class="separator" role="separator" aria-hidden="true"></ins>
+                <!--                <button id="accessibility-fontSizeUp" title="Aumentar o tamanho do texto">
+                                    <ins class="fa  fa-font"></ins>
+                                    <ins class="fa  fa-plus"></ins>
+                                </button>
+                                <button id="accessibility-fontSizeDown" title="Diminuir o tamanho do texto">
+                                    <ins class="fa  fa-font"></ins>
+                                    <ins class="fa  fa-minus"></ins>
+                                </button>-->
+                <button id="accessibility-highContrast" title="Modo alto contraste">
+                    <ins class="fa  fa-adjust"></ins>
+                    <span class="caption">Alto contraste</span>
+                </button>
+            </div>
+
+            <!--            <div id="social-media-panel" class="toolbar" role="toolbar">
+                            <a href="/contato" class="button" role="button">
+                                <ins class="fa  fa-envelope"></ins>
+                                <span class="caption">Fale Conosco</span>
+                            </a>
+                            <ins class="separator" role="separator" aria-hidden="true"></ins>
+                            <a href="/facebook" class="button suppressed-caption" role="button" title="Facebook">
+                                <ins class="fa  fa-facebook-official"></ins>
+                                <span class="caption">Facebook</span>
+                            </a>
+                            <a href="/twitter" class="button suppressed-caption" role="button" title="Twitter">
+                                <ins class="fa  fa-twitter"></ins>
+                                <span class="caption">Twitter</span>
+                            </a>
+                            <a href="/youtube" class="button suppressed-caption" role="button" title="Youtube">
+                                <ins class="fa  fa-youtube"></ins>
+                                <span class="caption">Youtube</span>
+                            </a>
+                        </div>-->
+            <div id="main-search" class="form--search">
+                <form action="/pesquisar" name="main-search" role="search" class="search__main-form">
+                    <label for="main-search-term" title="Palavra-chave" aria-label="Palavra-chave"><ins class="fa fa-search"></ins></label>
+                    <input type="search" name="q" autocomplete="off" id="main-search-term" size="25" placeholder="digite aqui" class="search__keyword"><button type="submit" class="button  button--neutral  button--inverted">Buscar</button>
+                </form>
+                <div class="search__powered-by-google"><img src="https://www.google.com/cse/images/google_custom_search_smwide.gif" alt="Google"></div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="size--1  center-container" id="nav-access-keys">
+            <div class="toolbar" role="toolbar">
+                <a href="#main-content" accesskey="1">Ir para o conteúdo <span class="hotkey">Alt</span>+<span class="hotkey">1</span></a>
+                <a href="#main-menu" accesskey="2">Ir para o menu <span class="hotkey">2</span></a>
+                <a href="#main-search" accesskey="3">Ir para a busca <span class="hotkey">3</span></a>
+                <a href="#main-footer" accesskey="4">Ir para o rodapé <span class="hotkey">4</span></a>
+            </div>
+        </div>
+        <div class="vertical-spacing--2x  size--1  center-container">
+            <h1>
+                <img src="logotipo.png" alt="" />
+            </h1>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row  slot-nav">
+    <div role="navigation">
+        <!--<nav></nav>-->
+        <ul class="main-nav  nav" role="menubar">
+            <li class="nav__item  first-level  nav-root  nav__current" role="menuitem"><span class="nav__caption">Principal</span></li>
+            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#2">Institucional</a></li>
+            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#3">Procuradorias</a></li>
+            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#4">Promotorias</a></li>
+            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#5">Atos e Normas</a></li>
+            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#6">Licitação</a></li>
+            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#7">Links</a></li>
+            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#8">Intranet</a></li>
+            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><span class="nav__caption">Mais</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row  slot-breadcrumb">
+    <div class="breadcrumb  center-container size--1" aria-label="breadcrumbs" role="navigation">
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="main-breadcrumb  nav">
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb__item  nav__item  breadcrumb__root" rel="index up">
+                <a itemprop="name" href="/main/" class="nav__caption">Principal</a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb__item  nav__item" rel="up">
+                <a itemprop="name" href="/promotorias/" class="nav__caption">Promotorias</a>
+                <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumb__item  nav__item  nav__current">
+                <span itemprop="name" class="nav__caption">Campo Grande</span>
+                <meta itemprop="position" content="3" />
+            </li>
+        </ol>
+    </div>
+</div>
+
+
+<div class="row  page__section">
+    <div class="size--1 center-container" id="main-content" role="main">
+
+
+        <h2 class="section__title">Promotorias</h2>
+        <h3>Lista de comarcas</h3>
+        <div class="grid__container  vertical-spacing--2x">
+            <div class="grid__item percentage-grid--1-4">
+                <div class="wrapper">
+                    <div class="widget">
+                        <h3 class="widget__title">Exibir</h3>
+
+
+                        <form action="">
+                            <label for="q-promotorias-keyword">Buscar Promotoria</label>
+                            <input type="text" name="q-promotorias-keyword" id="q-promotorias-keyword" />
+                            <select name="q-promotorias-by">
+                                <option value="1">por nome de promotor</option>
+                                <option value="2">por nome de comarca</option>
+                            </select>
+                        </form>
+
+                        <div class="action-bar  vertical-spacing">
+                            <a href="sdasd" class="button"><ins class="fa  fa-map-marker  spacing-right"></ins>Mapa de Comarcas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid__item  percentage-grid--3-4">
+                <div class="wrapper">
+                    <div class="grid__container">
+                        <div class="grid__item percentage-grid--1-3">
+                            <div class="wrapper">
+                                <h4>Primeira Entrância</h4>
+                                <ul>
+                                    <li>labsdabsdlasd[]asdi</li>
+                                    <li>asd</li>
+                                    <li>asdasdasda</li>
+                                    <li>sfsdf</li>
+                                    <li>sddfgdf gdf gdfh</li>
+                                    <li>fghfgh fg</li>
+                                    <li>jfgj ghjghj</li>
+                                    <li> 234</li>
+                                    <li>2342342 sdf</li>
+                                    <li>f sdf</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="grid__item percentage-grid--1-3">
+                            <div class="wrapper">
+                                <h4>Segunda Entrância</h4>
+                                <ul>
+                                    <li>labsdabsdlasd[]asdi</li>
+                                    <li>asd</li>
+                                    <li>asdasdasda</li>
+                                    <li>sfsdf</li>
+                                    <li>sddfgdf gdf gdfh</li>
+                                    <li>fghfgh fg</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="grid__item percentage-grid--1-3">
+                            <div class="wrapper">
+                                <h4>Entrância Especial</h4>
+                                <ul>
+                                    <li>labsdabsdlasd[]asdi</li>
+                                    <li>asd</li>
+                                    <li>asdasdasda</li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
