@@ -36,27 +36,6 @@
   margin-top: 40px;
   margin-bottom: 40px; }
 
-.horizontal-alignment--right {
-  text-align: right; }
-
-.spacing-right--half {
-  margin-right: 10px; }
-
-.spacing-right {
-  margin-right: 20px; }
-
-.spacing-right--2x {
-  margin-right: 40px; }
-
-.spacing-left--half {
-  margin-left: 10px; }
-
-.spacing-left {
-  margin-left: 20px; }
-
-.spacing-left--2x {
-  margin-left: 40px; }
-
 .page__section {
   margin-top: 80px;
   margin-bottom: 80px; }
@@ -70,18 +49,6 @@
 
 .action-bar {
   margin-top: 1.5em; }
-
-/*---------------------------*\
-   #UTILITIES
-\*---------------------------*/
-.pull-right {
-  float: right; }
-
-.pull-left {
-  float: left; }
-
-.full-wide {
-  width: 100%; }
 
 /**
  * Grid Mechanism
@@ -216,18 +183,47 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   margin: 0; }
 
-.article, article {
+.article {
   word-spacing: 0; }
-  .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, article h1, article h2, article h3, article h4, article h5, article h6 {
+  .article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
     margin: 2em 0 .8em 0; }
-    .article h1:first-child, .article h2:first-child, .article h3:first-child, .article h4:first-child, .article h5:first-child, .article h6:first-child, article h1:first-child, article h2:first-child, article h3:first-child, article h4:first-child, article h5:first-child, article h6:first-child {
+    .article h1:first-child, .article h2:first-child, .article h3:first-child, .article h4:first-child, .article h5:first-child, .article h6:first-child {
       margin-top: 0; }
 
-.reading-mode.article, .reading-mode article {
+.reading-mode .article, .reading-mode article {
   font-family: "Crimson Text", Georgia, Times, serif;
-  font-size: 112.5%;
   word-spacing: .1em; }
-  .reading-mode.article p, .reading-mode article p {
+  .reading-mode .article--news__heading, .reading-mode article--news__heading {
+    text-align: center;
+    margin-bottom: 60px; }
+  .reading-mode .article--news__subject, .reading-mode article--news__subject {
+    font-size: 75%;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    font-size: 81.25%;
+    letter-spacing: .4em;
+    white-space: nowrap;
+    position: relative; }
+  .reading-mode .article--news__title, .reading-mode article--news__title {
+    font-size: 240%;
+    line-height: 1;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 1em; }
+  .reading-mode .article--news__summary, .reading-mode article--news__summary {
+    font-style: italic; }
+  .reading-mode .article--news__dateline, .reading-mode article--news__dateline {
+    display: inline-block;
+    clear: both;
+    border-top: 1px solid #e6e6e6;
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    color: #C7C8CA;
+    padding: 1em; }
+  .reading-mode .article__body, .reading-mode article__body {
+    font-size: 112.5%; }
+  .reading-mode .article p, .reading-mode article p {
     margin: 0 0 1.4em;
     line-height: 1.4; }
 
@@ -269,16 +265,14 @@ h6 {
     margin-bottom: 1em;
     line-height: 1.2; }
 
-/*
-.first-paragraph::first-letter {
+/*.first-paragraph::first-letter {
     float: left;
-    font-size: 450%;
+    font-size: 400%;
     line-height: .9;
     padding-right: .5ex;
-    font-family: $font-secondary;
+    //font-family: $font-secondary;
     font-weight: $font-feature-weight;
-}
-*/
+}*/
 .section__title {
   font-weight: 800; }
 .section__sub-sub-title {
@@ -433,7 +427,7 @@ h6 {
   overflow: hidden;
   font-size: 92%; }
 
-.button, button {
+.button {
   display: inline-block;
   border: 1px solid;
   font-weight: 600;
@@ -442,11 +436,11 @@ h6 {
   padding: .65em .8em;
   text-decoration: none;
   text-align: center; }
-  .button, .button:visited, button, button:visited {
+  .button, .button:visited {
     border-color: #009DDC;
     background-color: #fff;
     color: #009DDC; }
-  .button:focus, .button:hover, button:focus, button:hover {
+  .button:focus, .button:hover {
     border-color: #2ac2ff;
     background-color: white;
     color: #2ac2ff;
@@ -541,12 +535,17 @@ h6 {
 .button--block {
   display: block; }
 
-.button--transparent, #utility-bar .button, #utility-bar button {
+.button--transparent, #utility-bar .button, #utility-bar button, .button--transparent:hover, #utility-bar .button:hover, #utility-bar button:hover, .button--transparent:focus, #utility-bar .button:focus, #utility-bar button:focus {
   background-color: transparent; }
 
-.button--borderless, #utility-bar .button, #utility-bar button {
+.button--borderless, #utility-bar .button, #utility-bar button, .button--borderless:hover, #utility-bar .button:hover, #utility-bar button:hover, .button--borderless:focus, #utility-bar .button:focus, #utility-bar button:focus {
   border-color: transparent; }
 
+/*
+.button:hover, button:hover, .button, button {
+    transition: all 100ms linear;
+}
+*/
 hr {
   height: 0;
   border: none;
@@ -615,6 +614,39 @@ hr {
 
 .text--huge {
   font-size: 400%; }
+
+/*---------------------------*\
+   #UTILITIES
+\*---------------------------*/
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.full-wide {
+  width: 100%; }
+
+.horizontal-alignment--right {
+  text-align: right; }
+
+.spacing-right--half {
+  margin-right: 10px; }
+
+.spacing-right {
+  margin-right: 20px; }
+
+.spacing-right--2x {
+  margin-right: 40px; }
+
+.spacing-left--half {
+  margin-left: 10px; }
+
+.spacing-left {
+  margin-left: 20px; }
+
+.spacing-left--2x {
+  margin-left: 40px; }
 
 body {
   background: #fff;
@@ -721,5 +753,22 @@ a {
 .search__powered-by-google {
   margin-top: 10px;
   text-align: right; }
+
+/* Footer*/
+.organization__info {
+  padding: 40px 0; }
+
+.place__name {
+  font-weight: 800; }
+
+address {
+  font-style: normal; }
+
+.footer__main-logotype {
+  width: 70%; }
+
+.slot-institutional,
+.slot-social-media {
+  border-top: 1px solid #e6e6e6; }
 
 /*# sourceMappingURL=style.css.map */

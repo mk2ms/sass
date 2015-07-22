@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-.article, article {
+.article {
     word-spacing: 0;
 
     h1, h2, h3, h4, h5, h6 {
@@ -51,10 +51,58 @@ h1, h2, h3, h4, h5, h6 {
 
 .reading-mode {
 
-    &.article, article {
+    .article, article {
         font-family: $font-secondary;
-        font-size: 112.5%;
         word-spacing: .1em;
+
+        &--news {
+
+            &__heading {
+                text-align: center;
+                margin-bottom: $internal-spacing*3;
+            }
+
+            &__subject {
+                @include small-uppercase-title(800);
+                font: {
+                    family: $font-primary;
+                    size: 81.25%;
+                }
+                letter-spacing: .4em;
+                white-space: nowrap;
+                position: relative;
+            }
+
+            &__title {
+                font-size: 240%;
+
+                line-height: 1;
+                padding-left: 10%;
+                padding-right: 10%;
+                margin-top: 1em;
+            }
+
+            &__summary {
+                //font-size: 87.5%;
+                font-style: italic;
+
+            }
+
+            &__dateline {
+                @include inline-block-box();
+                clear: both;
+                border-top: $border-secondary-setting;
+                font-family: $font-primary;
+                color: $color-neutral;
+                padding: 1em;
+
+            }
+
+        }
+
+        &__body {
+            font-size: 112.5%;
+        }
 
         p {
             margin: 0 0 1.4em;
@@ -108,16 +156,14 @@ h6 {
 
 }
 
-/*
-.first-paragraph::first-letter {
+/*.first-paragraph::first-letter {
     float: left;
-    font-size: 450%;
+    font-size: 400%;
     line-height: .9;
     padding-right: .5ex;
-    font-family: $font-secondary;
+    //font-family: $font-secondary;
     font-weight: $font-feature-weight;
-}
-*/
+}*/
 
 
 .section {

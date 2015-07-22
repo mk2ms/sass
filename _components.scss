@@ -297,7 +297,8 @@
 
 
 //TODO move to the 'base' section
-.button, button {
+.button {
+
     @include inline-block-box();
     @include button-like($color-primary, $color-inverted);
     border: 1px solid;
@@ -354,12 +355,22 @@
     }
 
     .button--transparent {
-        background-color:   transparent;
+        &, &:hover, &:focus {
+            background-color:   transparent;
+        }
     }
 
     .button--borderless {
-        border-color:       transparent;
+        &, &:hover, &:focus {
+            border-color:       transparent;
+        }
     }
+
+    /*
+    .button:hover, button:hover, .button, button {
+        transition: all 100ms linear;
+    }
+    */
 
 hr {
     height: 0;
