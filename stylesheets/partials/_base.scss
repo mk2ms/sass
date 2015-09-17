@@ -1,0 +1,28 @@
+/**************
+ * Function to convert 'pixel unit' font size into 'em size/percentage' based on the project variable $font-base-size
+ *
+ * Usage:
+ *      em(<font-size>)
+ * ex:  font-size: em(20);
+ * results:
+ *      font-size: 125%;       // if $font-base-size is set 16px
+ *
+*/
+$fn-base-size: $font-base-size / 1px;
+@function em($pixels, $context: $fn-base-size) {
+    @return #{$pixels/$context * 100%};
+}
+
+
+
+
+
+@mixin primary-inverted {
+    background: $color-primary;
+    color: $color-inverted;
+}
+
+@mixin label-inverted {
+    background: $color-label;
+    color: $color-inverted;
+}

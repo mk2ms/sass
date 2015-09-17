@@ -1,362 +1,288 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="pt-br">
+  <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title></title>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
-    <!--<link href='http://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>-->
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<div id="top-of-the-page" class="header  page__header">
-    <div id="utility-bar" class="row solid-box--half">
-        <div class="size--1 center-container">
-
-            <div id="accessibility-panel" class="toolbar" role="toolbar">
-                <a href="/mapa-do-site" class="button" role="button">
-                    <ins class="fa  fa-sitemap"></ins>
-                    <span class="caption">Mapa do Site</span>
-                </a>
-                <ins class="separator" role="separator" aria-hidden="true"></ins>
-<!--                <button id="accessibility-fontSizeUp" title="Aumentar o tamanho do texto">
-                    <ins class="fa  fa-font"></ins>
-                    <ins class="fa  fa-plus"></ins>
-                </button>
-                <button id="accessibility-fontSizeDown" title="Diminuir o tamanho do texto">
-                    <ins class="fa  fa-font"></ins>
-                    <ins class="fa  fa-minus"></ins>
-                </button>-->
-                <button id="accessibility-highContrast" title="Modo alto contraste">
-                    <ins class="fa  fa-adjust"></ins>
-                    <span class="caption">Alto contraste</span>
-                </button>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/vendor/normalize.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+      <title> Diário Oficial  - Minist&eacute;rio P&uacute;blico de Mato Grosso do Sul</title>
+  </head>
+  <body>
+      <div id="top-of-the-page" class="header page__header">
+        <div id="utility-bar" class="row solid-box--half viewport-framing">
+          <div class="center-container">
+            <div id="accessibility-panel" role="toolbar" class="toolbar"><a href="/mapa-do-site" class="button"><ins class="fa fa-sitemap spacing-right--half"></ins><span class="caption">Mapa do Site</span></a><ins aria-hidden class="separator"></ins>
+              <button id="accessibility-highContrast" title="Modo alto contraste" class="button"><ins class="fa fa-adjust spacing-right--half"></ins><span class="caption">Alto contraste</span></button>
             </div>
-
-<!--            <div id="social-media-panel" class="toolbar" role="toolbar">
-                <a href="/contato" class="button" role="button">
-                    <ins class="fa  fa-envelope"></ins>
-                    <span class="caption">Fale Conosco</span>
-                </a>
-                <ins class="separator" role="separator" aria-hidden="true"></ins>
-                <a href="/facebook" class="button suppressed-caption" role="button" title="Facebook">
-                    <ins class="fa  fa-facebook-official"></ins>
-                    <span class="caption">Facebook</span>
-                </a>
-                <a href="/twitter" class="button suppressed-caption" role="button" title="Twitter">
-                    <ins class="fa  fa-twitter"></ins>
-                    <span class="caption">Twitter</span>
-                </a>
-                <a href="/youtube" class="button suppressed-caption" role="button" title="Youtube">
-                    <ins class="fa  fa-youtube"></ins>
-                    <span class="caption">Youtube</span>
-                </a>
-            </div>-->
             <div id="main-search" class="form--search">
-                <form action="/pesquisar" name="main-search" role="search" class="search__main-form">
-                    <label for="main-search-term" title="Palavra-chave" aria-label="Palavra-chave"><ins class="fa fa-search"></ins></label>
-                    <input type="search" name="q" autocomplete="off" id="main-search-term" size="25" placeholder="digite aqui" class="search__keyword"><button type="submit" class="button  button--neutral  button--inverted">Buscar</button>
-                </form>
-                <div class="search__powered-by-google"><img src="https://www.google.com/cse/images/google_custom_search_smwide.gif" alt="Google"></div>
+              <form action="/pesquisar" name="main-search" role="search" class="search__main-form">
+                <label title="Palavra-chave" for="main-search-term" aria-label="Palavra-chave"><ins class="fa fa-search"></ins></label>
+                <input id="main-search-term" type="search" name="q" autocomplete="off" size="25" placeholder="digite aqui" class="search__keyword">
+                <button type="submit" class="button button--neutral button--inverted">Buscar</button>
+              </form>
+              <!--.search__powered-by-googleimg(src="https://www.google.com/cse/images/google_custom_search_smwide.gif", alt="Google")
+              -->
             </div>
-
-
+          </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="size--1  center-container" id="nav-access-keys">
-            <div class="toolbar" role="toolbar">
-                <a href="#main-content" accesskey="1">Ir para o conteúdo <span class="hotkey">Alt</span>+<span class="hotkey">1</span></a>
-                <a href="#main-menu" accesskey="2">Ir para o menu <span class="hotkey">2</span></a>
-                <a href="#main-search" accesskey="3">Ir para a busca <span class="hotkey">3</span></a>
-                <a href="#main-footer" accesskey="4">Ir para o rodapé <span class="hotkey">4</span></a>
-            </div>
+        <div class="row viewport-framing">
+          <div id="nav-access-keys" class="center-container">
+            <div role="toolbar" class="toolbar"><a href="#main-content" accesskey="1">Ir para o conte�do<span class="hotkey">Alt+</span><span class="hotkey">1</span></a><a href="#main-menut" accesskey="2">Ir para para o menu<span class="hotkey">Alt+</span><span class="hotkey">2</span></a><a href="#main-searc" accesskey="3">Ir para para a busca<span class="hotkey">Alt+</span><span class="hotkey">3</span></a><a href="#main-footer" accesskey="4">Ir para para o rodap�<span class="hotkey">Alt+</span><span class="hotkey">4</span></a><a href="#breadcrumb" accesskey="b">Ir para para breadcrumb<span class="hotkey">Alt+</span><span class="hotkey">b</span></a></div>
+          </div>
         </div>
-        <div class="vertical-spacing--2x  size--1  center-container">
-            <h1>
-                <img src="logotipo.png" alt="" />
-            </h1>
-
-
+        <div class="viewport-framing vertical-spacing--2x center-container">
+          <h1 class="logotipo"><a href="." title="Ministério Público de Mato Grosso do Sul"><img src="logotipo.png" alt="Logotipo do Minist&amp;eacute;rio P&amp;uacute;blico de Mato Grosso do Sul" class="logotipo-src"></a></h1>
         </div>
-    </div>
-
-</div>
-<div class="row  slot-nav">
-    <div role="navigation">
-        <!--<nav></nav>-->
-        <ul class="main-nav  nav" role="menubar">
-            <li class="nav__item  first-level  nav-root  nav__current" role="menuitem"><span class="nav__caption">Principal</span></li>
-            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#2">Institucional</a></li>
-            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#3">Procuradorias</a></li>
-            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#4">Promotorias</a></li>
-            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#5">Atos e Normas</a></li>
-            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#6">Licitação</a></li>
-            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#7">Links</a></li>
-            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#8">Intranet</a></li>
-            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><span class="nav__caption">Mais</span></li>
-        </ul>
-    </div>
-</div>
-
-<div class="row  slot-breadcrumb">
-    <div class="breadcrumb  center-container size--1" aria-label="breadcrumbs" role="navigation">
-        <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="main-breadcrumb  nav">
-            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb__item  nav__item  breadcrumb__root" rel="index">
-                <a itemprop="name" href="/main/" class="nav__caption">Principal</a>
-                <meta itemprop="position" content="1" />
+      </div>
+      <div class="row slot-nav">
+        <div role="navigation">
+          <!--<nav></nav>-->
+          <ul class="main-nav  nav" role="menubar">
+          <li class="nav__item  first-level  nav-root" role="menuitem"><a href="/" class="nav__caption">Principal</a></li>
+          <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="/quem-somos">Institucional</a></li>
+          <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#">Procuradorias</a></li>
+          <li class="nav__item  first-level  nav__current" role="menuitem" aria-haspopup="true"><span class="nav__caption">Promotorias</span></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#5">Atos e Normas</a></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#6">Licita&ccedil;&atilde;o</a></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="/links">Links</a></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#8">Intranet</a></li>
+          <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><span class="nav__caption" tabindex="0">Mais</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row slot-breadcrumb">
+        <div id="breadcrumb" role="navigation" aria-label="breadcrumbs" class="breadcrumb">
+          <ol itemscope="" itemtype="http://schema.org/BreadcrumbList" class="main-breadcrumb nav">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" rel="index up" class="breadcrumb__item nav__item breadcrumb__root"><a itemprop="name" href="/main/" class="nav__caption">Principal</a>
+              <meta itemprop="position" content="1">
             </li>
-            <li class="breadcrumb__item  nav__item  nav__current">
-                <span itemprop="name" class="nav__caption">Diário Oficial</span>
-                <meta itemprop="position" content="2" />
+            <li class="breadcrumb__item nav__item nav__current"><span title="Diário Oficial" class="nav__caption">Diário Oficial</span>
+              <meta itemprop="position" content="2">
             </li>
-        </ol>
-    </div>
-</div>
-
-<div class="row  page__section">
-    <div class="size--1  center-container" id="main-content" role="main">
-
-
-        <h2 class="section__title">Diário Oficial</h2>
-
-        <div class="widget  solid-box  page__section--sub" style="background: #f2f2f2;">
-            <h3 class="widget__title">Última edição</h3>
-
-            <div class="media-item">
-                <div class="media__subject" style="margin-right: 20px; position: relative;">
-                    <div class="ins fa fa-calendar-o fa-4x"></div>
-                    <span style="position:absolute; top:16px; left:0; right:0; text-align: center; letter-spacing: -2px"><strong class="text--very-big">29</strong></span>
-                </div>
-                <div class="media__subject">
+          </ol>
+        </div>
+      </div>
+      <div class="row viewport-framing page__section page__section--magazine-like">
+        <div id="main-content" role="main" class="main-content--default">
+          <div class="page__title-container section__title-container--magazine-like">
+            <h2 class="section__title">Diário Oficial</h2>
+          </div>
+          <div class="page__content">
+            <div class="row">
+              <div style="background-color: #f2f2f2;" class="widget page__section--sub solid-box">
+                <h3 class="widget__title">Última edição</h3>
+                <div class="media-item">
+                  <div style="margin-right: 20px; position: relative;" class="media__subject"><ins class="fa fa-calendar-o fa-4x"></ins><span style="position:absolute; top:16px; left:0; right:0; text-align: center; letter-spacing: -2px"><strong class="text--very-big">29</strong></span></div>
+                  <div class="media__subject">
                     <p><time datetime="2015-06-29">29 de Junho de 2015</time></p>
                     <p>Edição <span class="publication-number">1076</span></p>
-                </div>
-                <div class="media__content  horizontal-alignment--right">
-                    <a href="/download/last-domp" class="button  button--inverted  button--neutral">
+                  </div>
+                  <div class="media__content horizontal-alignment--right">
+                      <a class="button button--neutral button--inverted" href="/download/last-domp">
                         <p class="button__caption"><ins class="fa  fa-download  spacing-right--half"></ins>Baixar arquivo</p>
                         <p><span class="text--small">(Tamanho: 1,34 MB)</span></p>
-                    </a>
+                        
+                      </a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-
-        <div class="grid__container">
-
-            <div class="grid__item percentage-grid--1-3">
+            <div class="grid__container">
+              <div class="grid__item percentage-grid--1-2">
                 <div class="wrapper">
-                    <div class="widget">
-                        <h3 class="widget__title">Recentes</h3>
-                        <ul class="date-list">
-                            <li class="media-item">
-                                <div class="media__subject">
-                                    <div class="calendar-like">
-                                        <div class="calendar-like__day">1</div>
-                                        <div class="calendar-like__month">Jul</div>
-                                    </div>
-                                </div>
-                                <div class="media__subject  ">
-                                    <p><strong>Edição 1076</strong></p>
-                                    <p class="text--very-small">(Tamanho: 1,42 MB)</p>
-                                </div>
-                                <div class="media__content  horizontal-alignment--right">
-                                    <a href="/domp/222" class="button  button--inverted">
-                                        <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="media-item">
-                                <div class="media__subject">
-                                    <div class="calendar-like">
-                                        <div class="calendar-like__day">30</div>
-                                        <div class="calendar-like__month">Jun</div>
-                                    </div>
-                                </div>
-                                <div class="media__subject">
-                                    <p><strong>Edição 1075</strong></p>
-                                    <p class="text--very-small">(Tamanho: 1,63 MB)</p>
-                                </div>
-                                <div class="media__content  horizontal-alignment--right">
-                                    <a href="/domp/222" class="button  button--inverted">
-                                        <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="media-item">
-                                <div class="media__subject">
-                                    <div class="calendar-like">
-                                        <div class="calendar-like__day">25</div>
-                                        <div class="calendar-like__month">Jun</div>
-                                    </div>
-                                </div>
-                                <div class="media__subject">
-                                    <p class="title"><strong>Edição 1074</strong></p>
-                                    <p class="text--very-small">(Tamanho: 1,87 MB)</p>
-                                </div>
-                                <div class="media__content  horizontal-alignment--right">
-                                    <a href="/domp/222" class="button  button--inverted">
-                                        <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="media-item">
-                                <div class="media__subject">
-                                    <div class="calendar-like">
-                                        <div class="calendar-like__day">24</div>
-                                        <div class="calendar-like__month">Jun</div>
-                                    </div>
-                                </div>
-                                <div class="media__subject">
-                                    <p><strong>Edição 1073</strong></p>
-                                    <p class="text--very-small">(Tamanho: 1,1 MB)</p>
-                                </div>
-                                <div class="media__content  horizontal-alignment--right">
-                                    <a href="/domp/222" class="button  button--inverted">
-                                        <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="media-item">
-                                <div class="media__subject">
-                                    <div class="calendar-like">
-                                        <div class="calendar-like__day">23</div>
-                                        <div class="calendar-like__month">Jun</div>
-                                    </div>
-                                </div>
-                                <div class="media__subject">
-                                    <p><strong>Edição 1072</strong></p>
-                                    <p class="text--very-small">(Tamanho: 1,42 MB)</p>
-                                </div>
-                                <div class="media__content  horizontal-alignment--right">
-                                    <a href="/domp/222" class="button  button--inverted">
-                                        <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="action-bar  vertical-spacing">
-                            <a href="sdasd" class="button"><ins class="fa  fa-list  spacing-right--half"></ins>Ver mais edições</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid__item percentage-grid--2-3">
-                <div class="wrapper">
-                    <div class="widget">
-                        <h3 class="widget__title">Calendário</h3>
-
-                        <div class="grid__container">
-                            <div class="grid__item percentage-grid--1-2">
-                                <div class="wrapper">
-                                    <table class="calendar__month">
-                                        <caption class="calendar__month-name">Dezembro</caption>
-                                        <thead class="calendar__week-names">
-                                        <tr>
-                                            <th class="calendar__week-day"><span class="caption" title="Domingo">Dom</span></th>
-                                            <th class="calendar__week-day"><span class="caption" title="Segunda-feira">Seg</span></th>
-                                            <th class="calendar__week-day"><span class="caption" title="Terça-feira">Ter</span></th>
-                                            <th class="calendar__week-day"><span class="caption" title="Quarta-feira">Qua</span></th>
-                                            <th class="calendar__week-day"><span class="caption" title="Quinta-feira">Qui</span></th>
-                                            <th class="calendar__week-day"><span class="caption" title="Sexta-feira">Sex</span></th>
-                                            <th class="calendar__week-day"><span class="caption" title="Sábado">Sáb</span></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody class="calendar__days">
-                                        <tr class="calendar__week">
-                                            <td class="calendar__day"><span class="caption"></span></td>
-                                            <td class="calendar__day"><span class="caption">1</span></td>
-                                            <td class="calendar__day"><span class="caption">2</span></td>
-                                            <td class="calendar__day"><span class="caption">3</span></td>
-                                            <td class="calendar__day"><span class="caption">4</span></td>
-                                            <td class="calendar__day"><span class="caption">5</span></td>
-                                            <td class="calendar__day"><span class="caption">6</span></td>
-                                        </tr>
-                                        <tr class="calendar__week">
-                                            <td class="calendar__day"><span class="caption">7</span></td>
-                                            <td class="calendar__day"><span class="caption">8</span></td>
-                                            <td class="calendar__day"><span class="caption  calendar__day--hasevent">9</span></td>
-                                            <td class="calendar__day"><span class="caption">10</span></td>
-                                            <td class="calendar__day"><span class="caption">11</span></td>
-                                            <td class="calendar__day"><span class="caption">12</span></td>
-                                            <td class="calendar__day"><span class="caption">13</span></td>
-                                        </tr>
-                                        <tr class=calendar__day="calendar__week">
-                                            <td class="calendar__day"><span class="caption">14</span></td>
-                                            <td class="calendar__day"><span class="caption">15</span></td>
-                                            <td class="calendar__day"><span class="caption">16</span></td>
-                                            <td class="calendar__day"><span class="caption">17</span></td>
-                                            <td class="calendar__day"><span class="caption">18</span></td>
-                                            <td class="calendar__day"><span class="caption">19</span></td>
-                                            <td class="calendar__day"><span class="caption">20</span></td>
-                                        </tr>
-                                        <tr class="calendar__week">
-                                            <td class="calendar__day"><span class="caption">21</span></td>
-                                            <td class="calendar__day"><span class="caption">22</span></td>
-                                            <td class="calendar__day"><span class="caption">23</span></td>
-                                            <td class="calendar__day"><span class="caption">24</span></td>
-                                            <td class="calendar__day"><span class="caption">25</span></td>
-                                            <td class="calendar__day"><span class="caption">26</span></td>
-                                            <td class="calendar__day"><span class="caption">27</span></td>
-                                        </tr>
-                                        <tr class="calendar__week">
-                                            <td class="calendar__day"><span class="caption">28</span></td>
-                                            <td class="calendar__day"><span class="caption">29</span></td>
-                                            <td class="calendar__day"><span class="caption">30</span></td>
-                                            <td class="calendar__day"><span class="caption"></span></td>
-                                            <td class="calendar__day"><span class="caption"></span></td>
-                                            <td class="calendar__day"><span class="caption"></span></td>
-                                            <td class="calendar__day"><span class="caption"></span></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="grid__item percentage-grid--1-2">
-                                <div class="wrapper">
-                                    <div class="widget  solid-box" style="background: #f2f2f2;">
-                                        <p><time datetime="2015-06-29">29 de Junho de 2015</time></p>
-                                        <p>Edição <span class="publication-number">1076</span></p>
-                                        <a href="/download/last-domp" class="button  button--block  button--inverted  text--normal">
-                                            <p class="button__caption"><ins class="fa  fa-download  spacing-right"></ins>Baixar arquivo</p>
-                                            <p><span class="text--small">(Tamanho: 1,34 MB)</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid__item  percentage-grid--100">
-                                <div class="wrapper">
-                                    <div class="action-bar">
-                                        <a href="" class="button"><ins class="fa  fa-calendar  spacing-right--half"></ins>Ver calendário completo</a>
-                                    </div>
-                                </div>
+                  <div class="widget">
+                    <h3 class="widget__title">Recentes</h3>
+                    <ul class="date-list">
+                      <li class="media-item">
+                        <div class="media__subject">
+                            <div class="calendar-like">
+                              <div class="calendar-like__day">1</div>
+                              <div class="calendar-like__month">Jul</div>
                             </div>
                         </div>
-
-
+                        <div class="media__subject">
+                          <p><strong>Edição 1076</strong></p>
+                          <p class="text--very-small">(Tamanho: 1,42 MB)</p>
+                        </div>
+                        <div class="media__content horizontal-alignment--right">
+                            <a class="button  button--inverted" href="/domp/222">
+                              <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
+                              
+                            </a>
+                        </div>
+                      </li>
+                      <li class="media-item">
+                        <div class="media__subject">
+                            <div class="calendar-like">
+                              <div class="calendar-like__day">30</div>
+                              <div class="calendar-like__month">Jun</div>
+                            </div>
+                        </div>
+                        <div class="media__subject">
+                          <p><strong>Edição 1075</strong></p>
+                          <p class="text--very-small">(Tamanho: 1,63 MB)</p>
+                        </div>
+                        <div class="media__content horizontal-alignment--right">
+                            <a class="button  button--inverted" href="/domp/222"><p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
+                            </a>
+                        </div>
+                      </li>
+                      <li class="media-item">
+                        <div class="media__subject">
+                            <div class="calendar-like">
+                              <div class="calendar-like__day">25</div>
+                              <div class="calendar-like__month">Jun</div>
+                            </div>
+                        </div>
+                        <div class="media__subject">
+                          <p class="title"><strong>Edição 1074</strong></p>
+                          <p class="text--very-small">(Tamanho: 1,87 MB)</p>
+                          
+                        </div>
+                        <div class="media__content horizontal-alignment--right">
+                            <a class="button  button--inverted" href="/domp/222"><p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
+                            </a>
+                        </div>
+                      </li>
+                      <li class="media-item">
+                        <div class="media__subject">
+                            <div class="calendar-like">
+                              <div class="calendar-like__day">24</div>
+                              <div class="calendar-like__month">Jun</div>
+                            </div>
+                        </div>
+                        <div class="media__subject">
+                          <p><strong>Edição 1073</strong></p>
+                          <p class="text--very-small">(Tamanho: 1,1 MB)</p>
+                        </div>
+                        <div class="media__content horizontal-alignment--right">
+                            <a class="button  button--inverted" href="/domp/222"><p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
+                            </a>
+                        </div>
+                      </li>
+                      <li class="media-item">
+                        <div class="media__subject">
+                            <div class="calendar-like">
+                              <div class="calendar-like__day">23</div>
+                              <div class="calendar-like__month">Jun</div>
+                            </div>
+                        </div>
+                        <div class="media__subject">
+                          <p><strong>Edição 1072</strong></p>
+                          <p class="text--very-small">(Tamanho: 1,42 MB)</p>
+                        </div>
+                        <div class="media__content horizontal-alignment--right">
+                            <a class="button  button--inverted" href="/domp/222">
+                              <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
+                              
+                            </a>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="action-bar vertical-spacing">
+                        <a class="button" href="sdasd"><ins class="spacing-right--half  fa  fa-list"></ins>Ver últimas 30 edições
+                        </a>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <div class="grid__item  percentage-grid--1-2">
+              </div>
+              <div class="grid__item percentage-grid--1-2">
                 <div class="wrapper">
-
+                  <table class="calendar__month">
+                  <caption class="calendar__month-name">Dezembro</caption>
+                  <thead class="calendar__week-names">
+                  <tr>
+                  <th class="calendar__week-day"><span class="caption" title="Domingo">Dom</span></th>
+                  <th class="calendar__week-day"><span class="caption" title="Segunda-feira">Seg</span></th>
+                  <th class="calendar__week-day"><span class="caption" title="Terça-feira">Ter</span></th>
+                  <th class="calendar__week-day"><span class="caption" title="Quarta-feira">Qua</span></th>
+                  <th class="calendar__week-day"><span class="caption" title="Quinta-feira">Qui</span></th>
+                  <th class="calendar__week-day"><span class="caption" title="Sexta-feira">Sex</span></th>
+                  <th class="calendar__week-day"><span class="caption" title="Sábado">Sáb</span></th>
+                  </tr>
+                  </thead>
+                  <tbody class="calendar__days">
+                  <tr class="calendar__week">
+                  <td class="calendar__day"><span class="caption"></span></td>
+                  <td class="calendar__day"><span class="caption">1</span></td>
+                  <td class="calendar__day"><span class="caption">2</span></td>
+                  <td class="calendar__day"><span class="caption">3</span></td>
+                  <td class="calendar__day"><span class="caption">4</span></td>
+                  <td class="calendar__day"><span class="caption">5</span></td>
+                  <td class="calendar__day"><span class="caption">6</span></td>
+                  </tr>
+                  <tr class="calendar__week">
+                  <td class="calendar__day"><span class="caption">7</span></td>
+                  <td class="calendar__day"><span class="caption">8</span></td>
+                  <td class="calendar__day"><span class="caption  calendar__day--hasevent">9</span></td>
+                  <td class="calendar__day"><span class="caption">10</span></td>
+                  <td class="calendar__day"><span class="caption">11</span></td>
+                  <td class="calendar__day"><span class="caption">12</span></td>
+                  <td class="calendar__day"><span class="caption">13</span></td>
+                  </tr>
+                  <tr class=calendar__day="calendar__week">
+                  <td class="calendar__day"><span class="caption">14</span></td>
+                  <td class="calendar__day"><span class="caption">15</span></td>
+                  <td class="calendar__day"><span class="caption">16</span></td>
+                  <td class="calendar__day"><span class="caption">17</span></td>
+                  <td class="calendar__day"><span class="caption">18</span></td>
+                  <td class="calendar__day"><span class="caption">19</span></td>
+                  <td class="calendar__day"><span class="caption">20</span></td>
+                  </tr>
+                  <tr class="calendar__week">
+                  <td class="calendar__day"><span class="caption">21</span></td>
+                  <td class="calendar__day"><span class="caption">22</span></td>
+                  <td class="calendar__day"><span class="caption">23</span></td>
+                  <td class="calendar__day"><span class="caption">24</span></td>
+                  <td class="calendar__day"><span class="caption">25</span></td>
+                  <td class="calendar__day"><span class="caption">26</span></td>
+                  <td class="calendar__day"><span class="caption">27</span></td>
+                  </tr>
+                  <tr class="calendar__week">
+                  <td class="calendar__day"><span class="caption">28</span></td>
+                  <td class="calendar__day"><span class="caption">29</span></td>
+                  <td class="calendar__day"><span class="caption">30</span></td>
+                  <td class="calendar__day"><span class="caption"></span></td>
+                  <td class="calendar__day"><span class="caption"></span></td>
+                  <td class="calendar__day"><span class="caption"></span></td>
+                  <td class="calendar__day"><span class="caption"></span></td>
+                  </tr>
+                  </tbody>
+                  </table>
+                  <div class="action-bar">
+                      <a class="button" href="/calendar"><ins class="spacing-right--half  fa  fa-calendar"></ins>Ver calendário completo
+                      </a>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!--<div class="widget">
-            <div class="widget__title">Visualizar por data</div>
-
-        </div>-->
-    </div>
-</div>
-<div class="grid__item  percentage-grid--1-3  sidebar" role="complementary">
-
-</div>
-</div>
-</div>
-
-</div>
-</body>
+      </div>
+      <div id="main-footer" class="row page__footer">
+        <div class="row slot-social-media">
+          <div class="viewport-framing center-container horizontal-alignment--right">
+            <div role="list" class="toolbar vertical-spacing"><a href="" role="link" class="button button--borderless button--transparent"><ins class="fa  fa-envelope"></ins> Fale Conosco</a><ins role="separator" aria-hidden="true" class="separator"></ins><a href="" role="link" class="button button--borderless button--transparent"><ins class="fa  fa-facebook-square"></ins> Facebook</a><a href="" role="link" class="button button--borderless button--transparent"><ins class="fa  fa-twitter"></ins> Twitter</a><a href="" role="link" class="button button--borderless button--transparent"><ins class="fa  fa-youtube-play"></ins> YouTube</a></div>
+          </div>
+        </div>
+        <div class="row slot-institutional">
+          <div class="viewport-framing center-container media-item organization__info">
+            <div class="institutional-info media__subject">
+              <p class="place__name">Procuradoria-Geral de Justi&ccedil;a do Estado de Mato Grosso do Sul</p>
+              <address class="place__address text--small">
+                <p><ins class="fa  fa-map-marker" aria-hidden="true"></ins> Rua Pres. Manuel Ferraz de Campos Salles, 214 - Jardim Veraneio - CEP 79031-907 - Campo Grande - MS</p>
+              </address>
+              <p class="place__telephone text--small"><ins class="fa  fa-phone" aria-hidden="true"></ins> Telefone: (67) 3318-2000</p>
+            </div>
+            <div class="team-info media__content text--small horizontal-alignment--right"><img src="logotipo.png" alt="Minist�rio P�blico de Mato Grosso do Sul" class="footer__main-logotype place__name">
+              <p class="place__name">Secretaria de Tecnologia da Informa&ccedil;&atilde;o - STI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
 </html>

@@ -1,0 +1,127 @@
+/*---------------------------*\
+   #TEXT
+\*---------------------------*/
+
+
+.text {
+
+    &--very-small, &--x-small {
+        font-size: 75%;
+    }
+
+    &--small {
+        font-size: 87.5%;
+    }
+
+    &--normal {
+        font-size: 100%;
+    }
+
+    &--big {
+        font-size: 150%;
+    }
+
+    &--very-big {
+        font-size: 225%;
+    }
+
+    &--huge {
+        font-size: 400%;
+    }
+
+    &--uppercase, &--allcaps {
+        text-transform: uppercase;
+    }
+
+    &--lowercase {
+        text-transform: lowercase;
+    }
+
+    &--capitalize {
+        text-transform: capitalize;
+    }
+
+    &--smallcaps {
+        font-variant: small-caps;
+    }
+
+    &--light {
+        font-weight: 400;
+    }
+
+    &--bold {
+        font-weight: $font-strong-weight;
+    }
+
+    &--no-underline {
+        text-decoration: none;
+    }
+}
+
+
+
+/*---------------------------*\
+   #UTILITIES
+\*---------------------------*/
+
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.full-wide,
+.any--full-wide { width: 100%; }
+
+
+.horizontal-alignment {
+
+    &--right {
+        text-align: right;
+    }
+
+    &--left {
+        text-align: left;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+}
+
+.spacing-right--half {
+    margin-right: $internal-spacing/2;
+}
+
+.spacing-right {
+    margin-right: $internal-spacing;
+}
+
+.spacing-right--2x {
+    margin-right: $internal-spacing*2;
+}
+
+.spacing-left--half {
+    margin-left: $internal-spacing/2;
+}
+
+.spacing-left {
+    margin-left: $internal-spacing;
+}
+
+.spacing-left--2x {
+    margin-left: $internal-spacing*2;
+}
+
+.any--full-wide {
+    box-sizing: border-box;
+    display: block;
+}
+
+.list--no-bullets {
+    list-style: none;
+}

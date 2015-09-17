@@ -1,0 +1,75 @@
+mixin button(params)
+    //- @icon       :   Font awesome icon name without the fa- prefix
+    //- @style      :   The button modifier (pre-defined ones: success, neutral, error, warning) can be anything else user-defined
+    //- @inverted   :   Can be true or false; adds inverted appearance to the button (background color turns inverse with the foreground)
+    //- @el         :   Use a for <a> and b for <button> (Default is 'a')
+    //- @href       :   !optional - pass an URL or anchor to use on the a.button
+    //- @type       :   Can be 'button', 'reset', 'submit' and is used only for <button> element
+    - params = params || {}
+    - var icon_class = 'fa'
+    - var button_style = params.style ? 'button--'+params.style : ''
+    - var icon = params.icon
+    - var element = 'a'
+
+    - if (params.el == 'b')
+        -   element = 'button'
+
+    - if (params.inverted == true)
+        -   button_style = button_style + ' button--inverted'
+
+    #{element}.button(class='#{button_style}')&attributes({ href: params.href, type: params.type })
+        - if (icon)
+            ins(class='spacing-right--half  #{icon_class}  #{icon_class}-#{icon}')
+        block
+
+
+
+mixin sectionStart
+    .row.viewport-framing.page__section(class=magazineLike == true ? 'page__section--magazine-like' : '')
+        #main-content.main-content--default(role="main")
+            - if (!suppressTitle)
+                .page__title-container(class=magazineLike == true ? 'section__title-container--magazine-like' : '')
+                    h2.section__title !{pageTitle}
+                    - if (titleComplement)
+                        !{titleComplement}
+            .page__content
+                block
+
+
+
+mixin tabList(id)
+    - var navName = id || 'main-content-tab';
+    .nav-tab(role="navigation")
+        ul.tab-list(role="tablist", id='#{navName}')
+            block
+
+
+mixin tabItem(tab_name, current)
+    - if (current == true)
+        li.nav__item.tab__item.nav__current(role="presentation")
+            a.nav__caption.tab__caption(id="#{tab_name}", role="tab", aria-controls="tab-#{tab_name}", aria-selected="true", href="#tab-#{tab_name}")
+                block
+    - else
+        li.nav__item.tab__item(role="presentation")
+            a.nav__caption.tab__caption(id="#{tab_name}", role="tab", aria-controls="tab-#{tab_name}", aria-selected="false", href="#tab-#{tab_name}")
+                block
+
+
+
+mixin person(given_name, family_name, occupation, photo_src, photo_alt)
+    .person__picture
+        img(src="#{photo_src}", alt="#{photo_alt}", style="width: 120px;")
+    .person__info
+        .person__name
+            | <span class="person__given-name">#{given_name}</span> <span class="person__family-name">#{family_name}</span>
+        .person__job-title
+            span #{occupation}
+
+
+
+mixin calendarLike(day, month)
+    - var _listOfMonths = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+    - var _month = _listOfMonths[month-1]
+    .calendar-like
+        .calendar-like__day #{day}
+        .calendar-like__month #{_month.substr(0,3)}

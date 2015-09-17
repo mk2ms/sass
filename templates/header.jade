@@ -1,0 +1,43 @@
+mixin makeHeader
+
+    #top-of-the-page.header.page__header
+        #utility-bar.row.solid-box--half.viewport-framing
+            .center-container
+                #accessibility-panel.toolbar(role="toolbar")
+                    a.button(href="/mapa-do-site", role=button)
+                        ins.fa.fa-sitemap.spacing-right--half
+                        span.caption Mapa do Site
+                    ins.separator(role=separator, aria-hidden=true)
+                    button#accessibility-highContrast.button(title="Modo alto contraste")
+                        ins.fa.fa-adjust.spacing-right--half
+                        span.caption Alto contraste
+                #main-search.form--search
+                    form.search__main-form(action="/pesquisar", name="main-search", role="search")
+                        label(title="Palavra-chave", for="main-search-term", aria-label="Palavra-chave")
+                            ins.fa.fa-search
+                        input#main-search-term.search__keyword(type="search", name="q", autocomplete="off", size="25", placeholder="digite aqui")
+                        button.button.button--neutral.button--inverted(type="submit") Buscar
+                    //.search__powered-by-google
+                        img(src="https://www.google.com/cse/images/google_custom_search_smwide.gif", alt="Google")
+        .row.viewport-framing
+            #nav-access-keys.center-container
+                .toolbar(role="toolbar")
+                    a(href="#main-content", accesskey="1") Ir para o conte�do
+                        span.hotkey Alt+
+                        span.hotkey 1
+                    a(href="#main-menut", accesskey="2") Ir para para o menu
+                        span.hotkey Alt+
+                        span.hotkey 2
+                    a(href="#main-searc", accesskey="3") Ir para para a busca
+                        span.hotkey Alt+
+                        span.hotkey 3
+                    a(href="#main-footer", accesskey="4") Ir para para o rodap�
+                        span.hotkey Alt+
+                        span.hotkey 4
+                    a(href="#breadcrumb", accesskey="b") Ir para para breadcrumb
+                        span.hotkey Alt+
+                        span.hotkey b
+        .viewport-framing.vertical-spacing--2x.center-container
+            h1.logotipo
+                a(href=".", title="Ministério Público de Mato Grosso do Sul")
+                    img.logotipo-src(src="logotipo.png", alt="Logotipo do Minist&eacute;rio P&uacute;blico de Mato Grosso do Sul")

@@ -1,0 +1,143 @@
+extends portal
+block vars
+    - var pageTitle = "Diário Oficial"
+    - var magazineLike = true
+
+block content
+    .row
+        .widget.page__section--sub.solid-box(style="background-color: #f2f2f2;")
+            h3.widget__title Última edição
+            .media-item
+                .media__subject(style="margin-right: 20px; position: relative;")
+                    ins.fa.fa-calendar-o.fa-4x
+                    span(style="position:absolute; top:16px; left:0; right:0; text-align: center; letter-spacing: -2px") <strong class="text--very-big">29</strong>
+                .media__subject
+                    p <time datetime="2015-06-29">29 de Junho de 2015</time>
+                    p Edição <span class="publication-number">1076</span>
+                .media__content.horizontal-alignment--right
+                    +button({href: "/download/last-domp", style: 'neutral', inverted: true}).
+                        <p class="button__caption"><ins class="fa  fa-download  spacing-right--half"></ins>Baixar arquivo</p>
+                        <p><span class="text--small">(Tamanho: 1,34 MB)</span></p>
+
+    .grid__container
+        .grid__item.percentage-grid--1-2
+            .wrapper
+                .widget
+                    h3.widget__title Recentes
+                    ul.date-list
+                        li.media-item
+                            .media__subject
+                                +calendarLike(1,7)
+                            .media__subject
+                                p <strong>Edição 1076</strong>
+                                p.text--very-small (Tamanho: 1,42 MB)
+                            .media__content.horizontal-alignment--right
+                                +button({href:"/domp/222", inverted: true}).
+                                    <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
+
+                        li.media-item
+                            .media__subject
+                                +calendarLike(30,6)
+                            .media__subject.
+                                <p><strong>Edição 1075</strong></p>
+                                <p class="text--very-small">(Tamanho: 1,63 MB)</p>
+                            .media__content.horizontal-alignment--right
+                                +button({href:"/domp/222", inverted: true}).
+                                    <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
+                        li.media-item
+                            .media__subject
+                                +calendarLike(25,6)
+                            .media__subject.
+                                <p class="title"><strong>Edição 1074</strong></p>
+                                <p class="text--very-small">(Tamanho: 1,87 MB)</p>
+
+                            .media__content.horizontal-alignment--right
+                                +button({href:"/domp/222", inverted: true}).
+                                    <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
+                        li.media-item
+                            .media__subject
+                                +calendarLike(24,6)
+                            .media__subject
+                                <p><strong>Edição 1073</strong></p>
+                                <p class="text--very-small">(Tamanho: 1,1 MB)</p>
+                            .media__content.horizontal-alignment--right
+                                +button({href:"/domp/222", inverted: true}).
+                                    <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
+                        li.media-item
+                            .media__subject
+                                +calendarLike(23,6)
+                            .media__subject
+                                <p><strong>Edição 1072</strong></p>
+                                <p class="text--very-small">(Tamanho: 1,42 MB)</p>
+                            .media__content.horizontal-alignment--right
+                                +button({href:"/domp/222", inverted: true}).
+                                    <p><ins class="fa  fa-download  spacing-right--half"></ins><span class="button__caption">Baixar</span></p>
+
+                    .action-bar.vertical-spacing
+                        +button({href:"sdasd", icon: 'list'}) Ver últimas 30 edições
+
+        .grid__item.percentage-grid--1-2
+            .wrapper
+                <table class="calendar__month">
+                <caption class="calendar__month-name">Dezembro</caption>
+                <thead class="calendar__week-names">
+                <tr>
+                <th class="calendar__week-day"><span class="caption" title="Domingo">Dom</span></th>
+                <th class="calendar__week-day"><span class="caption" title="Segunda-feira">Seg</span></th>
+                <th class="calendar__week-day"><span class="caption" title="Terça-feira">Ter</span></th>
+                <th class="calendar__week-day"><span class="caption" title="Quarta-feira">Qua</span></th>
+                <th class="calendar__week-day"><span class="caption" title="Quinta-feira">Qui</span></th>
+                <th class="calendar__week-day"><span class="caption" title="Sexta-feira">Sex</span></th>
+                <th class="calendar__week-day"><span class="caption" title="Sábado">Sáb</span></th>
+                </tr>
+                </thead>
+                <tbody class="calendar__days">
+                <tr class="calendar__week">
+                <td class="calendar__day"><span class="caption"></span></td>
+                <td class="calendar__day"><span class="caption">1</span></td>
+                <td class="calendar__day"><span class="caption">2</span></td>
+                <td class="calendar__day"><span class="caption">3</span></td>
+                <td class="calendar__day"><span class="caption">4</span></td>
+                <td class="calendar__day"><span class="caption">5</span></td>
+                <td class="calendar__day"><span class="caption">6</span></td>
+                </tr>
+                <tr class="calendar__week">
+                <td class="calendar__day"><span class="caption">7</span></td>
+                <td class="calendar__day"><span class="caption">8</span></td>
+                <td class="calendar__day"><span class="caption  calendar__day--hasevent">9</span></td>
+                <td class="calendar__day"><span class="caption">10</span></td>
+                <td class="calendar__day"><span class="caption">11</span></td>
+                <td class="calendar__day"><span class="caption">12</span></td>
+                <td class="calendar__day"><span class="caption">13</span></td>
+                </tr>
+                <tr class=calendar__day="calendar__week">
+                <td class="calendar__day"><span class="caption">14</span></td>
+                <td class="calendar__day"><span class="caption">15</span></td>
+                <td class="calendar__day"><span class="caption">16</span></td>
+                <td class="calendar__day"><span class="caption">17</span></td>
+                <td class="calendar__day"><span class="caption">18</span></td>
+                <td class="calendar__day"><span class="caption">19</span></td>
+                <td class="calendar__day"><span class="caption">20</span></td>
+                </tr>
+                <tr class="calendar__week">
+                <td class="calendar__day"><span class="caption">21</span></td>
+                <td class="calendar__day"><span class="caption">22</span></td>
+                <td class="calendar__day"><span class="caption">23</span></td>
+                <td class="calendar__day"><span class="caption">24</span></td>
+                <td class="calendar__day"><span class="caption">25</span></td>
+                <td class="calendar__day"><span class="caption">26</span></td>
+                <td class="calendar__day"><span class="caption">27</span></td>
+                </tr>
+                <tr class="calendar__week">
+                <td class="calendar__day"><span class="caption">28</span></td>
+                <td class="calendar__day"><span class="caption">29</span></td>
+                <td class="calendar__day"><span class="caption">30</span></td>
+                <td class="calendar__day"><span class="caption"></span></td>
+                <td class="calendar__day"><span class="caption"></span></td>
+                <td class="calendar__day"><span class="caption"></span></td>
+                <td class="calendar__day"><span class="caption"></span></td>
+                </tr>
+                </tbody>
+                </table>
+                .action-bar
+                    +button({href: '/calendar', icon: 'calendar'}) Ver calendário completo

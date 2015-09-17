@@ -1,280 +1,189 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="pt-br">
+  <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Quem somos - Ministério Público de Mato Grosso do Sul</title>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<!--
-<div class="shadow-box" style="background: rgba(0,0,0,0.7); position: fixed; top:0; bottom:0; left:0; right:0; z-index: 1; display: table-cell;">
-    <div class="shadow-box__wrapper" style="background: #fff; padding: 20px; width: 400px; margin:25% auto; top: -100px; position: relative;">
-        <h4>Baba o'relly</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dicta dolor doloremque ea, eveniet ex, harum itaque labore laborum magnam minima minus necessitatibus nemo omnis qui recusandae temporibus veniam? Illum.</p>
-    </div>
-</div>
--->
-
-<div id="top-of-the-page" class="header  page__header">
-    <div id="utility-bar" class="row solid-box--half">
-        <div class="size--1 center-container">
-
-            <div id="accessibility-panel" class="toolbar" role="toolbar">
-                <a href="/mapa-do-site" class="button" role="button">
-                    <ins class="fa  fa-sitemap"></ins>
-                    <span class="caption">Mapa do Site</span>
-                </a>
-                <ins class="separator" role="separator" aria-hidden="true"></ins>
-                <!--                <button id="accessibility-fontSizeUp" title="Aumentar o tamanho do texto">
-                                    <ins class="fa  fa-font"></ins>
-                                    <ins class="fa  fa-plus"></ins>
-                                </button>
-                                <button id="accessibility-fontSizeDown" title="Diminuir o tamanho do texto">
-                                    <ins class="fa  fa-font"></ins>
-                                    <ins class="fa  fa-minus"></ins>
-                                </button>-->
-                <button id="accessibility-highContrast" class="button" title="Modo alto contraste">
-                    <ins class="fa  fa-adjust"></ins>
-                    <span class="caption">Alto contraste</span>
-                </button>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/vendor/normalize.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+      <title> Quem Somos  - Minist&eacute;rio P&uacute;blico de Mato Grosso do Sul</title>
+  </head>
+  <body>
+      <div id="top-of-the-page" class="header page__header">
+        <div id="utility-bar" class="row solid-box--half viewport-framing">
+          <div class="center-container">
+            <div id="accessibility-panel" role="toolbar" class="toolbar"><a href="/mapa-do-site" class="button"><ins class="fa fa-sitemap spacing-right--half"></ins><span class="caption">Mapa do Site</span></a><ins aria-hidden class="separator"></ins>
+              <button id="accessibility-highContrast" title="Modo alto contraste" class="button"><ins class="fa fa-adjust spacing-right--half"></ins><span class="caption">Alto contraste</span></button>
             </div>
-
-            <!--            <div id="social-media-panel" class="toolbar" role="toolbar">
-                            <a href="/contato" class="button" role="button">
-                                <ins class="fa  fa-envelope"></ins>
-                                <span class="caption">Fale Conosco</span>
-                            </a>
-                            <ins class="separator" role="separator" aria-hidden="true"></ins>
-                            <a href="/facebook" class="button suppressed-caption" role="button" title="Facebook">
-                                <ins class="fa  fa-facebook-official"></ins>
-                                <span class="caption">Facebook</span>
-                            </a>
-                            <a href="/twitter" class="button suppressed-caption" role="button" title="Twitter">
-                                <ins class="fa  fa-twitter"></ins>
-                                <span class="caption">Twitter</span>
-                            </a>
-                            <a href="/youtube" class="button suppressed-caption" role="button" title="Youtube">
-                                <ins class="fa  fa-youtube"></ins>
-                                <span class="caption">Youtube</span>
-                            </a>
-                        </div>-->
             <div id="main-search" class="form--search">
-                <form action="/pesquisar" name="main-search" role="search" class="search__main-form">
-                    <label for="main-search-term" title="Palavra-chave" aria-label="Palavra-chave"><ins class="fa fa-search"></ins></label>
-                    <input type="search" name="q" autocomplete="off" id="main-search-term" size="25" placeholder="digite aqui" class="search__keyword"><button type="submit" class="button  button--neutral  button--inverted">Buscar</button>
-                </form>
-                <div class="search__powered-by-google"><img src="https://www.google.com/cse/images/google_custom_search_smwide.gif" alt="Google"></div>
+              <form action="/pesquisar" name="main-search" role="search" class="search__main-form">
+                <label title="Palavra-chave" for="main-search-term" aria-label="Palavra-chave"><ins class="fa fa-search"></ins></label>
+                <input id="main-search-term" type="search" name="q" autocomplete="off" size="25" placeholder="digite aqui" class="search__keyword">
+                <button type="submit" class="button button--neutral button--inverted">Buscar</button>
+              </form>
+              <!--.search__powered-by-googleimg(src="https://www.google.com/cse/images/google_custom_search_smwide.gif", alt="Google")
+              -->
             </div>
-
-
+          </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="size--1  center-container" id="nav-access-keys">
-            <div class="toolbar" role="toolbar">
-                <a href="#main-content" accesskey="1">Ir para o conteúdo <span class="hotkey">Alt</span>+<span class="hotkey">1</span></a>
-                <a href="#main-menu" accesskey="2">Ir para o menu <span class="hotkey">2</span></a>
-                <a href="#main-search" accesskey="3">Ir para a busca <span class="hotkey">3</span></a>
-                <a href="#main-footer" accesskey="4">Ir para o rodapé <span class="hotkey">4</span></a>
-            </div>
+        <div class="row viewport-framing">
+          <div id="nav-access-keys" class="center-container">
+            <div role="toolbar" class="toolbar"><a href="#main-content" accesskey="1">Ir para o conte�do<span class="hotkey">Alt+</span><span class="hotkey">1</span></a><a href="#main-menut" accesskey="2">Ir para para o menu<span class="hotkey">Alt+</span><span class="hotkey">2</span></a><a href="#main-searc" accesskey="3">Ir para para a busca<span class="hotkey">Alt+</span><span class="hotkey">3</span></a><a href="#main-footer" accesskey="4">Ir para para o rodap�<span class="hotkey">Alt+</span><span class="hotkey">4</span></a><a href="#breadcrumb" accesskey="b">Ir para para breadcrumb<span class="hotkey">Alt+</span><span class="hotkey">b</span></a></div>
+          </div>
         </div>
-        <div class="vertical-spacing--2x  size--1  center-container">
-            <h1>
-                <img src="logotipo.png" alt="" />
-            </h1>
-
-
+        <div class="viewport-framing vertical-spacing--2x center-container">
+          <h1 class="logotipo"><a href="." title="Ministério Público de Mato Grosso do Sul"><img src="logotipo.png" alt="Logotipo do Minist&amp;eacute;rio P&amp;uacute;blico de Mato Grosso do Sul" class="logotipo-src"></a></h1>
         </div>
-    </div>
-
-</div>
-
-
-<div class="row  slot-nav">
-    <div role="navigation">
-        <!--<nav></nav>-->
-        <ul class="main-nav  nav" role="menubar">
-            <li class="nav__item  first-level  nav-root  nav__current" role="menuitem"><span class="nav__caption">Principal</span></li>
-            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#2">Institucional</a></li>
-            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#3">Procuradorias</a></li>
-            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#4">Promotorias</a></li>
-            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#5">Atos e Normas</a></li>
-            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#6">Licitação</a></li>
-            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#7">Links</a></li>
-            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#8">Intranet</a></li>
-            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><span class="nav__caption">Mais</span></li>
-        </ul>
-    </div>
-</div>
-
-<div class="row  slot-breadcrumb">
-    <div class="breadcrumb  center-container size--1" aria-label="breadcrumbs" role="navigation">
-        <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="main-breadcrumb  nav">
-            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb__item  nav__item  breadcrumb__root" rel="index up">
-                <a itemprop="name" href="/main/" class="nav__caption">Principal</a>
-                <meta itemprop="position" content="1" />
+      </div>
+      <div class="row slot-nav">
+        <div role="navigation">
+          <!--<nav></nav>-->
+          <ul class="main-nav  nav" role="menubar">
+          <li class="nav__item  first-level  nav-root" role="menuitem"><a href="/" class="nav__caption">Principal</a></li>
+          <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="/quem-somos">Institucional</a></li>
+          <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#">Procuradorias</a></li>
+          <li class="nav__item  first-level  nav__current" role="menuitem" aria-haspopup="true"><span class="nav__caption">Promotorias</span></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#5">Atos e Normas</a></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#6">Licita&ccedil;&atilde;o</a></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="/links">Links</a></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#8">Intranet</a></li>
+          <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><span class="nav__caption" tabindex="0">Mais</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row slot-breadcrumb">
+        <div id="breadcrumb" role="navigation" aria-label="breadcrumbs" class="breadcrumb">
+          <ol itemscope="" itemtype="http://schema.org/BreadcrumbList" class="main-breadcrumb nav">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" rel="index up" class="breadcrumb__item nav__item breadcrumb__root"><a itemprop="name" href="/main/" class="nav__caption">Principal</a>
+              <meta itemprop="position" content="1">
             </li>
-            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb__item  nav__item" rel="up">
-                <a itemprop="name" href="/institucional/" class="nav__caption">Institucional</a>
-                <meta itemprop="position" content="2" />
+            <li rel="up" class="breadcrumb__item nav__item"><a itemprop="name" href="/institucional" class="nav__caption">Institucional</a>
+              <meta itemprop="position" content="2">
             </li>
-            <li class="breadcrumb__item  nav__item  nav__current">
-                <span itemprop="name" class="nav__caption">Quem somos</span>
-                <meta itemprop="position" content="3" />
+            <li class="breadcrumb__item nav__item nav__current"><span title="Quem Somos" class="nav__caption">Quem Somos</span>
+              <meta itemprop="position" content="3">
             </li>
-        </ol>
-    </div>
-</div>
-
-<div class="row  page__section">
-    <div class="size--1  center-container" id="main-content">
-        <h2 class="section__title">Institucional</h2>
-
-        <div class="grid__container">
-
-            <div class="grid__item  percentage-grid--2-3">
+          </ol>
+        </div>
+      </div>
+      <div class="row viewport-framing page__section page__section--magazine-like">
+        <div id="main-content" role="main" class="main-content--default">
+          <div class="page__title-container section__title-container--magazine-like">
+            <h2 class="section__title">Quem Somos</h2>
+          </div>
+          <div class="page__content">
+            <div class="grid__container">
+              <div class="grid__item percentage-grid--2-3">
                 <div class="wrapper">
-
-                    <div class="nav-tab" role="navigation">
-                        <ul id="main-content-tab" class="tab-list" role="tablist">
-                            <li role="presentation" class="nav__item  tab__item  nav__current"><a class="nav__caption  tab__caption" role="tab" aria-controls="section&#45;&#45;1" aria-selected="true" href="#section&#45;&#45;1" id="tab-section&#45;&#45;1">Quem somos</a></li>
-                            <li role="presentation" class="nav__item  tab__item"><a class="nav__caption  tab__caption" role="tab" aria-controls="section&#45;&#45;2" aria-selected="false" href="#section&#45;&#45;2" id="tab-section&#45;&#45;2">Órgãos do MP</a></li>
-                        </ul>
+                    <div role="navigation" class="nav-tab">
+                      <ul role="tablist" id="main-content-tab" class="tab-list">
+                          <li role="presentation" class="nav__item tab__item nav__current"><a id="quem-somos" role="tab" aria-controls="tab-quem-somos" aria-selected="true" href="#tab-quem-somos" class="nav__caption tab__caption">Quem somos</a></li>
+                          <li role="presentation" class="nav__item tab__item"><a id="orgaos-do-mp" role="tab" aria-controls="tab-orgaos-do-mp" aria-selected="false" href="#tab-orgaos-do-mp" class="nav__caption tab__caption">Órgãos do MP</a></li>
+                      </ul>
                     </div>
-
-
-                    <div class="article">
-                        <h3>Quem somos</h3>
-                        <p class="first-paragraph--------">O Ministério Público é instituição permanente, essencial à função jurisdicional do Estado, incumbindo-lhe a defesa da ordem jurídica, do regime democrático e dos interesses sociais e individuais indisponíveis, de acordo com o artigo 127 da Constituição Federal de 1988. Também é função institucional do Ministério Público zelar pelo efetivo respeito dos serviços de relevância pública (aos quais se incluem as ações e serviços em saúde), aos direitos assegurados aos cidadãos pela Carta Magna, promovendo as medidas necessárias à sua garantia (art. 129, inciso II, CF/88).</p>
-                        <div class="figure">
-                            <img class="full-wide" src="http://www.mpms.mp.br/images/photos/PGJ03.jpg">
-                            <p class="figure__comments  text--small"><ins class="fa fa-info-circle spacing-right"></ins>Sede da Procuradoria-Geral de Justiça do Estado de Mato Grosso do Sul</p>
-                            <p class="figure__comments  text--small  credits"><ins class="fa fa-user spacing-right"></ins>Créditos: Douglas Oldegardo Cavalheiro dos Santos</p>
+                  <div class="tab__content-container">
+                    <div id="tab-quem-somos">
+                      <div class="article">
+                        <h3 class="section__sub-title">Quem somos</h3>
+                        <p class="first-paragraph">O Ministério Público é instituição permanente, essencial à função jurisdicional do Estado, incumbindo-lhe a defesa da ordem jurídica, do regime democrático e dos interesses sociais e individuais indisponíveis, de acordo com o artigo 127 da Constituição Federal de 1988. Também é função institucional do Ministério Público zelar pelo efetivo respeito dos serviços de relevância pública (aos quais se incluem as ações e serviços em saúde), aos direitos assegurados aos cidadãos pela Carta Magna, promovendo as medidas necessárias à sua garantia (art. 129, inciso II, CF/88).</p></p>
+                        <div class="figure"><img src="http://www.mpms.mp.br/images/photos/PGJ03.jpg" class="full-wide">
+                          <p class="figure__comments text--small"><ins class="fa fa-info-circle spacing-right"></ins>Sede da Procuradoria-Geral de Justiça do Estado de Mato Grosso do Sul</p></p>
+                          <p class="figure__comments text--small credits"><ins class="fa fa-user spacing-right"></ins>Créditos: Douglas Oldegardo Cavalheiro dos Santos</p></p>
                         </div>
-                        <p>São princípios institucionais do Ministério Público a unidade, a indivisibilidade e a independência funcional e a seus membros, são asseguradas as seguintes garantias; a vitaliciedade, após dois anos de exercício, não podendo perder o cargo senão por sentença judicial transitada em julgado; inamovibilidade, salvo por motivo de interesse público, mediante decisão do órgão colegiado competente do Ministério Público, pelo voto da maioria absoluta de seus membros, assegurada ampla defesa; e a irredutibilidade de subsídio.</p>
-                        <p>Ao Ministério Público é assegurada autonomia funcional e administrativa, podendo, observado o disposto no art. 169 da Constituição Federal, propor ao Poder Legislativo a criação e extinção de seus cargos e serviços auxiliares, provendo-os por concurso público de provas ou de provas e títulos, a política remuneratória e os planos de carreira, ainda de acordo com o artigo 127, CF.</p>
-                        <p>Com autonomia funcional e administrativa, o Ministério Público exerce as funções constitucionais de maneira livre e independente, sempre lutando pelos direitos dos cidadãos, da criança e do adolescente, do idoso, do consumidor, do aposentado, do incapaz, da família, do trabalhador, protegendo o meio ambiente e o patrimônio público, além de fiscalizar a moralidade no serviço público, abrangendo todas as áreas de que necessita a sociedade para sobreviver.</p>
-                        <div class="figure">
-                            <img class="full-wide"  src="http://www.mpms.mp.br/images/photos/PGJ12.jpg">
-                            <p class="figure__comments  text--small">Auditório Dr. Nereu Aristides Marques, localizado na sede da PGJ-MS</p>
-                            <p class="figure__comments  text--small  credits">Créditos: Douglas Oldegardo Cavalheiro dos Santos</p>
+                        <p>São princípios institucionais do Ministério Público a unidade, a indivisibilidade e a independência funcional e a seus membros, são asseguradas as seguintes garantias; a vitaliciedade, após dois anos de exercício, não podendo perder o cargo senão por sentença judicial transitada em julgado; inamovibilidade, salvo por motivo de interesse público, mediante decisão do órgão colegiado competente do Ministério Público, pelo voto da maioria absoluta de seus membros, assegurada ampla defesa; e a irredutibilidade de subsídio.</p></p>
+                        <p>Ao Ministério Público é assegurada autonomia funcional e administrativa, podendo, observado o disposto no art. 169 da Constituição Federal, propor ao Poder Legislativo a criação e extinção de seus cargos e serviços auxiliares, provendo-os por concurso público de provas ou de provas e títulos, a política remuneratória e os planos de carreira, ainda de acordo com o artigo 127, CF.</p></p>
+                        <p>Com autonomia funcional e administrativa, o Ministério Público exerce as funções constitucionais de maneira livre e independente, sempre lutando pelos direitos dos cidadãos, da criança e do adolescente, do idoso, do consumidor, do aposentado, do incapaz, da família, do trabalhador, protegendo o meio ambiente e o patrimônio público, além de fiscalizar a moralidade no serviço público, abrangendo todas as áreas de que necessita a sociedade para sobreviver.</p></p>
+                        <div class="figure"><img src="http://www.mpms.mp.br/images/photos/PGJ12.jpg" class="full-wide">
+                          <p class="figure__comments text--small">Auditório Dr. Nereu Aristides Marques, localizado na sede da PGJ-MS</p></p>
+                          <p class="figure__comments text--small credits">Créditos: Douglas Oldegardo Cavalheiro dos Santos</p></p>
                         </div>
-                        <p>As funções institucionais do Ministério Público são manter a ordem democrática, garantindo o exercício dos direitos sociais e constitucionais, bem como a segurança, a liberdade, o bem-estar, o desenvolvimento, a igualdade social e a justiça.</p>
-                        <p>De acordo com o artigo 129 e seus incisos, são funções institucionais do Ministério Público promover, privativamente, a ação penal pública, na forma da lei; zelar pelo efetivo respeito dos Poderes Públicos e dos serviços de relevância pública aos direitos assegurados pela Constituição, promovendo as medidas necessárias a sua garantia; promover o inquérito civil e a ação civil pública, para a proteção do patrimônio público e social, do meio ambiente e de outros interesses difusos e coletivos; promover a ação de inconstitucionalidade ou representação para fins de intervenção da União e dos Estados, nos casos previstos na Constituição Federal; requisitar diligências investigatórias e a instauração de inquérito policial, indicados os fundamentos jurídicos de suas manifestações processuais; e exercer o controle externo da atividade policial, entre outros.</p>
-                        <p>Ainda segundo o artigo 129, em seus §§ 2º e 3º, as funções do Ministério Público só podem ser exercidas por integrantes da carreira, que deverão residir na comarca da respectiva lotação, salvo autorização do chefe da instituição. O ingresso na carreira do Ministério Público far-se-á mediante concurso público de provas e títulos, assegurada a participação da Ordem dos Advogados do Brasil em sua realização, exigindo-se do bacharel em direito, no mínimo, três anos de atividade jurídica e observando-se, nas nomeações, a ordem de classificação.</p>
-                        <p>O Ministério Público se fortaleceu nos últimos anos, principalmente diante das manifestações populares nas ruas provocando a queda da PEC 37 (Proposta de Emenda à Constituição) que dava poder exclusivo à polícia para realizar investigações criminais, retirando essa possibilidade do Ministério Público. O respeito e a admiração pela Instituição vêm aumentando, principalmente pelo trabalho desenvolvido pelos seus membros.</p>
-                        <p>Na área criminal, o Ministério Público tem a função de garantir segurança ao meio social, defendendo a sociedade daqueles que afrontam a lei cometendo crimes. Na área civil, tem atuação destacada nos processos de inventário onde há interesses de menores ou incapazes. Promove a investigação de paternidade e atua em divórcios e separações com o intuito de proteger a instituição da família, sem descuidar da fiscalização das contas públicas e da verificação da correta aplicação do dinheiro do contribuinte nos setores essenciais.</p>
-                        <p>O Procurador-Geral de Justiça exerce a chefia da Instituição, sendo nomeado pelo Governador do Estado dentre integrantes de carreira, indicado em lista tríplice elaborada, através de votação, pelos membros da carreira em efetivo exercício, para mandato de dois anos, permitida uma recondução por igual período, na forma da Lei Complementar.</p>
-                        <h4>Acesso à população</h4>
-                        <p>Para representar a sociedade, na exigência de seus direitos, o Ministério Público conta com as Promotorias e as Procuradorias de Justiça que, como o próprio nome diz, têm autonomia para promover a justiça social.</p>
-                        <p>O Ministério Público do Estado de Mato Grosso do Sul, atua através de seus Centros de Apoio Operacional das Promotorias de Justiça em assuntos relacionados ao Meio Ambiente, ao Consumidor, a Habitação e Urbanismo e do Patrimônio Histórico e Cultural, Infância e Juventude, Patrimônio Público e Social, Fundações, Idosos e das Pessoas com Deficiência, Direitos Constitucionais do Cidadão e dos Direitos Humanos, Criminal e das Vitimas de Infração Penal, Cíveis, Eleitorais e do Controle Externo da Atividade Policial.</p>
-                        <div class="figure">
-                            <img class="full-wide"  src="http://www.mpms.mp.br/images/photos/Ruadapaz04.jpg">
-                            <p class="figure__comments  text--small">Promotorias de Justiça na Rua da Paz em Campo Grande.</p>
-                            <p class="figure__comments  text--small  credits">Créditos: Douglas Oldegardo Cavalheiro dos Santos</p>
+                        <p>As funções institucionais do Ministério Público são manter a ordem democrática, garantindo o exercício dos direitos sociais e constitucionais, bem como a segurança, a liberdade, o bem-estar, o desenvolvimento, a igualdade social e a justiça.</p></p>
+                        <p>De acordo com o artigo 129 e seus incisos, são funções institucionais do Ministério Público promover, privativamente, a ação penal pública, na forma da lei; zelar pelo efetivo respeito dos Poderes Públicos e dos serviços de relevância pública aos direitos assegurados pela Constituição, promovendo as medidas necessárias a sua garantia; promover o inquérito civil e a ação civil pública, para a proteção do patrimônio público e social, do meio ambiente e de outros interesses difusos e coletivos; promover a ação de inconstitucionalidade ou representação para fins de intervenção da União e dos Estados, nos casos previstos na Constituição Federal; requisitar diligências investigatórias e a instauração de inquérito policial, indicados os fundamentos jurídicos de suas manifestações processuais; e exercer o controle externo da atividade policial, entre outros.</p></p>
+                        <p>Ainda segundo o artigo 129, em seus §§ 2º e 3º, as funções do Ministério Público só podem ser exercidas por integrantes da carreira, que deverão residir na comarca da respectiva lotação, salvo autorização do chefe da instituição. O ingresso na carreira do Ministério Público far-se-á mediante concurso público de provas e títulos, assegurada a participação da Ordem dos Advogados do Brasil em sua realização, exigindo-se do bacharel em direito, no mínimo, três anos de atividade jurídica e observando-se, nas nomeações, a ordem de classificação.</p></p>
+                        <p>O Ministério Público se fortaleceu nos últimos anos, principalmente diante das manifestações populares nas ruas provocando a queda da PEC 37 (Proposta de Emenda à Constituição) que dava poder exclusivo à polícia para realizar investigações criminais, retirando essa possibilidade do Ministério Público. O respeito e a admiração pela Instituição vêm aumentando, principalmente pelo trabalho desenvolvido pelos seus membros.</p></p>
+                        <p>Na área criminal, o Ministério Público tem a função de garantir segurança ao meio social, defendendo a sociedade daqueles que afrontam a lei cometendo crimes. Na área civil, tem atuação destacada nos processos de inventário onde há interesses de menores ou incapazes. Promove a investigação de paternidade e atua em divórcios e separações com o intuito de proteger a instituição da família, sem descuidar da fiscalização das contas públicas e da verificação da correta aplicação do dinheiro do contribuinte nos setores essenciais.</p></p>
+                        <p>O Procurador-Geral de Justiça exerce a chefia da Instituição, sendo nomeado pelo Governador do Estado dentre integrantes de carreira, indicado em lista tríplice elaborada, através de votação, pelos membros da carreira em efetivo exercício, para mandato de dois anos, permitida uma recondução por igual período, na forma da Lei Complementar.</p></p>
+                        <h4 class="section__sub-sub-title">Acesso à população</h4>
+                        <p>Para representar a sociedade, na exigência de seus direitos, o Ministério Público conta com as Promotorias e as Procuradorias de Justiça que, como o próprio nome diz, têm autonomia para promover a justiça social.</p></p>
+                        <p>O Ministério Público do Estado de Mato Grosso do Sul, atua através de seus Centros de Apoio Operacional das Promotorias de Justiça em assuntos relacionados ao Meio Ambiente, ao Consumidor, a Habitação e Urbanismo e do Patrimônio Histórico e Cultural, Infância e Juventude, Patrimônio Público e Social, Fundações, Idosos e das Pessoas com Deficiência, Direitos Constitucionais do Cidadão e dos Direitos Humanos, Criminal e das Vitimas de Infração Penal, Cíveis, Eleitorais e do Controle Externo da Atividade Policial.</p></p>
+                        <div class="figure"><img src="http://www.mpms.mp.br/images/photos/Ruadapaz04.jpg" class="full-wide">
+                          <p class="figure__comments">Promotorias de Justiça na Rua da Paz em Campo Grande.</p></p>
+                          <p class="figure__comments credits">Créditos: Douglas Oldegardo Cavalheiro dos Santos</p></p>
                         </div>
-                        <p>A população pode ter livre acesso aos trabalhos prestados pelo Ministério Público do Estado de Mato Grosso do Sul em sua função constitucional. Todo cidadão tem o direito de falar, ser ouvido e ser recebido por um Procurador de Justiça, na Procuradoria-Geral de Justiça em Campo Grande ou por um Promotor de Justiça através das Promotorias de Justiça da Capital e interior do Estado, fazendo denúncias ou pleiteando direitos constitucionais.</p>
-                        <h4>Criança e Adolescente</h4>
-                        <p>A Constituição Federal elenca que é dever da família, da sociedade e do Estado assegurar à criança, e ao adolescente, com absoluta prioridade, o direito à vida, à saúde, à alimentação, à educação, ao lazer, à profissionalização, à cultura, à dignidade, ao respeito, à liberdade, e à convivência familiar e comunitária, além colocá-los a salvo de toda forma de negligência, discriminação, exploração, violência, crueldade e opressão (CF, art. 227, “caput”).</p>
-                        <p>O art. 201, XII, § 5º, “c”, da Lei n.º 8.069/90 (Estatuto da Criança e do Adolescente), garante que compete ao Ministério Público “efetuar recomendações visando à melhoria dos serviços públicos e de relevância afetos à criança e ao adolescente, fixando prazo razoável para sua perfeita adequação”.</p>
-                        <p>O Ministério Público deve promover e acompanhar os procedimentos relativos às infrações atribuídas a adolescentes, promover e acompanhar as ações de alimentos e os procedimentos de suspensão e destituição do poder familiar, nomeação e remoção de tutores, curadores e guardiães, bem como oficiar em todos os demais procedimentos da competência da Justiça da Infância e da Juventude;</p>
-                        <p>O MP ainda deve promover, de ofício ou por solicitação dos interessados, a prestação de contas dos tutores, curadores e quaisquer administradores de bens de crianças e adolescentes nas hipóteses do art. 98 do Estatuto da Criança e do Adolescente, além de promover o inquérito civil e a ação civil pública para a proteção dos interesses individuais, difusos ou coletivos relativos à infância e à adolescência, inclusive os definidos no art. 220 § 3º, inciso II, da Constituição Federal (estabelecer os meios legais que garantam à pessoa e à família a possibilidade de se defenderem de programas ou programações de rádio e televisão que contrariem o disposto no Art. 221, bem como da propaganda de produtos, práticas e serviços que possam ser nocivos à saúde e ao meio ambiente).</p>
-
-                        <table class="table--compact">
-                            <caption>Tabela .compact</caption>
-                            <thead>
-                            <tr>
-                                <th class="percentage-grid--10">#</th>
-                                <th class="percentage-grid--20">Classe CSS</th>
-                                <th class="percentage-grid--50">Descrição</th>
-                                <th class="percentage-grid--20">Status</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>NULL</td>
-                                <td>Visualização padrão da tabela, sem alteração no CSS</td>
-                                <td><ins class="icon done"></ins><ins class="icon user-admin"></ins></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>.compact</td>
-                                <td>Headers em caixa alta, visual mais limpo.</td>
-                                <td><ins class="icon done"></ins></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>.grid-view</td>
-                                <td>Especial para exibir dados de listagens longas</td>
-                                <td><ins class="icon done"></ins></td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td><a href="#">.report</a></td>
-                                <td>Versão para apresentação de relatórios contendo dados tabulares.</td>
-                                <td>
-                                    <ins class="icon alert"></ins><ins class="icon cancel"></ins>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-
+                        <p>A população pode ter livre acesso aos trabalhos prestados pelo Ministério Público do Estado de Mato Grosso do Sul em sua função constitucional. Todo cidadão tem o direito de falar, ser ouvido e ser recebido por um Procurador de Justiça, na Procuradoria-Geral de Justiça em Campo Grande ou por um Promotor de Justiça através das Promotorias de Justiça da Capital e interior do Estado, fazendo denúncias ou pleiteando direitos constitucionais.</p></p>
+                        <h4 class="section__sub-sub-title">Criança e Adolescente</h4></h4>
+                        <p>A Constituição Federal elenca que é dever da família, da sociedade e do Estado assegurar à criança, e ao adolescente, com absoluta prioridade, o direito à vida, à saúde, à alimentação, à educação, ao lazer, à profissionalização, à cultura, à dignidade, ao respeito, à liberdade, e à convivência familiar e comunitária, além colocá-los a salvo de toda forma de negligência, discriminação, exploração, violência, crueldade e opressão (CF, art. 227, “caput”).</p></p>
+                        <p>O art. 201, XII, § 5º, “c”, da Lei n.º 8.069/90 (Estatuto da Criança e do Adolescente), garante que compete ao Ministério Público “efetuar recomendações visando à melhoria dos serviços públicos e de relevância afetos à criança e ao adolescente, fixando prazo razoável para sua perfeita adequação”.</p></p>
+                        <p>O Ministério Público deve promover e acompanhar os procedimentos relativos às infrações atribuídas a adolescentes, promover e acompanhar as ações de alimentos e os procedimentos de suspensão e destituição do poder familiar, nomeação e remoção de tutores, curadores e guardiães, bem como oficiar em todos os demais procedimentos da competência da Justiça da Infância e da Juventude;</p></p>
+                        <p>O MP ainda deve promover, de ofício ou por solicitação dos interessados, a prestação de contas dos tutores, curadores e quaisquer administradores de bens de crianças e adolescentes nas hipóteses do art. 98 do Estatuto da Criança e do Adolescente, além de promover o inquérito civil e a ação civil pública para a proteção dos interesses individuais, difusos ou coletivos relativos à infância e à adolescência, inclusive os definidos no art. 220 § 3º, inciso II, da Constituição Federal (estabelecer os meios legais que garantam à pessoa e à família a possibilidade de se defenderem de programas ou programações de rádio e televisão que contrariem o disposto no Art. 221, bem como da propaganda de produtos, práticas e serviços que possam ser nocivos à saúde e ao meio ambiente).</p></p>
                         <h4>Saúde</h4>
-                        <p>O artigo 196 da Constituição Federal de 1988 dispõe que “a saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação”, configurando um direito público subjetivo e fundamental (direito à vida) do ser humano, cujo dever em assegurar a saúde foi conferida à Administração Pública, conforme previsão dos artigos 23, inciso II, 24, inciso XII e 30, inciso VII, todos da Carta Constitucional de 1988. O Ministério Público zela para que isso seja cumprido.</p>
+                        <p>O artigo 196 da Constituição Federal de 1988 dispõe que “a saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação”, configurando um direito público subjetivo e fundamental (direito à vida) do ser humano, cujo dever em assegurar a saúde foi conferida à Administração Pública, conforme previsão dos artigos 23, inciso II, 24, inciso XII e 30, inciso VII, todos da Carta Constitucional de 1988. O Ministério Público zela para que isso seja cumprido.</p></p>
                         <h4>Do Meio Ambiente</h4>
-                        <p>Cabe ainda, ao Ministério Público, através de suas ações, fazer cumprir o artigo 225 da Constituição Federal, para que todos possam ter direito ao meio ambiente ecologicamente equilibrado, bem de uso comum do povo e essencial à sadia qualidade de vida, impondo-se ao Poder Público e à coletividade o dever de defendê-lo e preservá- lo para as presentes e futuras gerações.</p>
+                        <p>Cabe ainda, ao Ministério Público, através de suas ações, fazer cumprir o artigo 225 da Constituição Federal, para que todos possam ter direito ao meio ambiente ecologicamente equilibrado, bem de uso comum do povo e essencial à sadia qualidade de vida, impondo-se ao Poder Público e à coletividade o dever de defendê-lo e preservá- lo para as presentes e futuras gerações.</p></p>
+                      </div>
                     </div>
-
+                  </div>
                 </div>
-
-
-            </div>
-            <div class="grid__item percentage-grid--1-3  sidebar">
+              </div>
+              <div class="grid__item grid__item percentage-grid--1-3">
                 <div class="wrapper">
-                    <div class="widget">
-                        <h2 class="widget__title"><span class="caption">Atividades Realizadas em 2015</span></h2>
-                        <ul class="def-list">
-                            <li class="list-item  def-list__item">
-                                <div class="def__title"><span class="text--very-big">1.112</span></div>
-                                <div class="def__description">Ações Civis Públicas Ajuizadas</div>
-                            </li>
-                            <li class="list-item  def-list__item">
-                                <div class="def__title"><span class="text--very-big">11.041</span></div>
-                                <div class="def__description">Denúncias Oferecidas</div>
-                            </li>
-                            <li class="list-item  def-list__item">
-                                <div class="def__title"><span class="text--very-big">125.374</span></div>
-                                <div class="def__description">Manifestações Realizadas no ano</div>
-                            </li>
-                            <li class="list-item  def-list__item">
-                                <div class="def__title"><span class="text--very-big">207</span></div>
-                                <div class="def__description">Sessões do Tribunal do Júri</div>
-                            </li>
-                            <li class="list-item  def-list__item">
-                                <div class="def__title"><span class="text--very-big">141</span></div>
-                                <div class="def__description">Termos de Ajustamento de condutas</div>
-                            </li>
-                        </ul>
-                        <div class="footnotes">
-                            <p><strong>Fonte:</strong> Dados de 01/01/2015 até 15/06/2015 @ 09:00:09</p>
-                        </div>
-                    </div>
+                  <div class="widget">
+                    <h2 class="widget__title"><span class="caption">Atividades Realizadas em 2015</span></h2>
+                    <ul class="def-list">
+                      <li class="list-item def-list__item">
+                        <div class="def__title"><span class="text--big">1.112</span></div>
+                        <div class="def__description">Ações Civis Públicas Ajuizadas</div>
+                      </li>
+                      <li class="list-item def-list__item">
+                        <div class="def__title"><span class="text--big">11.041</span></div>
+                        <div class="def__description">Denúncias Oferecidas</div>
+                      </li>
+                      <li class="list-item def-list__item">
+                        <div class="def__title"><span class="text--big">125.374</span></div>
+                        <div class="def__description">Manifestações Realizadas no ano</div>
+                      </li>
+                      <li class="list-item def-list__item">
+                        <div class="def__title"><span class="text--big">207</span></div>
+                        <div class="def__description">Sessões do Tribunal do Júri</div>
+                      </li>
+                      <li class="list-item def-list__item">
+                        <div class="def__title"><span class="text--big">141</span></div>
+                        <div class="def__description">Termos de Ajustamento de condutas</div>
+                      </li>
+                      <div class="footnotes">
+                        <p><strong>Fonte:</strong> Dados de 01/01/2015 até 15/06/2015 @ 09:00:09</p>
+                      </div>
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
-
-
+          </div>
         </div>
-
-    </div>
-</div>
-</body>
+      </div>
+      <div id="main-footer" class="row page__footer">
+        <div class="row slot-social-media">
+          <div class="viewport-framing center-container horizontal-alignment--right">
+            <div role="list" class="toolbar vertical-spacing"><a href="" role="link" class="button button--borderless button--transparent"><ins class="fa  fa-envelope"></ins> Fale Conosco</a><ins role="separator" aria-hidden="true" class="separator"></ins><a href="" role="link" class="button button--borderless button--transparent"><ins class="fa  fa-facebook-square"></ins> Facebook</a><a href="" role="link" class="button button--borderless button--transparent"><ins class="fa  fa-twitter"></ins> Twitter</a><a href="" role="link" class="button button--borderless button--transparent"><ins class="fa  fa-youtube-play"></ins> YouTube</a></div>
+          </div>
+        </div>
+        <div class="row slot-institutional">
+          <div class="viewport-framing center-container media-item organization__info">
+            <div class="institutional-info media__subject">
+              <p class="place__name">Procuradoria-Geral de Justi&ccedil;a do Estado de Mato Grosso do Sul</p>
+              <address class="place__address text--small">
+                <p><ins class="fa  fa-map-marker" aria-hidden="true"></ins> Rua Pres. Manuel Ferraz de Campos Salles, 214 - Jardim Veraneio - CEP 79031-907 - Campo Grande - MS</p>
+              </address>
+              <p class="place__telephone text--small"><ins class="fa  fa-phone" aria-hidden="true"></ins> Telefone: (67) 3318-2000</p>
+            </div>
+            <div class="team-info media__content text--small horizontal-alignment--right"><img src="logotipo.png" alt="Minist�rio P�blico de Mato Grosso do Sul" class="footer__main-logotype place__name">
+              <p class="place__name">Secretaria de Tecnologia da Informa&ccedil;&atilde;o - STI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
 </html>

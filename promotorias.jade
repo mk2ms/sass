@@ -1,0 +1,91 @@
+extends portal
+block vars
+    - var pageTitle = "Promotorias"
+    //- var pathWay = [{ label: 'Promotorias', path: '/main/promotorias'}, {label: 'Campo Grande', path: '/main/promotorias/campo-grande' }]
+    - var magazineLike = true
+
+block content
+
+    h3.section__sub-title Lista de comarcas
+    .grid__container
+        .grid__item.percentage-grid--1-4
+            .wrapper
+                .widget
+                    //-h5.widget__title(style="margin-bottom: 1.5em") Buscar Promotoria
+                    form.form.form--spaced-fields(action="")
+                        label.form__label(for="q-promotorias-keyword") Palavra-chave
+                        input#q-promotorias-keyword.form__input.input-text.any--full-wide(type="text", name="q-promotorias-keyword")
+                        select.form__input.select-box.any--full-wide(name="q-promotorias-by")
+                            option(value="1") por nome de promotor
+                            option(value="2") por nome de comarca
+                        .form__footer.horizontal-alignment--right
+                            +button({el: 'b', type: "submit", style: 'neutral', inverted: true, icon: 'search'}) Buscar
+                        .action-bar.vertical-spacing
+                            +button({href: "/mapa-de-comarcas", icon: 'map-marker'}) Mapa de Comarcas
+
+        .grid__item.percentage-grid--1-4
+            .wrapper
+                h4.section__sub-sub-title Primeira Entrância <span class="counter">(25)</span></h4>
+                ul.list--no-bullets.list--spaced
+                    <li class="list__item"><a href="/promotorias/agua-clara">Água Clara</a></li>
+                    <li class="list__item"><a href="/promotorias/anastacio">Anastácio</a></li>
+                    <li class="list__item"><a href="/promotorias/anaurilandia">Anaurilândia</a></li>
+                    <li class="list__item"><a href="/promotorias/angelica">Angélica</a></li>
+                    <li class="list__item"><a href="/promotorias/bandeirantes">Bandeirantes</a></li>
+                    <li class="list__item"><a href="/promotorias/bataypora">Batayporã</a></li>
+                    <li class="list__item"><a href="/promotorias/brasilandia">Brasilândia</a></li>
+                    <li class="list__item"><a href="/promotorias/deodapolis">Deodápolis</a></li>
+                    <li class="list__item"><a href="/promotorias/dois-irmaos-do-buriti">Dois Irmãos do Buriti</a></li>
+                    <li class="list__item"><a href="/promotorias/eldorado">Eldorado</a></li>
+                    <li class="list__item"><a href="/promotorias/gloria-de-dourados">Glória de Dourados</a></li>
+                    <li class="list__item"><a href="/promotorias/iguatemi">Iguatemi</a></li>
+                    <li class="list__item"><a href="/promotorias/inocencia">Inocência</a></li>
+                    <li class="list__item"><a href="/promotorias/itapora">Itaporã</a></li>
+                    <li class="list__item"><a href="/promotorias/itaquirai">Itaquiraí</a></li>
+                    <li class="list__item"><a href="/promotorias/nioaque">Nioaque</a></li>
+                    <li class="list__item"><a href="/promotorias/nova-alvorada-do-sul">Nova Alvorada do Sul</a></li>
+                    <li class="list__item"><a href="/promotorias/pedro-gomes">Pedro Gomes</a></li>
+                    <li class="list__item"><a href="/promotorias/porto-murtinho">Porto Murtinho</a></li>
+                    <li class="list__item"><a href="/promotorias/ribas-do-rio-pardo">Ribas do Rio Pardo</a></li>
+                    <li class="list__item"><a href="/promotorias/rio-negro">Rio Negro</a></li>
+                    <li class="list__item"><a href="/promotorias/rio-verde-de-mato-grosso">Rio Verde de Mato Grosso</a></li>
+                    <li class="list__item"><a href="/promotorias/sete-quedas">Sete Quedas</a></li>
+                    <li class="list__item"><a href="/promotorias/sonora">Sonora</a></li>
+                    <li class="list__item"><a href="/promotorias/terenos">Terenos</a></li>
+        .grid__item.percentage-grid--1-4
+            .wrapper
+                h4.section__sub-sub-title Segunda Entrância <span class="counter">(26)</span></h4>
+                ul.list--no-bullets.list--spaced
+                    <li class="list__item"><a href="/promotorias/amambai">Amambai</a></li>
+                    <li class="list__item"><a href="/promotorias/aparecida-do-taboado">Aparecida do Taboado</a></li>
+                    <li class="list__item"><a href="/promotorias/aquidauana">Aquidauana</a></li>
+                    <li class="list__item"><a href="/promotorias/bataguassu">Bataguassu</a></li>
+                    <li class="list__item"><a href="/promotorias/bela-vista">Bela Vista</a></li>
+                    <li class="list__item"><a href="/promotorias/bonito">Bonito</a></li>
+                    <li class="list__item"><a href="/promotorias/caarapo">Caarapó</a></li>
+                    <li class="list__item"><a href="/promotorias/camapua">Camapuã</a></li>
+                    <li class="list__item"><a href="/promotorias/cassilandia">Cassilândia</a></li>
+                    <li class="list__item"><a href="/promotorias/chapadao-do-sul">Chapadão do Sul</a></li>
+                    <li class="list__item"><a href="/promotorias/corumba">Corumbá</a></li>
+                    <li class="list__item"><a href="/promotorias/costa-rica">Costa Rica</a></li>
+                    <li class="list__item"><a href="/promotorias/coxim">Coxim</a></li>
+                    <li class="list__item"><a href="/promotorias/fatima-do-sul">Fátima do Sul</a></li>
+                    <li class="list__item"><a href="/promotorias/ivinhema">Ivinhema</a></li>
+                    <li class="list__item"><a href="/promotorias/jardim">Jardim</a></li>
+                    <li class="list__item"><a href="/promotorias/maracaju">Maracaju</a></li>
+                    <li class="list__item"><a href="/promotorias/miranda">Miranda</a></li>
+                    <li class="list__item"><a href="/promotorias/mundo-novo">Mundo Novo</a></li>
+                    <li class="list__item"><a href="/promotorias/navirai">Naviraí</a></li>
+                    <li class="list__item"><a href="/promotorias/nova-andradina">Nova Andradina</a></li>
+                    <li class="list__item"><a href="/promotorias/paranaiba">Paranaíba</a></li>
+                    <li class="list__item"><a href="/promotorias/ponta-pora">Ponta Porã</a></li>
+                    <li class="list__item"><a href="/promotorias/rio-brilhante">Rio Brilhante</a></li>
+                    <li class="list__item"><a href="/promotorias/sao-gabriel-do-oeste">São Gabriel do Oeste</a></li>
+                    <li class="list__item"><a href="/promotorias/sidrolandia">Sidrolândia</a></li>
+        .grid__item.percentage-grid--1-4
+            .wrapper
+                h4.section__sub-sub-title Entrância Especial <span class="counter">(3)</span>
+                ul.list--no-bullets.list--spaced
+                    <li class="list__item"><a href="/promotorias/campo-grande">Campo Grande</a></li>
+                    <li class="list__item"><a href="/promotorias/dourados">Dourados</a></li>
+                    <li class="list__item"><a href="/promotorias/tres-lagoas">Três Lagoas</a></li>

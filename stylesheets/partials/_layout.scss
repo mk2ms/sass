@@ -6,11 +6,12 @@
 }
 
 @mixin inline-block-box($ie-mode: $ie-compatibility) {
+    display: inline-block;
     @if ($ie-mode == 1) {
         *display: inline;
-        *zoom: 1;
+        zoom: 1;
     }
-    display: inline-block;
+
 }
 
 @mixin clear-block() {
@@ -39,7 +40,7 @@
     background-color: $background;
     border-style: solid;
     border-color: $border-color;
-    border-width: 1px 1px 3px 1px;
+    border-width: 1px 1px 3px;
 }
 
 
@@ -86,40 +87,9 @@
     @include vertical-spacing($internal-spacing*2)
 }
 
-.horizontal-alignment--right {
-    text-align: right;
-}
-
-
-.spacing-right--half {
-    margin-right: $internal-spacing/2;
-}
-
-.spacing-right {
-    margin-right: $internal-spacing;
-}
-
-.spacing-right--2x {
-    margin-right: $internal-spacing*2;
-}
-
-.spacing-left--half {
-    margin-left: $internal-spacing/2;
-}
-
-.spacing-left {
-    margin-left: $internal-spacing;
-}
-
-.spacing-left--2x {
-    margin-left: $internal-spacing*2;
-}
-
-
-
 .page__section {
 
-    @include vertical-spacing($internal-spacing * 4);
+    margin-top: $internal-spacing * 3;
 
     &--half, &--sub {
         @include vertical-spacing($internal-spacing * 2);
@@ -130,7 +100,7 @@
 
 .section__title,
 .section__sub-title {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 
 
@@ -139,18 +109,25 @@
 }
 
 
-/*---------------------------*\
-   #UTILITIES
-\*---------------------------*/
 
+.viewport-framing {
+    box-sizing: border-box;
+    padding-left: $internal-spacing;
+    padding-right: $internal-spacing;
 
-.pull-right {
-    float: right;
+    //TODO review this
+    /*padding-left: 15%;
+    padding-right: 15%;
+
+    @include desktop {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    @include tablet {
+        padding-left: $internal-spacing/2;
+        padding-right: $internal-spacing/2;
+    }
+*/
 }
-
-.pull-left {
-    float: left;
-}
-
-.full-wide { width: 100%; }
 

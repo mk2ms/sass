@@ -1,0 +1,55 @@
+//
+   Created by marcooliveira on 03/09/2015.
+
+extends portal
+block vars
+    - var pageTitle = "Concursos"
+    - var magazineLike = true
+
+block content
+
+    .row.grid__container
+        .grid__item.percentage-grid--2-3
+            .wrapper
+                .section
+                    h3.section__sub-title Últimas atualizações
+                    ul.common-list.list--spaced
+                        li.media-item.list__item
+                            .media__subject.size--5.horizontal-alignment--right
+                                p 14 de Agosto de 2015
+                                p.post-list__section Decisão
+                            .media__content
+                                h4 <a href="{link}">XXVII Concurso Público para Promotor Substituto</a>
+                                p.text--small <a href="{link também}"><ins class="fa  fa-download"></ins> Relação de requerimentos deferidos e indeferidos - taxa de isençao</a>
+
+                        li.media-item.list__item
+                            .media__subject.size--5.horizontal-alignment--right
+                                p 13 de Agosto de 2015
+                                p.post-list__section Aviso
+                            .media__content
+                                h4 <a href="{link}">XXVII Concurso Público para Promotor Substituto</a>
+                                p.text--small <a href="{link também}"><ins class="fa  fa-download"></ins> Aviso nº 004/2015-COC - Aviso Período Prova Preambular</a>
+
+                        li.media-item.list__item
+                            .media__subject.size--5.horizontal-alignment--right
+                                p 13 de Agosto de 2015
+                                p.post-list__section Aviso
+                            .media__content
+                                h4 <a href="{link}">XXVII Concurso Público para Promotor Substituto</a>
+                                p.text--small <a href="{link também}"><ins class="fa  fa-download"></ins> Aviso nº 003/2015-COC - Aviso Código Processual Civil</a>
+                .section
+                    h3.section__sub-title Categoria de concursos
+
+        .grid__item.percentage-grid--1-3.sidebar
+            .wrapper
+                .widget
+                    h3.widget__title Concursos Ativos
+                    ul.common-list.list--spaced
+                        li.list__item
+                            h4.section__sub-sub-title V Concurso Público para Serviços Auxiliares
+                            p.text--small Concurso Público: Ingresso na Carreira do Quadro de Servidores
+
+                .widget
+                    h3.widget__title Concursos Encerrados
+
+                    +button({ el: 'a', icon: 'check', style: 'success', href: "http://buyitnow.domain.com" }) Confirmar!!

@@ -1,14 +1,11 @@
-// Defaults Variables
-$ie-compatibility: 0;
-/*$colors: (
-  'primary': #009DDC,
-  'secondary': #00A160,
-  'neutral': #C7C8CA,
-  'inverted': #fff,
-  'border': #ccc
-);*/
+// Defaults configuration
+$ie-compatibility: 1;
+$high-contrast-mode: 0;
+
+
+// Color configuration
 $body-text-color:   #000;
-$background-color:  #fff;
+$color-background:  #fff;
 $color-primary:     #009DDC;
 $color-secondary:   #00A160;
 $color-neutral:     #C7C8CA;
@@ -23,23 +20,31 @@ $color-warning:     #F7931E;
 $color-error:       #C1272D;
 $color-info:        $color-primary;
 $color-disabled:    $color-neutral;
+$color-nav-links:   $color-label;
+$color-nav-hover:   $color-highlight;
 
 
 // Font
-$font-primary:    'Raleway', Helvetica, Arial, sans-serif;
-$font-secondary:  'Crimson Text', Georgia, Times, serif;
-$font-base-size: 16px;
+$font-primary:    'Open Sans', Helvetica, Arial, sans-serif;
+$font-secondary:  'Merriweather', Georgia, Times, serif;
+$font-base-size:  16px;
 $font-base-weight: 400;
-$font-feature-weight: 600;
-$font-heading-weight: 800;
-$font-strong-weight: 800;
-$font-main-section-weight: 800;
+$font-feature-weight: 700;
+$font-heading-weight: 700;
+$font-strong-weight: 700;
+$font-button-weight: 400;
+$font-main-section-weight: $font-heading-weight;
 $base-line-height: 1.6;
-$icon-name: 'icon';
 
 
 // Layout variables
 $internal-spacing: 20px;
+
+
+// Media queries settings
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$large-desktop-width: 1440px;
 
 
 // Grid System
@@ -60,7 +65,8 @@ $border-default-setting: 1px solid $color-border;
 $border-secondary-setting: 1px solid lighten($color-border, 10);
 
 
-// Responsive utility configs
-$visible-class-name: '.visible';
-$hidden-class-name: '.hidden';
+// Display utility configs
+$visible-class-name: '.r-visible';
+$hidden-class-name: '.r-hidden';
+
 // End of Defaults

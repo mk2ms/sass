@@ -1,0 +1,31 @@
+extends portal
+block vars
+    - var pageTitle = "1ª Promotoria de Justiça de Campo Grande"
+    - var pathWay = [{ label: 'Promotorias', path: '/promotorias'}, {label: 'Campo Grande', path: '/promotorias/campo-grande' }]
+    - var magazineLike = true
+
+block content
+    h3.section__sub-title Informações
+
+    .page__section--sub.percentage-grid--1-2
+        ul.icon-list.list--spaced
+            li.list__item
+                .icon__img.w50.media__subject
+                    ins.fa.fa-user.text--big
+                .icon__caption.media__content
+                    h5 Titular: Juliane Cristina Gomes
+            li.list__item
+                .icon__img.w50.media__subject
+                    ins.fa.fa-list-ul.text--big
+                .icon__caption.media__content
+                    | Feitos pares distribuídos à 1ª Vara de Família, à Vara de Falências, Recuperações, Insolvências e cumprimento de cartas precatórias cíveis em geral e às Varas de Execução Fiscal
+            li.list__item
+                .icon__img.w50.media__subject
+                    ins.fa.fa-map-marker.text--big
+                .icon__caption.media__content
+                    | <strong>Endereço:</strong> Avenida Ricardo Brandão, 232 - Itanhangá Park - CEP: 79003-027 Campo Grande - Brasil
+            li.list__item
+                .icon__img.w50.media__subject
+                    ins.fa.fa-phone.text--big
+                .icon__caption.media__content
+                    | <strong>Telefone:</strong> (67) 3317-4070

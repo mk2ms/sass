@@ -1,6 +1,6 @@
 @mixin small-uppercase-title($font-weight: $font-feature-weight) {
     font: {
-        size: 75%;
+        size: em(12);
         weight: $font-weight;
     }
     letter-spacing: 0;
@@ -21,7 +21,7 @@ body {
     word-spacing: .1em;
 }
 
-// regra abaixo: Somente em páginas de leitura
+// regra abaixo: Somente em pï¿½ginas de leitura
 p {
     line-height: $base-line-height;
     margin: 0;
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
     word-spacing: 0;
 
     h1, h2, h3, h4, h5, h6 {
-        margin: 2em 0 .8em 0;
+        margin: 2em 0 .4em 0;
         &:first-child {
             margin-top: 0;
         }
@@ -50,9 +50,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .reading-mode {
+    font-family: $font-secondary;
 
-    .article, article {
-        font-family: $font-secondary;
+    .article {
         word-spacing: .1em;
 
         &--news {
@@ -63,19 +63,17 @@ h1, h2, h3, h4, h5, h6 {
             }
 
             &__subject {
-                @include small-uppercase-title(800);
-                font: {
-                    family: $font-primary;
-                    size: 81.25%;
-                }
+                @include small-uppercase-title($font-heading-weight);
+                font-family: $font-primary;
                 letter-spacing: .4em;
                 white-space: nowrap;
-                position: relative;
             }
 
             &__title {
-                font-size: 240%;
-
+                font: {
+                    size: 240%;
+                    family: $font-primary;
+                }
                 line-height: 1;
                 padding-left: 10%;
                 padding-right: 10%;
@@ -83,30 +81,28 @@ h1, h2, h3, h4, h5, h6 {
             }
 
             &__summary {
-                //font-size: 87.5%;
+                font-size: 87.5%;
                 font-style: italic;
-
             }
 
-            &__dateline {
+            &__date-published {
                 @include inline-block-box();
                 clear: both;
                 border-top: $border-secondary-setting;
                 font-family: $font-primary;
                 color: $color-neutral;
                 padding: 1em;
-
             }
 
         }
 
-        &__body {
-            font-size: 112.5%;
+        p {
+            margin: 0 0 1.6em;
+            line-height: 1.6;
         }
 
-        p {
-            margin: 0 0 1.4em;
-            line-height: 1.4;
+        h2, h3, h4, h5, h6 {
+            font-family: $font-primary;
         }
 
     }
@@ -136,11 +132,6 @@ $fibonacci-start: 8;
     $fibonacci: $fibonacci + $fibonacci-last;
     $fibonacci-last: $fibonacci-aux;
 }
-
-h6 {
-    text-transform: uppercase;
-}
-
 
 .footnotes {
     @include solid-box($internal-spacing/2 0);
@@ -172,14 +163,35 @@ h6 {
         font-weight: $font-main-section-weight;
     }
 
-    &__sub-title {
-
+    &__sub-title, &__sub-sub-title {
+        font-weight: $font-feature-weight;
     }
 
     &__sub-sub-title {
-        font-size: 93.75%;
-        font-weight: $font-feature-weight;
-        text-transform: uppercase;
+        font-size: 115%;
     }
 
+}
+
+.blockquote {
+    border-left: 3px solid $color-border;
+    @include reset-spacing;
+    @include solid-box;
+
+    p {
+        font-size: 130%;
+    }
+}
+    .cite {
+
+        &::before {
+            content: '\2014 \00A0';
+        }
+
+    }
+
+    /* TODO considerar blockquote-reverse (left-way) */
+
+.cite, address {
+    font-style: normal;
 }

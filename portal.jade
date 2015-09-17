@@ -1,0 +1,23 @@
+doctype html
+html(lang='pt-br')
+    block vars
+
+    include templates/components
+    include templates/header
+    include templates/main-nav
+    include templates/breadcrumb
+    include templates/footer
+
+    include templates/head
+
+    body
+        +makeHeader
+
+        +makeNav
+
+        +makeBreadcrumb(pathWay)
+
+        +sectionStart
+            block content
+
+        +makeFooter

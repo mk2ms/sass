@@ -1,0 +1,54 @@
+extends portal
+block vars
+    - var pageTitle = "Lista de notícias"
+    - var magazineLike = true
+    - var pathWay = [{ label: 'Notícias', path: '/main/noticias/'}]
+
+block content
+    ul.common-list.list--news
+        li.media-item.list__item.news__item
+            .media__subject.size--5
+                p.news__date-published
+                    time(datetime="2015-08-31T12:00").
+                        31 de Agosto de 2015
+                p.text--small <ins class="fa fa-clock-o"></ins> 12h00
+            .media__content
+                h3.news__headline
+                    a(href="/noticias/2015/08/promotor-de-justia-de-ms-participa-de-lanamento-do-livro-revisao-direito-administrativo")
+                        | Promotor de Justiça de MS participa de lançamento do livro Revisaço Direito Administrativo
+                .news__partial
+                    p O Promotor de Justiça Fabio Ianni Goldfinger, Assessor Especial do Procurador-Geral de Justiça de Mato Grosso do Sul, Humberto de Matos Brittes, está participando de mais um lançamento de livro da Editora JusPodivm, juntamente com Leandro Bortoleto e Luís Felipe Cirino. Trata-se do Revisaço Direito Administrativo, com 2.921 questões comentadas, alternativa por alternativa.
+                    //.toolbar.action-bar.horizontal-alignment--right.full-wide.text--allcaps.text--bold <ins class="fa fa-share-alt"></ins> <span class="text--x-small">Compartilhar</span> <span class="separator"></span> <ins class="fa fa-photo"></ins> <span class="text--x-small">Galeria</span>
+
+        li.media-item.list__item.news__item
+            .media__subject.size--5
+                p.news__date-published
+                    time(datetime="2015-08-28T16:58").
+                        28 de Agosto de 2015
+                p.text--small <ins class="fa fa-clock-o"></ins> 16h58
+            .media__content
+                h3.news__headline
+                    a(href="/noticias/2015/08/promotoras-de-justia-participam-de-audincia-pblica-em-comemorao-aos-nove-anos-da-criao-da-lei-maria-da-penha")
+                        | Promotoras de Justiça participam de audiência pública em comemoração aos nove anos da criação da Lei Maria da Penha
+                .news__picture
+                    img(src="http://www.mpms.mp.br/portal/imagens/image6227.JPG").news__photo
+                .news__partial
+                    p As Promotoras de Justiça Ana Lara Camargo de Castro e Helen Neves Dutra da Silva, com atuação em PJs da Violência Doméstica e Familiar contra a Mulher, participaram A participaram de audiência pública na quinta-feira (28/8/2015), na Assembleia Legislativa do Estado, em comemoração aos nove anos da criação da Lei Maria da Penha (11.340/2006)
+                .news__tags.tags__container
+                    a.tag(href="?tag=audiencia-publica") Audiência Pública
+                    a.tag(href="?tag=maria-da-penha") Maria da Penha
+        li.media-item.list__item.news__item
+            .media__subject.size--5
+                p.news__date-published
+                    time(datetime="2015-08-31T12:00").
+                        31 de Agosto de 2015
+                    p.text--small <ins class="fa fa-clock-o"></ins> 12h00
+            .media__content
+                h3.news__headline
+                    a(href="/noticias/2015/08/promotor-de-justia-de-ms-participa-de-lanamento-do-livro-revisao-direito-administrativo")
+                        | Juiz acata pedido do MPMS e interdita boate em Corumbá
+                .news__partial
+                    p O Juiz de Direito André Luiz Monteiro, em substituição legal na Vara de Fazenda Pública de Corumbá (MS), acatou o pedido do Ministério Público do Estado de Mato Grosso do Sul, por meio da 5ª Promotoria de Justiça de Corumbá, e determinou a interdição da Boate Studium 1054, sob aplicação de multa no valor de R$ 10 mil por cada dia de funcionamento indevido.
+                .news__tags.tags__container
+                    a.tag(href="?tag=corumba") Corumbá
+                    a.tag(href="?tag=interdicao") Interdição

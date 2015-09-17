@@ -1,0 +1,21 @@
+mixin makeBreadcrumb(pathWay)
+    - var pathWay = pathWay || []
+    //- var magazineClass = magazineLike == true ? 'breadcrumb--magazine-like' : ''
+
+    .row.slot-breadcrumb
+        #breadcrumb.breadcrumb(role="navigation", aria-label="breadcrumbs")
+
+            ol.main-breadcrumb.nav(itemscope="", itemtype="http://schema.org/BreadcrumbList")
+                li.breadcrumb__item.nav__item.breadcrumb__root(itemprop="itemListElement", itemscope="", itemtype="http://schema.org/ListItem", rel="index up")
+                    a.nav__caption(itemprop="name", href="/main/") Principal
+                    meta(itemprop="position", content="1")
+
+                - each path, index in pathWay
+                    - if (index < pathWay.length)
+                        li.breadcrumb__item.nav__item(rel="up")
+                            a.nav__caption(itemprop="name", href="#{path.path}") #{path.label}
+                            meta(itemprop="position", content="#{index+2}")
+
+                li.breadcrumb__item.nav__item.nav__current
+                    span.nav__caption(title="#{pageTitle}")= pageTitle.length > 38 ? pageTitle.substr(0,38) +'...' : pageTitle
+                    meta(itemprop="position", content="#{pathWay.length+2}")

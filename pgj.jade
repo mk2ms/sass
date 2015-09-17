@@ -1,0 +1,25 @@
+extends portal
+block vars
+    - var pageTitle = "Procuradoria-Geral"
+    - var magazineLike = true
+    - var pathWay = [{ label: 'Institucional', path: '/main/institucional/'}]
+
+block content
+    +tabList
+        +tabItem('section-1', true) Gabinete
+        +tabItem('section-2') Galeria
+        +tabItem('section-3') Atribuições
+        +tabItem('section-4') Organograma
+
+    .tab__content-container
+        #section-1
+            h3.section__sub-title Gabinete
+            ul.common-list.person-list.person-list--vertical.list--spaced
+                li.person-list__item.list__item
+                    +person("Humberto", "de Matos Brittes", "Procurador-Geral de Justiça", "http://www.mpms.mp.br/portal/img/fotos/humbertom.jpg", "Retrato do Dr. Humberto de Matos Brittes")
+                li.person-list__item.list__item
+                    +person("Mara Cristiane", "Crisóstomo Bravo", "Procurador-Geral Adjunto de Justiça Jurídico", "http://www.mpms.mp.br/portal/imagens/image4610.jpg", "Retrato da Dra. Mara Cristiane Crisóstomo Bravo")
+                li.person-list__item.list__item
+                    +person("João", "Albino Cardoso Filho", "Procurador-Geral Adjunto de Justiça Administrativo", "http://www.mpms.mp.br/portal/img/fotos/joaoalbino.jpg", "Retrato do Dr. João Albino Cardoso Filho")
+                li.person-list__item.list__item
+                    +person("Paulo Cezar", "dos Passos", "Procurador-Geral Adjunto de Justiça de Gestão e Planejamento Institucional", "http://www.mpms.mp.br/portal/imagens/image4682.jpg", "Retrato do Dr. Paulo Cezar dos Passos")

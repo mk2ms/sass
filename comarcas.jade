@@ -1,0 +1,261 @@
+extends portal
+mixin promotoria(params)
+    - params.areas = params.areas || []
+    - params.promotores = params.promotores || ['Nenhum promotor titular']
+    li.list__item
+        h5
+            a(href="#")= params.name
+        .descendant-definition
+            - if (params.areas.length > 0)
+                .tags__container
+                    - each area in params.areas
+                        span.tag= area
+            - each promotor in params.promotores
+                .person= promotor
+
+
+block vars
+    - var pageTitle = "Comarca de Campo Grande"
+    - var pathWay = [{ label: 'Promotorias', path: '/main/promotorias'}]
+    - var magazineLike = true
+    - var titleComplement = '<p><a class="text--no-underline" href="/promtorias/entrancia-especial/"><ins class="fa fa-dot-circle-o"></ins> Entrância Especial</a></p>'
+
+
+block content
+    h3.section__sub-title Lista de promotorias
+    .grid__container.vertical-spacing--2x
+        //.grid__item.percentage-grid--1-4
+            .wrapper
+                .widget
+                    form.form.form--spaced-fields(action="")
+                        label.form__label(for="q-promotorias-keyword") Palavra-chave
+                        input#q-promotorias-keyword.form__input.input-text.any--full-wide(type="text", name="q-promotorias-keyword")
+                        select.form__input.select-box.any--full-wide(name="q-promotorias-by")
+                            option(value="1") por nome de promotor
+                            option(value="2") por nome de comarca
+                        .form__footer.horizontal-alignment--right
+                            +button({el: 'b', type: "submit", style: 'neutral', inverted: true, icon: 'search'}) Buscar
+                        .action-bar.vertical-spacing
+                            +button({href: "/mapa-de-comarcas", icon: 'map-marker'}) Mapa de Comarcas
+        .grid__item.percentage-grid--1-2
+            .wrapper
+                h4.section__sub-title Cível <span class="counter">(11)</span>
+                ul.list--no-bullets.list--spaced
+                    li.list__item(data-id="60")
+                        h5
+                            a(href="/promotorias/campo-grande/1a-promotoria-de-justica-de-campo-grande") 1ª Promotoria de Justiça de Campo Grande
+                        .person Titular: Juliane Cristina Gomes
+                    li.list__item(data-id="62")
+                        h5
+                            a(href="/promotorias/campo-grande/2a-promotoria-de-justica-de-campo-grande") 2ª Promotoria de Justiça de Campo Grande
+                        .person Titular: Kristiam Gomes Simoes
+                    li.list__item(data-id="64")
+                        h5
+                            a(href="/promotorias/campo-grande/3a-promotoria-de-justica-de-campo-grande") 3ª Promotoria de Justiça de Campo Grande
+                        .person Titular: André Antônio Camargo Lorenzoni                                    </p>
+                    li.list__item
+                        h5
+                            a(href="#111") 4ª Promotoria de Justiça de Campo Grande
+                        .person Titular: Silasneiton Gonçalves
+                    li.list__item
+                        h5
+                            a(href="#111") 5ª Promotoria de Justiça de Campo Grande
+                        .person Titular: Plínio Alessi Júnior
+                        .person Substituição: Érica Rocha Espíndola
+                    li.list__item
+                        h5
+                            a(href="#111") 6ª Promotoria de Justiça de Campo Grande
+                        .person Titularidade: Cristina Beraldo de Andrade
+                    li.list__item
+                        h5
+                            a(href="#111") 7ª Promotoria de Justiça de Campo Grande
+                        .person Titular: Reynaldo Hilst Mattar
+                        .person Designação: Luiz Antônio Freitas de Almeida
+                    li.list__item
+                        h5
+                            a(href="#111") 8ª Promotoria de Justiça de Campo Grande
+                        .person Titular: José Luiz Rodrigues
+                    li.list__item
+                        h5
+                            a(href="#111") 9ª Promotoria de Justiça de Campo Grande
+                        .person Titular: Emy Louise Souza de Almeida Albertini
+                        .person Substituição: Daniela Cristina Guiotti
+                    li.list__item
+                        h5
+                            a(href="#111") 35ª Promotoria de Justiça de Campo Grande
+                        .person Titular: Christiane de Alencar
+                    li.list__item
+                        h5
+                            a(href="#111") 45ª Promotoria de Justiça de Campo Grande
+                        .person Titular: Érica Rocha Espíndola
+        .grid__item.percentage-grid--1-2
+            .wrapper
+                h4.section__sub-title Criminal <span class="counter">(26)</span></h4>
+                ul.list--no-bullets.list--spaced
+                    +promotoria({
+                        name: '10ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Marcos Fernandes Sisti', 'Substituição: Allan Thiago Barbosa Arakaki']
+                    })
+                    +promotoria({
+                        name: '11ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Grazia Strobel da Silva Gaifatto']
+                    })
+                    +promotoria({
+                        name: '12ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Rodrigo Yshida Brandão']
+                    })
+                    +promotoria({
+                        name: '13ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Pedro Arthur de Figueiredo']
+                    })
+                    +promotoria({
+                        name: '14ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Rodrigo Jacobina Stephanini', 'Designação: Camila Augusta Calarge Doreto']
+                    })
+                    +promotoria({
+                        name: '15ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Rogério Augusto Calábria de Araújo']
+                    })
+                    +promotoria({
+                        name: '16ª Promotoria de Justiça De Campo Grande',
+                        promotores: ['Titular: Luciana Moreira Schenk', 'Substituição: Allan Thiago Barbosa Arakaki', 'Substituição: Júlio Bilemjian Ribeiro']
+                    })
+                    +promotoria({
+                        name: '17ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Clóvis Amauri Smaniotto', 'Substituição: Allan Thiago Barbosa Arakaki']
+                    })
+                    +promotoria({
+                        name: '18ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Fábio Ianni Goldfinger', 'Substituição: Allan Thiago Barbosa Arakaki', 'Substituição: Livia Carla Guadanhim Bariani']
+                    })
+                    +promotoria({
+                        name: '19ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Eduardo José Rizkallah']
+                    })
+                    +promotoria({
+                        name: '20ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Douglas Oldegardo Cavalheiro dos Santos', 'Substituição: Humberto Lapa Ferri']
+                    })
+                    +promotoria({
+                        name: '21ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Marcos Roberto Dietz', 'Substituição: Gerson Eduardo de Araújo', 'Designação: Luiz Antônio Freitas de Almeida']
+                    })
+                    +promotoria({
+                        name: '22ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Bianka Karina Barros da Costa', 'Substituição: Paula da Silva Santos Volpe']
+                    })
+                    +promotoria({
+                        name: '23ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Regina Dornte Broch']
+                    })
+                    +promotoria({
+                        name: '24ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Tathiana Correa Pereira da Silva Façanha']
+                    })
+                    +promotoria({
+                        name: '47ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Renzo Siufi']
+                    })
+                    +promotoria({
+                        name: '48ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Ana Lara Camargo de Castro', 'Substituição: Renzo Siufi']
+                    })
+                    +promotoria({
+                        name: '50ª Promotoria de Justiça De Campo Grande',
+                        promotores: ['Titular: Jiskia Sandri Trentin']
+                    })
+                    +promotoria({
+                        name: '61ª Promotoria de Justiça De Campo Grande',
+                        promotores: ['Titular: Sílvio Amaral Nogueira de Lima']
+                    })
+                    +promotoria({
+                        name: '62ª Promotoria de Justiça De Campo Grande',
+                        promotores: ['Titular: Candy Hiroki Cruz Marques Moreira']
+                    })
+                    +promotoria({
+                        name: '63ª Promotoria de Justiça De Campo Grande',
+                        promotores: ['Titular: Ricardo Benito Crepaldi', 'Substituição: Renata Ruth Fernandes Goya Marinho']
+                    })
+                    +promotoria({
+                        name: '64ª Promotoria de Justiça De Campo Grande',
+                        promotores: ['Titular: Cristiane Amaral Cavalcante', 'Substituição: Renata Ruth Fernandes Goya Marinho', 'Designação: Sílvio Amaral Nogueira de Lima']
+                    })
+                    +promotoria({
+                        name: '65ª Promotoria de Justiça De Campo Grande',
+                        promotores: ['Titular: Fernando Jorge Manvailer Esgaib', 'Coadjuvar: Helen Neves Dutra da Silva']
+                    })
+                    +promotoria({
+                        name: '66ª Promotoria de Justiça De Campo Grande',
+                        promotores: ['Titular: Helen Neves Dutra da Silva']
+                    })
+                    +promotoria({
+                        name: '68ª Promotoria de Justiça De Campo Grande',
+                        promotores: ['Titular: Celso Antônio Botelho de Carvalho', 'Substituição: Fernando Martins Zaupa']
+                    })
+                    +promotoria({
+                        name: '69ª Promotoria de Justiça De Campo Grande',
+                        promotores: ['Titular: Paulo César Zeni', 'Substituição: Fernando Martins Zaupa', 'Designação: Luiz Antônio Freitas de Almeida']
+                    })
+                    +promotoria({
+                        name: '72ª Promotoria de Justiça De Campo Grande - Casa da Mulher Brasileira',
+                        promotores: ['Titular: Luciana do Amaral Rabelo', 'Substituição: Ana Lara Camargo de Castro']
+                    })
+    .grid__container
+        .grid__item.percentage-grid--1-2
+            .wrapper
+                h4.section__sub-title Interesses Difusos e Coletivos <span class="counter">(16)</span>
+                ul.list--no-bullets.list--spaced
+                    +promotoria({name: '25ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Antonio André David Medeiros', 'Substituição: Fabrício Proença de Azambuja'], areas: ['Consumidor'] })
+                    +promotoria({name: '26ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Luz Marina Borges Maciel Pinheiro'], areas: ['Meio Ambiente'] })
+                    +promotoria({name: '27ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Sergio Fernando Raimundo Harfouche'], areas: ['Infância e da Juventude'] })
+                    +promotoria({name: '28ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Vera Aparecida Cardoso Bogalho Frost Vieira'], areas: ['Infância e da Juventude'] })
+                    +promotoria({
+                        name: '29ª Promotoria de Justiça de Campo Grande',
+                        areas: ['Entidades de Interesse Social', 'Fundações', 'Patrimônio Público e Social'],
+                    })
+                    +promotoria({ name: '30ª Promotoria de Justiça de Campo Grande', areas: ['Entidades de Interesse Social','Fundações', 'Patrimônio Público e Social'], promotores: ['Titular: Alexandre Pinto Capiberibe Saldanha']})
+                    +promotoria({ name: '31ª Promotoria de Justiça de Campo Grande', areas: ['Entidades de Interesse Social','Fundações', 'Patrimônio Público e Social'], promotores: ['Titular: Henrique Franco Cândia']})
+                    +promotoria({ name: '32ª Promotoria de Justiça de Campo Grande', areas: ['Saúde'], promotores: ['Titular: Filomena Aparecida Depolito Fluminhan', 'Substituição: Daniela Cristina Guiotti', 'Designação: Luiz Antônio Freitas de Almeida']})
+                    +promotoria({ name: '33ª Promotoria de Justiça de Campo Grande', areas: ['Infância e da Juventude'], promotores: ['Titular: Nicolau Bacarji Júnior']})
+                    +promotoria({ name: '34ª Promotoria de Justiça de Campo Grande', areas: ['Meio Ambiente'], promotores: ['Titular: Alexandre Lima Raslan']})
+                    +promotoria({ name: '42ª Promotoria de Justiça de Campo Grande', areas: ['Meio Ambiente'], promotores: ['Titular: Andréia Cristina Peres da Silva']})
+                    +promotoria({ name: '43ª Promotoria de Justiça de Campo Grande', areas: ['Consumidor'], promotores: ['Titular: Luiz Eduardo Lemos de Almeida']})
+                    +promotoria({ name: '44ª Promotoria de Justiça de Campo Grande', areas: ['Idoso'], promotores: ['Titular: Cristiane Barreto Nogueira Rizkallah']})
+                    +promotoria({ name: '46ª Promotoria de Justiça de Campo Grande', areas: ['Infância e da Juventude'], promotores: ['Titular: Paulo Henrique Camargo Iunes']})
+                    +promotoria({
+                        name: '49ª Promotoria de Justiça de Campo Grande',
+                        areas: ['Entidades de Interesse Social', 'Fundações', 'Patrimônio Público e Social'],
+                        promotores: ['Titular: Gevair Ferreira Lima Júnior']
+                    })
+                    +promotoria({
+                        name: '67ª Promotoria de Justiça de Campo Grande',
+                        areas: ['Direitos Humanos'],
+                        promotores: ['Titular: Jaceguara Dantas da Silva Passos']
+                    })
+        .grid__item.percentage-grid--1-2
+            .wrapper
+                h4.section__sub-title Promotoria Auxiliar <span class="counter">(18)</span>
+                ul.list--no-bullets.list--spaced
+                    +promotoria({
+                        name: '36ª Promotoria de Justiça de Campo Grande',
+                        promotores: ['Titular: Thalys Franklyn de Souza']
+                    })
+                    +promotoria({name: '37ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Alexandre Magno Benites de Lacerda'] })
+                    +promotoria({name: '38ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Gerson Eduardo de Araújo'] })
+                    +promotoria({name: '39ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Fernando Martins Zaupa'] })
+                    +promotoria({name: '40ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Marjorie de Oliveira Zanchetta', 'Substituição: Daniela Cristina Guiotti'] })
+                    +promotoria({name: '41ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Camila Augusta Calarge Doreto', 'Substituição: Rogério Augusto Calábria de Araújo'] })
+                    +promotoria({name: '51ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Livia Carla Guadanhim Bariani'] })
+                    +promotoria({name: '52ª Promotoria de Justiça de Campo Grande', promotores: ['Substituição: Renata Ruth Fernandes Goya Marinho'] })
+                    +promotoria({name: '53ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Humberto Lapa Ferri'] })
+                    +promotoria({name: '54ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Marcos Alex Vera de Oliveira'] })
+                    +promotoria({name: '55ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Fabrício Proença de Azambuja'] })
+                    +promotoria({name: '56ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Júlio Bilemjian Ribeiro'] })
+                    +promotoria({name: '57ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Daniela Cristina Guiotti', 'Substituição: Filomena Aparecida Depolito Fluminhan'] })
+                    +promotoria({name: '58ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Paula da Silva Santos Volpe'] })
+                    +promotoria({name: '59ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Eduardo Franco Cândia'] })
+                    +promotoria({name: '60ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Luiz Antônio Freitas de Almeida'] })
+                    +promotoria({name: '70ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Tiago Di Giulio Freire'] })
+                    +promotoria({name: '10ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Ricardo de Melo Alves'] })
+    .action-bar
+        p Total de promotorias: <strong>70</strong>

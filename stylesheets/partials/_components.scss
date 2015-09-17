@@ -8,10 +8,10 @@
     .widget__title {
         font: {
             size: 87.5%;
-            weight: $font-feature-weight;
+            weight: $font-heading-weight;
         }
         letter-spacing: 0;
-        margin-bottom: $internal-spacing;
+        margin-bottom: $internal-spacing/2;
     }
 }
 
@@ -35,7 +35,7 @@
 
 
 
-@mixin button-like($foreground: $color-primary, $background: $color-inverted, $border: 'normal') {
+@mixin button-style($foreground: $color-primary, $background: $color-inverted, $border: 'normal') {
 
     &, &:visited {
 
@@ -117,7 +117,6 @@
     @include reset-spacing();
     margin-left: 0.7ex;
 }
-
     .nav__item {
         @include inline-block-box();
         margin-left: -0.7ex;
@@ -131,20 +130,26 @@
             text-decoration: none;
         }
 
-        [aria-haspopup="true"] {
+    [aria-haspopup="true"] {
 
-            .nav__caption::after {
-                @include arrow('down', .4em, $color-primary);
+        .nav__caption {
+            padding-right: 2em;
+
+            &:after {
+                @include arrow('down', .4em, $color-nav-links);
                 position: absolute;
                 right: .3em;
-                top:   45%;
+                top: 45%;
+                z-index: 1;
             }
 
-            .nav__caption:focus::after, .nav__caption:hover::after {
-                @include arrow('down', .4em, $color-highlight);
+            &:focus:after, &:hover:after {
+                border-top-color: $color-nav-hover;
             }
 
         }
+
+    }
 
     .nav__current {
 
@@ -153,14 +158,82 @@
             cursor: default;
         }
 
+        &[aria-haspopup="true"] .nav__caption:after {
+            border-top-color: $color-inverted;
+        }
+
     }
+
+
+
+$menu-backgroundcolor: darken($color-label, 7);
+
+.nav__dropdown {
+    background: $menu-backgroundcolor;
+    box-shadow: rgba(0,0,0,.3) 0 5px 7px;
+
+    position: absolute;
+    padding: 5px;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+
+    &:before {
+        @include arrow('up', 1em, $menu-backgroundcolor);
+        position: absolute;
+        bottom: 100%;
+        left: 1em;
+    }
+
+    &--inverted {
+        right: 0;
+        left: auto;
+
+        &:before {
+            left: auto;
+            right: 1em;
+        }
+
+    }
+}
+
+
+    .nav__submenu {
+        @include reset-spacing();
+
+        list-style: none;
+    }
+
+    /*.nav__dropdown { display: none;  }
+    [aria-haspopup='true']:hover > .nav__dropdown, [aria-haspopup='true']:focus > .nav__dropdown {
+        display: block;
+    }
+*/
+        .submenu__item:link {
+            color: $color-inverted;
+            display: block;
+            white-space: nowrap;
+            padding: .7em 1em;
+            text-decoration: none;
+        }
+            .submenu__item:hover, .submenu__item:focus {
+                background: $color-primary;
+                color: $color-inverted;
+            }
+
+        .dropdown__separator {
+            border-bottom: 1px solid lighten($color-label, 7);
+            margin-top:     .5em;
+            margin-bottom:  .5em;
+        }
 
 
 .main-nav {
 
     .nav__caption {
-        font-weight: 600;
-        padding: 1.5em;
+        font-weight: $font-feature-weight;
+        padding: 1em 1.5em;
     }
 
     .nav__current {
@@ -183,6 +256,11 @@
         @include small-uppercase-title($font-heading-weight);
         color: $color-label;
         padding: .3em 1em;
+
+/*        &:visited {
+            color: $color-label;
+        }*/
+
     }
 
     .nav__current {
@@ -214,27 +292,33 @@
         font-size: 81.25%;
     }
 
-        .breadcrumb__item::after {
-            content: '/';
-            font-weight: 700;
+        /*.breadcrumb__item::after,*/
+        .breadcrumb__item:after, {
+            /*content: '\f054';
+            font: {
+                family: FontAwesome;
+            }
+            margin-top:  .3em;
+            */
+            content: "/";
             float: right;
             margin-left: .7em;
-            margin-top:  .1em;
+            font-weight: $font-strong-weight;
         }
 
     .breadcrumb__item {
         color: $color-label;
     }
 
-    .breadcrumb__item.nav__current::after {
+    .breadcrumb__item.nav__current:after {
         display: none;
     }
 
-    .breadcrumb__root::before {
+    /*.breadcrumb__root:before {
         content: "\f015";
         font-family: FontAwesome, sans-serif;
         color: $color-primary;
-    }
+    }*/
 
 .nav-root {
     /*
@@ -265,10 +349,14 @@
    #LISTS
 \*---------------------------*/
 
-.def-list, .icon-list, .tab-list, .date-list {
+.def-list, .icon-list, .tab-list, .date-list, .common-list {
     @include reset-spacing();
     list-style-type: none;
 }
+
+    .list--spaced > .list__item {
+        margin-bottom: $internal-spacing;
+    }
 
 .list__item, .def-list__item,
 .media-item, .media__content {
@@ -292,60 +380,103 @@
 
         .def__description {
             @include clear-block;
-            font-size: 92%;
+            font-size: em(14);
         }
+
+
+
+.post-list {
+    border-top: $border-secondary-setting;
+
+    &__thumbnail {
+       width: 25%;
+    }
+    
+    &__title {
+        font: {
+            size: 125%;
+            weight: $font-heading-weight;
+        }
+    }
+    
+    &__section {
+        @include small-uppercase-title(800);
+    }
+    
+    &__timestamp {
+        font-size: em(14);
+    }
+
+    > .list__item {
+        padding-top: $internal-spacing;
+    }
+
+}
+
+
 
 
 //TODO move to the 'base' section
 .button {
 
     @include inline-block-box();
-    @include button-like($color-primary, $color-inverted);
+    @include button-style($color-primary, $color-inverted);
     border: 1px solid;
+    border-bottom-width: 3px;
     font: {
-        weight: 600;
-        size: 87.5%;
+        weight: $font-button-weight;
+        size: em(14);
     };
     line-height: 1;
     padding: .65em .8em;
     text-decoration: none;
     text-align: center;
 
+    &:active {
+        top: 2px;
+        position: relative;
+        border-bottom-width: 1px;
+        margin-bottom: 2px;
+    }
+    &, &:hover, &:focus {
+        transition-property: background-color, border-color;
+        transition-duration: .2s
+    }
 }
 
     .button--success {
-        @include button-like($color-success);
+        @include button-style($color-success);
     }
 
     .button--error {
-        @include button-like($color-error);
+        @include button-style($color-error);
     }
 
     .button--warning {
-        @include button-like($color-warning);
+        @include button-style($color-warning);
     }
 
     .button--neutral {
-        @include button-like($color-label);
+        @include button-style($color-label);
     }
 
     .button--inverted {
-        @include button-like($color-inverted, $color-primary, 'no-border');
+        @include button-style($color-inverted, $color-primary, 'no-border');
 
         &.button--success {
-            @include button-like($color-inverted, $color-success, 'no-border');
+            @include button-style($color-inverted, $color-success, 'no-border');
         }
 
         &.button--error {
-            @include button-like($color-inverted, $color-error, 'no-border');
+            @include button-style($color-inverted, $color-error, 'no-border');
         }
 
         &.button--warning {
-            @include button-like($color-inverted, $color-warning, 'no-border');
+            @include button-style($color-inverted, $color-warning, 'no-border');
         }
 
         &.button--neutral {
-            @include button-like($color-inverted, $color-label, 'no-border');
+            @include button-style($color-inverted, $color-label, 'no-border');
         }
 
     }
@@ -372,6 +503,7 @@
     }
     */
 
+
 hr {
     height: 0;
     border: none;
@@ -379,9 +511,43 @@ hr {
 }
 
 
-form {
+.input-text, .select-box {
+
+    @if ($high-contrast-mode == true) {
+        //background-color: lighten($color-inverted, 0.2);
+        color: $color-inverted;
+    }
+    @else {
+        //background-color: darken($color-background, 2);
+        color: $body-text-color;
+    }
+
+    padding: .4em .65em;
+
+    &:focus {
+        outline: 0;
+        border-color: $color-highlight;
+    }
+}
+
+.form {
+
+    font-size: em(15);
+
+    &--spaced-fields {
+
+       .form__input {
+           margin-bottom: .33em;
+       }
+
+    }
+
+    &__label {
+        font-weight: 600;
+    }
 
 }
+
 
 
 /* #TABLE */
@@ -427,7 +593,7 @@ form {
 
 
 .calendar-like {
-
+    min-width: 3em;
 }
 
 
@@ -443,9 +609,7 @@ form {
     }
 
     &__day {
-        background: $color-label;
-        color: $color-inverted;
-        font-size: 125%;
+        font-size: em(20);
     }
 
     &__month {

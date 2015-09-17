@@ -1,0 +1,26 @@
+mixin makeFooter
+
+    #main-footer.row.page__footer
+        .row.slot-social-media
+            .viewport-framing.center-container.horizontal-alignment--right
+                .toolbar.vertical-spacing(role="list")
+                    a.button.button--borderless.button--transparent(href="",role="link")
+                        | <ins class="fa  fa-envelope"></ins> Fale Conosco
+                    ins.separator(role="separator",aria-hidden="true")
+                    a.button.button--borderless.button--transparent(href="",role="link")
+                        | <ins class="fa  fa-facebook-square"></ins> Facebook
+                    a.button.button--borderless.button--transparent(href="",role="link")
+                        | <ins class="fa  fa-twitter"></ins> Twitter
+                    a.button.button--borderless.button--transparent(href="",role="link")
+                        | <ins class="fa  fa-youtube-play"></ins> YouTube
+        .row.slot-institutional
+            .viewport-framing.center-container.media-item.organization__info
+                .institutional-info.media__subject
+                    p.place__name Procuradoria-Geral de Justi&ccedil;a do Estado de Mato Grosso do Sul
+                    address.place__address.text--small
+                        p <ins class="fa  fa-map-marker" aria-hidden="true"></ins> Rua Pres. Manuel Ferraz de Campos Salles, 214 - Jardim Veraneio - CEP 79031-907 - Campo Grande - MS
+
+                    p.place__telephone.text--small <ins class="fa  fa-phone" aria-hidden="true"></ins> Telefone: (67) 3318-2000
+                .team-info.media__content.text--small.horizontal-alignment--right
+                    img.footer__main-logotype.place__name(src="logotipo.png", alt="Minist�rio P�blico de Mato Grosso do Sul")
+                    p.place__name Secretaria de Tecnologia da Informa&ccedil;&atilde;o - STI

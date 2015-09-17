@@ -1,0 +1,85 @@
+extends portal
+block vars
+    - var pageTitle = 'Quem Somos'
+    - var pathWay = [{label: 'Institucional', path: '/institucional'}]
+    - var magazineLike = true
+
+block content
+    .grid__container
+        .grid__item.percentage-grid--2-3
+            .wrapper
+                +tabList('main-content-tab')
+                    +tabItem('quem-somos', true) Quem somos
+                    +tabItem('orgaos-do-mp') Órgãos do MP
+
+                .tab__content-container
+                    #tab-quem-somos
+                        .article
+                            h3.section__sub-title Quem somos
+                            p.first-paragraph O Ministério Público é instituição permanente, essencial à função jurisdicional do Estado, incumbindo-lhe a defesa da ordem jurídica, do regime democrático e dos interesses sociais e individuais indisponíveis, de acordo com o artigo 127 da Constituição Federal de 1988. Também é função institucional do Ministério Público zelar pelo efetivo respeito dos serviços de relevância pública (aos quais se incluem as ações e serviços em saúde), aos direitos assegurados aos cidadãos pela Carta Magna, promovendo as medidas necessárias à sua garantia (art. 129, inciso II, CF/88).</p>
+                            .figure
+                                img.full-wide(src="http://www.mpms.mp.br/images/photos/PGJ03.jpg")
+                                p.figure__comments.text--small
+                                    ins.fa.fa-info-circle.spacing-right
+                                    | Sede da Procuradoria-Geral de Justiça do Estado de Mato Grosso do Sul</p>
+                                p.figure__comments.text--small.credits
+                                    ins.fa.fa-user.spacing-right
+                                    | Créditos: Douglas Oldegardo Cavalheiro dos Santos</p>
+
+                            p São princípios institucionais do Ministério Público a unidade, a indivisibilidade e a independência funcional e a seus membros, são asseguradas as seguintes garantias; a vitaliciedade, após dois anos de exercício, não podendo perder o cargo senão por sentença judicial transitada em julgado; inamovibilidade, salvo por motivo de interesse público, mediante decisão do órgão colegiado competente do Ministério Público, pelo voto da maioria absoluta de seus membros, assegurada ampla defesa; e a irredutibilidade de subsídio.</p>
+                            p Ao Ministério Público é assegurada autonomia funcional e administrativa, podendo, observado o disposto no art. 169 da Constituição Federal, propor ao Poder Legislativo a criação e extinção de seus cargos e serviços auxiliares, provendo-os por concurso público de provas ou de provas e títulos, a política remuneratória e os planos de carreira, ainda de acordo com o artigo 127, CF.</p>
+                            p Com autonomia funcional e administrativa, o Ministério Público exerce as funções constitucionais de maneira livre e independente, sempre lutando pelos direitos dos cidadãos, da criança e do adolescente, do idoso, do consumidor, do aposentado, do incapaz, da família, do trabalhador, protegendo o meio ambiente e o patrimônio público, além de fiscalizar a moralidade no serviço público, abrangendo todas as áreas de que necessita a sociedade para sobreviver.</p>
+                            .figure
+                                img.full-wide(src="http://www.mpms.mp.br/images/photos/PGJ12.jpg")
+                                p.figure__comments.text--small Auditório Dr. Nereu Aristides Marques, localizado na sede da PGJ-MS</p>
+                                p.figure__comments.text--small.credits Créditos: Douglas Oldegardo Cavalheiro dos Santos</p>
+
+                            p As funções institucionais do Ministério Público são manter a ordem democrática, garantindo o exercício dos direitos sociais e constitucionais, bem como a segurança, a liberdade, o bem-estar, o desenvolvimento, a igualdade social e a justiça.</p>
+                            p De acordo com o artigo 129 e seus incisos, são funções institucionais do Ministério Público promover, privativamente, a ação penal pública, na forma da lei; zelar pelo efetivo respeito dos Poderes Públicos e dos serviços de relevância pública aos direitos assegurados pela Constituição, promovendo as medidas necessárias a sua garantia; promover o inquérito civil e a ação civil pública, para a proteção do patrimônio público e social, do meio ambiente e de outros interesses difusos e coletivos; promover a ação de inconstitucionalidade ou representação para fins de intervenção da União e dos Estados, nos casos previstos na Constituição Federal; requisitar diligências investigatórias e a instauração de inquérito policial, indicados os fundamentos jurídicos de suas manifestações processuais; e exercer o controle externo da atividade policial, entre outros.</p>
+                            p Ainda segundo o artigo 129, em seus §§ 2º e 3º, as funções do Ministério Público só podem ser exercidas por integrantes da carreira, que deverão residir na comarca da respectiva lotação, salvo autorização do chefe da instituição. O ingresso na carreira do Ministério Público far-se-á mediante concurso público de provas e títulos, assegurada a participação da Ordem dos Advogados do Brasil em sua realização, exigindo-se do bacharel em direito, no mínimo, três anos de atividade jurídica e observando-se, nas nomeações, a ordem de classificação.</p>
+                            p O Ministério Público se fortaleceu nos últimos anos, principalmente diante das manifestações populares nas ruas provocando a queda da PEC 37 (Proposta de Emenda à Constituição) que dava poder exclusivo à polícia para realizar investigações criminais, retirando essa possibilidade do Ministério Público. O respeito e a admiração pela Instituição vêm aumentando, principalmente pelo trabalho desenvolvido pelos seus membros.</p>
+                            p Na área criminal, o Ministério Público tem a função de garantir segurança ao meio social, defendendo a sociedade daqueles que afrontam a lei cometendo crimes. Na área civil, tem atuação destacada nos processos de inventário onde há interesses de menores ou incapazes. Promove a investigação de paternidade e atua em divórcios e separações com o intuito de proteger a instituição da família, sem descuidar da fiscalização das contas públicas e da verificação da correta aplicação do dinheiro do contribuinte nos setores essenciais.</p>
+                            p O Procurador-Geral de Justiça exerce a chefia da Instituição, sendo nomeado pelo Governador do Estado dentre integrantes de carreira, indicado em lista tríplice elaborada, através de votação, pelos membros da carreira em efetivo exercício, para mandato de dois anos, permitida uma recondução por igual período, na forma da Lei Complementar.</p>
+                            h4.section__sub-sub-title Acesso à população
+                            p Para representar a sociedade, na exigência de seus direitos, o Ministério Público conta com as Promotorias e as Procuradorias de Justiça que, como o próprio nome diz, têm autonomia para promover a justiça social.</p>
+                            p O Ministério Público do Estado de Mato Grosso do Sul, atua através de seus Centros de Apoio Operacional das Promotorias de Justiça em assuntos relacionados ao Meio Ambiente, ao Consumidor, a Habitação e Urbanismo e do Patrimônio Histórico e Cultural, Infância e Juventude, Patrimônio Público e Social, Fundações, Idosos e das Pessoas com Deficiência, Direitos Constitucionais do Cidadão e dos Direitos Humanos, Criminal e das Vitimas de Infração Penal, Cíveis, Eleitorais e do Controle Externo da Atividade Policial.</p>
+                            .figure
+                                img.full-wide(src="http://www.mpms.mp.br/images/photos/Ruadapaz04.jpg")
+                                p.figure__comments Promotorias de Justiça na Rua da Paz em Campo Grande.</p>
+                                p.figure__comments.credits Créditos: Douglas Oldegardo Cavalheiro dos Santos</p>
+
+                            p A população pode ter livre acesso aos trabalhos prestados pelo Ministério Público do Estado de Mato Grosso do Sul em sua função constitucional. Todo cidadão tem o direito de falar, ser ouvido e ser recebido por um Procurador de Justiça, na Procuradoria-Geral de Justiça em Campo Grande ou por um Promotor de Justiça através das Promotorias de Justiça da Capital e interior do Estado, fazendo denúncias ou pleiteando direitos constitucionais.</p>
+                            h4.section__sub-sub-title Criança e Adolescente</h4>
+                            p A Constituição Federal elenca que é dever da família, da sociedade e do Estado assegurar à criança, e ao adolescente, com absoluta prioridade, o direito à vida, à saúde, à alimentação, à educação, ao lazer, à profissionalização, à cultura, à dignidade, ao respeito, à liberdade, e à convivência familiar e comunitária, além colocá-los a salvo de toda forma de negligência, discriminação, exploração, violência, crueldade e opressão (CF, art. 227, “caput”).</p>
+                            p O art. 201, XII, § 5º, “c”, da Lei n.º 8.069/90 (Estatuto da Criança e do Adolescente), garante que compete ao Ministério Público “efetuar recomendações visando à melhoria dos serviços públicos e de relevância afetos à criança e ao adolescente, fixando prazo razoável para sua perfeita adequação”.</p>
+                            p O Ministério Público deve promover e acompanhar os procedimentos relativos às infrações atribuídas a adolescentes, promover e acompanhar as ações de alimentos e os procedimentos de suspensão e destituição do poder familiar, nomeação e remoção de tutores, curadores e guardiães, bem como oficiar em todos os demais procedimentos da competência da Justiça da Infância e da Juventude;</p>
+                            p O MP ainda deve promover, de ofício ou por solicitação dos interessados, a prestação de contas dos tutores, curadores e quaisquer administradores de bens de crianças e adolescentes nas hipóteses do art. 98 do Estatuto da Criança e do Adolescente, além de promover o inquérito civil e a ação civil pública para a proteção dos interesses individuais, difusos ou coletivos relativos à infância e à adolescência, inclusive os definidos no art. 220 § 3º, inciso II, da Constituição Federal (estabelecer os meios legais que garantam à pessoa e à família a possibilidade de se defenderem de programas ou programações de rádio e televisão que contrariem o disposto no Art. 221, bem como da propaganda de produtos, práticas e serviços que possam ser nocivos à saúde e ao meio ambiente).</p>
+
+                            h4 Saúde
+                            p O artigo 196 da Constituição Federal de 1988 dispõe que “a saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação”, configurando um direito público subjetivo e fundamental (direito à vida) do ser humano, cujo dever em assegurar a saúde foi conferida à Administração Pública, conforme previsão dos artigos 23, inciso II, 24, inciso XII e 30, inciso VII, todos da Carta Constitucional de 1988. O Ministério Público zela para que isso seja cumprido.</p>
+                            h4 Do Meio Ambiente
+                            p Cabe ainda, ao Ministério Público, através de suas ações, fazer cumprir o artigo 225 da Constituição Federal, para que todos possam ter direito ao meio ambiente ecologicamente equilibrado, bem de uso comum do povo e essencial à sadia qualidade de vida, impondo-se ao Poder Público e à coletividade o dever de defendê-lo e preservá- lo para as presentes e futuras gerações.</p>
+        .grid__item.grid__item.percentage-grid--1-3
+            .wrapper
+                .widget
+                    h2.widget__title
+                        span.caption Atividades Realizadas em 2015
+                    ul.def-list
+                        li.list-item.def-list__item
+                            .def__title <span class="text--big">1.112</span>
+                            .def__description Ações Civis Públicas Ajuizadas
+                        li.list-item.def-list__item
+                            .def__title <span class="text--big">11.041</span>
+                            .def__description Denúncias Oferecidas
+                        li.list-item.def-list__item
+                            .def__title <span class="text--big">125.374</span>
+                            .def__description Manifestações Realizadas no ano
+                        li.list-item.def-list__item
+                            .def__title <span class="text--big">207</span>
+                            .def__description Sessões do Tribunal do Júri
+                        li.list-item.def-list__item
+                            .def__title <span class="text--big">141</span>
+                            .def__description Termos de Ajustamento de condutas
+                        .footnotes
+                            p <strong>Fonte:</strong> Dados de 01/01/2015 até 15/06/2015 @ 09:00:09
+
