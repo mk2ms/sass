@@ -6,6 +6,30 @@ block vars
 
 block content
     ul.common-list.list--news
+        - each noticia in results
+            - if (noticia.descricao != '')
+                li.media-item.list__item.news__item
+                    .media__subject.size--5
+                        p.news__date-published
+                            time(datetime=noticia.data+'T00:00'): +timestamp2full(noticia.data)
+                        p.text--small
+                            +fa-icon({name: 'clock-o', extras: ''})
+                            | 12h00
+                    .media__content
+                        h3.news__headline
+                            a(href="/noticias/"+noticia.id)= noticia.titulo
+                        - if (noticia.imagens.length > 0)
+                            .news__picture
+                                img(src="http://www.mpms.mp.br/portal/imagens/"+noticia.imagens[0].link).news__photo
+                        - if (noticia.descricao != '')
+                            .news__partial
+                                p= noticia.descricao.replace(/(<([^>]+)>)/ig,"").substr(0, 250) + '...'
+                                    a(href='/noticias/'+noticia.id) continuar lendo
+                        - if (noticia.tags != undefined && noticia.tags.length > 0)
+                            .news__tags.tags__container
+                                span.text--x-small= 'Palavras-chave: '
+                                - each tag in noticia.tags.split(';')
+                                    +tag(tag, '?tag='+tag)
         li.media-item.list__item.news__item
             .media__subject.size--5
                 p.news__date-published
@@ -35,8 +59,9 @@ block content
                 .news__partial
                     p As Promotoras de Justiça Ana Lara Camargo de Castro e Helen Neves Dutra da Silva, com atuação em PJs da Violência Doméstica e Familiar contra a Mulher, participaram A participaram de audiência pública na quinta-feira (28/8/2015), na Assembleia Legislativa do Estado, em comemoração aos nove anos da criação da Lei Maria da Penha (11.340/2006)
                 .news__tags.tags__container
-                    a.tag(href="?tag=audiencia-publica") Audiência Pública
-                    a.tag(href="?tag=maria-da-penha") Maria da Penha
+                    span.text--very-small= 'Palavras-chave: '
+                    +tag('Audiência Pública', '?tag=audiencia-publica')
+                    +tag('Maria da Penha', '?tag=maria-da-penha')
         li.media-item.list__item.news__item
             .media__subject.size--5
                 p.news__date-published
@@ -50,5 +75,6 @@ block content
                 .news__partial
                     p O Juiz de Direito André Luiz Monteiro, em substituição legal na Vara de Fazenda Pública de Corumbá (MS), acatou o pedido do Ministério Público do Estado de Mato Grosso do Sul, por meio da 5ª Promotoria de Justiça de Corumbá, e determinou a interdição da Boate Studium 1054, sob aplicação de multa no valor de R$ 10 mil por cada dia de funcionamento indevido.
                 .news__tags.tags__container
-                    a.tag(href="?tag=corumba") Corumbá
-                    a.tag(href="?tag=interdicao") Interdição
+                    span.text--very-small= 'Palavras-chave: '
+                    +tag('Corumbá','?tag=corumba')
+                    +tag('Interdição','?tag=interdicao')

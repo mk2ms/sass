@@ -9,7 +9,7 @@ mixin promotoria(params)
             - if (params.areas.length > 0)
                 .tags__container
                     - each area in params.areas
-                        span.tag= area
+                        +tag(area, '?area='+area)
             - each promotor in params.promotores
                 .person= promotor
 
@@ -18,7 +18,7 @@ block vars
     - var pageTitle = "Comarca de Campo Grande"
     - var pathWay = [{ label: 'Promotorias', path: '/main/promotorias'}]
     - var magazineLike = true
-    - var titleComplement = '<p><a class="text--no-underline" href="/promtorias/entrancia-especial/"><ins class="fa fa-dot-circle-o"></ins> Entrância Especial</a></p>'
+    - var titleComplement = '<p><a class="text--no-underline" href="/promtorias/entrancia-especial/"><ins class="fa fa-dot-circle-o"></ins> Entrância Especial</a></p><hr/><p class="text--small">Municípios e distritos atendidos: Campo Grande, Rochedinho e Anhanduí</p>'
 
 
 block content
@@ -258,4 +258,4 @@ block content
                     +promotoria({name: '70ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Tiago Di Giulio Freire'] })
                     +promotoria({name: '10ª Promotoria de Justiça de Campo Grande', promotores: ['Titular: Ricardo de Melo Alves'] })
     .action-bar
-        p Total de promotorias: <strong>70</strong>
+        p Total de promotorias: <strong class="count">70</strong>

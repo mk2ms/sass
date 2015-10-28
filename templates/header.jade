@@ -1,13 +1,12 @@
 mixin makeHeader
 
-    #top-of-the-page.header.page__header
+    header#top-of-the-page.header.page__header(role='banner')
         #utility-bar.row.solid-box--half.viewport-framing
             .center-container
                 #accessibility-panel.toolbar(role="toolbar")
-                    a.button(href="/mapa-do-site", role=button)
-                        ins.fa.fa-sitemap.spacing-right--half
+                    +button({ href:"/mapa-do-site", icon: 'sitemap'})
                         span.caption Mapa do Site
-                    ins.separator(role=separator, aria-hidden=true)
+                    +separator
                     button#accessibility-highContrast.button(title="Modo alto contraste")
                         ins.fa.fa-adjust.spacing-right--half
                         span.caption Alto contraste
@@ -37,7 +36,7 @@ mixin makeHeader
                     a(href="#breadcrumb", accesskey="b") Ir para para breadcrumb
                         span.hotkey Alt+
                         span.hotkey b
-        .viewport-framing.vertical-spacing--2x.center-container
+        .viewport-framing.center-container
             h1.logotipo
                 a(href=".", title="Ministério Público de Mato Grosso do Sul")
                     img.logotipo-src(src="logotipo.png", alt="Logotipo do Minist&eacute;rio P&uacute;blico de Mato Grosso do Sul")

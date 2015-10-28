@@ -209,45 +209,42 @@ h1, h2, h3, h4, h5, h6 {
     .article h1:first-child, .article h2:first-child, .article h3:first-child, .article h4:first-child, .article h5:first-child, .article h6:first-child {
       margin-top: 0; }
 
-.reading-mode {
-  font-family: "Merriweather", Georgia, Times, serif; }
-  .reading-mode .article {
-    word-spacing: .1em; }
-    .reading-mode .article--news__heading {
-      text-align: center;
-      margin-bottom: 60px; }
-    .reading-mode .article--news__subject {
-      font-size: 75%;
-      font-weight: 700;
-      letter-spacing: 0;
-      text-transform: uppercase;
-      font-family: "Open Sans", Helvetica, Arial, sans-serif;
-      letter-spacing: .4em;
-      white-space: nowrap; }
-    .reading-mode .article--news__title {
-      font-size: 240%;
-      font-family: "Open Sans", Helvetica, Arial, sans-serif;
-      line-height: 1;
-      padding-left: 10%;
-      padding-right: 10%;
-      margin-top: 1em; }
-    .reading-mode .article--news__summary {
-      font-size: 87.5%;
-      font-style: italic; }
-    .reading-mode .article--news__date-published {
-      display: inline-block;
-      *display: inline;
-      zoom: 1;
-      clear: both;
-      border-top: 1px solid #e6e6e6;
-      font-family: "Open Sans", Helvetica, Arial, sans-serif;
-      color: #C7C8CA;
-      padding: 1em; }
-    .reading-mode .article p {
-      margin: 0 0 1.6em;
-      line-height: 1.6; }
-    .reading-mode .article h2, .reading-mode .article h3, .reading-mode .article h4, .reading-mode .article h5, .reading-mode .article h6 {
-      font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+.reading-mode .article {
+  word-spacing: .1em; }
+  .reading-mode .article--news__heading {
+    text-align: center;
+    margin-bottom: 20px; }
+  .reading-mode .article--news__subject {
+    font-size: 75%;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    white-space: nowrap; }
+  .reading-mode .article--news__title {
+    font-size: 240%;
+    line-height: 1;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 0; }
+  .reading-mode .article--news__summary {
+    font-size: 87.5%;
+    font-style: italic; }
+  .reading-mode .article--news__date-published {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    clear: both;
+    border-top: 1px solid #e6e6e6;
+    color: #C7C8CA;
+    padding: 1em; }
+  .reading-mode .article--news__body, .reading-mode .article--news__summary {
+    font-family: "Merriweather", Georgia, Times, serif; }
+  .reading-mode .article p {
+    margin: 0 0 1.6em;
+    line-height: 1.6; }
+  .reading-mode .article h2, .reading-mode .article h3, .reading-mode .article h4, .reading-mode .article h5, .reading-mode .article h6 {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif; }
 
 strong {
   font-weight: 700; }
@@ -425,7 +422,7 @@ h1 {
   margin-bottom: .5em; }
 
 .main-nav .nav__caption {
-  font-weight: 700;
+  /*font-weight: $font-feature-weight;*/
   padding: 1em 1.5em; }
 .main-nav .nav__current .nav__caption {
   border-bottom: 5px solid #009DDC;
@@ -583,9 +580,9 @@ h1 {
   background-color: #fff;
   color: #00A160; }
 .button--success:focus, .button--success:hover {
-  border-color: #00ed8e;
+  border-color: #00ee8e;
   background-color: white;
-  color: #00ed8e;
+  color: #00ee8e;
   outline: none; }
 
 .button--error, .button--error:visited {
@@ -632,8 +629,8 @@ h1 {
   background-color: #00A160;
   color: #fff; }
 .button--inverted.button--success:focus, .button--inverted.button--success:hover {
-  border-color: #00ed8e;
-  background-color: #00ed8e;
+  border-color: #00ee8e;
+  background-color: #00ee8e;
   color: white;
   outline: none; }
 .button--inverted.button--error, .button--inverted.button--error:visited {
@@ -690,12 +687,24 @@ hr {
     outline: 0;
     border-color: #2ac2ff; }
 
+.input-checkbox, input[type='checkbox'],
+.input-radio, input[type='radio'] {
+  margin-right: .5em;
+  margin-left: -1.5em;
+  width: 1em; }
+
 .form {
   font-size: 93.75%; }
   .form--spaced-fields .form__input {
     margin-bottom: .33em; }
   .form__label {
     font-weight: 600; }
+    .form__label--checkbox, .form__label--radio {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      margin-left: 1.5em;
+      padding-bottom: .5em; }
 
 /* #TABLE */
 /* #Calendar Components */
@@ -725,16 +734,16 @@ hr {
   margin-bottom: 10px; }
 
 .calendar-like {
-  min-width: 3em; }
-
-.calendar-like {
+  min-width: 3em;
   background: #eeefef;
   color: #000;
   text-align: center; }
   .calendar-like__day, .calendar-like__month {
     padding: 5px 10px; }
   .calendar-like__day {
-    font-size: 125%; }
+    font-size: 125%;
+    background: #666;
+    color: #fff; }
   .calendar-like__month {
     font-size: 75%;
     font-weight: 700;
@@ -793,19 +802,14 @@ hr {
 
 .spacing-right--half {
   margin-right: 10px; }
-
 .spacing-right {
   margin-right: 20px; }
-
 .spacing-right--2x {
   margin-right: 40px; }
-
 .spacing-left--half {
   margin-left: 10px; }
-
 .spacing-left {
   margin-left: 20px; }
-
 .spacing-left--2x {
   margin-left: 40px; }
 
@@ -832,7 +836,9 @@ a {
 
 .logotipo {
   line-height: 0;
-  text-align: center; }
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px; }
   .logotipo-src {
     width: 390px; }
 
@@ -852,6 +858,8 @@ a.tag:hover {
   background: #009DDC;
   color: #fff; }
 
+.list__item > h5 a {
+  /*text-decoration: none;*/ }
 .list__item > h5 ~ * {
   margin-left: 20px; }
 
@@ -868,8 +876,7 @@ a.tag:hover {
   text-align: right; }
 
 #utility-bar {
-  background: #fafafa;
-  border-bottom: 1px solid #f2f2f3; }
+  background: #fafafa; }
 
 #accessibility-panel {
   float: left; }
@@ -905,7 +912,6 @@ a.tag:hover {
     .main-nav .nav__current .nav__caption:hover, .main-nav .nav__current .nav__caption:focus, .main-nav .nav__current .nav__caption:visited {
       color: #fff; }
   .main-nav .nav__caption {
-    padding: 2em 1.5em;
     color: #666; }
     .main-nav .nav__caption:hover, .main-nav .nav__caption:focus {
       color: #2ac2ff; }
@@ -932,8 +938,6 @@ a.tag:hover {
   .mpms-news__title a {
     text-decoration: none; }
 .mpms-news__description {
-  /*border-left: $border-secondary-setting;
-  padding-left: $internal-spacing;*/
   margin-top: .5em;
   font-size: 81.25%;
   line-height: 1.2; }
@@ -1042,8 +1046,7 @@ a.tag:hover {
 
 /* Bloco fundo azul letra branca */
 .section__title-container--magazine-like {
-  color: #009DDC;
-  border-right: 3px solid;
+  border-right: 3px solid #009DDC;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1077,6 +1080,8 @@ a.tag:hover {
         width: $magazine-like-title-width;
     }
 */ }
+  .section__title-container--magazine-like .section__title {
+    color: #009DDC; }
 
 .page__section--magazine-like {
   position: relative;

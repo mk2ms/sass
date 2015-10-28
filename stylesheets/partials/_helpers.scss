@@ -93,30 +93,32 @@
 
 }
 
-.spacing-right--half {
-    margin-right: $internal-spacing/2;
-}
+.spacing {
 
-.spacing-right {
-    margin-right: $internal-spacing;
-}
+    &-right--half {
+        margin-right: $internal-spacing/2;
+    }
 
-.spacing-right--2x {
-    margin-right: $internal-spacing*2;
-}
+    &-right {
+        margin-right: $internal-spacing;
+    }
 
-.spacing-left--half {
-    margin-left: $internal-spacing/2;
-}
+    &-right--2x {
+        margin-right: $internal-spacing*2;
+    }
 
-.spacing-left {
-    margin-left: $internal-spacing;
-}
+    &-left--half {
+        margin-left: $internal-spacing/2;
+    }
 
-.spacing-left--2x {
-    margin-left: $internal-spacing*2;
-}
+    &-left {
+        margin-left: $internal-spacing;
+    }
 
+    &-left--2x {
+        margin-left: $internal-spacing*2;
+    }
+}
 .any--full-wide {
     box-sizing: border-box;
     display: block;

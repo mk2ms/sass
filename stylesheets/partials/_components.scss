@@ -232,7 +232,7 @@ $menu-backgroundcolor: darken($color-label, 7);
 .main-nav {
 
     .nav__caption {
-        font-weight: $font-feature-weight;
+        /*font-weight: $font-feature-weight;*/
         padding: 1em 1.5em;
     }
 
@@ -530,6 +530,17 @@ hr {
     }
 }
 
+
+.input-checkbox, input[type='checkbox'],
+.input-radio, input[type='radio'] {
+    margin-right: .5em;
+    margin-left: -1.5em;
+    width: 1em;
+}
+
+
+
+
 .form {
 
     font-size: em(15);
@@ -544,6 +555,13 @@ hr {
 
     &__label {
         font-weight: 600;
+
+        &--checkbox, &--radio {
+            @include inline-block-box();
+            margin-left: 1.5em;
+            padding-bottom: .5em;
+        }
+
     }
 
 }
@@ -592,13 +610,9 @@ hr {
 }
 
 
+
 .calendar-like {
     min-width: 3em;
-}
-
-
-.calendar-like {
-
     background: lighten($color-neutral, 15);
     color: $body-text-color;
     text-align: center;
@@ -610,6 +624,7 @@ hr {
 
     &__day {
         font-size: em(20);
+        @include label-inverted;
     }
 
     &__month {

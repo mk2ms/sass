@@ -19,7 +19,7 @@ block content
                             option(value="1") por nome de promotor
                             option(value="2") por nome de comarca
                         .form__footer.horizontal-alignment--right
-                            +button({el: 'b', type: "submit", style: 'neutral', inverted: true, icon: 'search'}) Buscar
+                            +button({el: 'b', type: "submit", inverted: true, icon: 'search'}) Buscar
                         .action-bar.vertical-spacing
                             +button({href: "/mapa-de-comarcas", icon: 'map-marker'}) Mapa de Comarcas
 
@@ -89,3 +89,6 @@ block content
                     <li class="list__item"><a href="/promotorias/campo-grande">Campo Grande</a></li>
                     <li class="list__item"><a href="/promotorias/dourados">Dourados</a></li>
                     <li class="list__item"><a href="/promotorias/tres-lagoas">Três Lagoas</a></li>
+
+    .action-bar
+        p Total de comarcas: <strong class="count">54</strong>

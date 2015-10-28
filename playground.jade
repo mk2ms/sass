@@ -1,5 +1,26 @@
 doctype html
 html(lang='pt-br')
     block vars
+        - var pageTitle = 'Playground'
 
     include templates/components
+
+    include templates/head
+
+    body
+        .center-container.size--1
+            h1= pageTitle
+
+            form
+                .wrapper
+                    label.form__label--checkbox(for='checkbox1')
+                        input#checkbox1.input-checkbox(name='checkbox1', type='checkbox')
+                        | Clique aqui para selecionar The node-sass project has proven to be popular, and we've taken it into the main Sass GitHub repo. Check out its package page here, and there's a dedicated twitter account for updates.
+                .wrapper
+                    label.form__label--checkbox(for='checkbox2')
+                        input#checkbox2.input-checkbox(name='checkbox2', type='checkbox')
+                        | Segunda opção
+                .wrapper
+                    label.form__label--checkbox(for='checkbox3')
+                        input#checkbox3.input-checkbox(name='checkbox3', type='checkbox')
+                        | Terceira opção

@@ -13,9 +13,11 @@ mixin makeBreadcrumb(pathWay)
                 - each path, index in pathWay
                     - if (index < pathWay.length)
                         li.breadcrumb__item.nav__item(rel="up")
-                            a.nav__caption(itemprop="name", href="#{path.path}") #{path.label}
-                            meta(itemprop="position", content="#{index+2}")
+                            | &nbsp;
+                            a.nav__caption(itemprop="name", href=path.path)= path.label
+                            meta(itemprop="position", content=index+2)
 
                 li.breadcrumb__item.nav__item.nav__current
-                    span.nav__caption(title="#{pageTitle}")= pageTitle.length > 38 ? pageTitle.substr(0,38) +'...' : pageTitle
-                    meta(itemprop="position", content="#{pathWay.length+2}")
+                    | &nbsp;
+                    span.nav__caption(title=pageTitle)= pageTitle.length > 38 ? pageTitle.substr(0,38) +'...' : pageTitle
+                    meta(itemprop="position", content=pathWay.length+2)

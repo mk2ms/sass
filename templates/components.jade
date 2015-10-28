@@ -1,3 +1,22 @@
+// configuration
+- var icon_class = 'fa'
+- var _listOfMonths = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+
+mixin fa-icon(params)
+    - params = params || {}
+    ins(class='#{icon_class} #{icon_class}-#{params.name}')
+    //&attributes(params.extras)
+
+
+
+mixin tag(keyword, link)
+    - if (link == undefined)
+        span.tag=keyword
+    - else
+        a.tag(href=encodeURI(link))=keyword
+
+
+
 mixin button(params)
     //- @icon       :   Font awesome icon name without the fa- prefix
     //- @style      :   The button modifier (pre-defined ones: success, neutral, error, warning) can be anything else user-defined
@@ -5,33 +24,36 @@ mixin button(params)
     //- @el         :   Use a for <a> and b for <button> (Default is 'a')
     //- @href       :   !optional - pass an URL or anchor to use on the a.button
     //- @type       :   Can be 'button', 'reset', 'submit' and is used only for <button> element
+    //- @borderless :   Can be true or false to add a borderless class to the button
+
     - params = params || {}
-    - var icon_class = 'fa'
     - var button_style = params.style ? 'button--'+params.style : ''
     - var icon = params.icon
     - var element = 'a'
 
     - if (params.el == 'b')
         -   element = 'button'
-
     - if (params.inverted == true)
-        -   button_style = button_style + ' button--inverted'
+        -   button_style += ' button--inverted'
+    - if (params.borderless == true)
+        -   button_style += ' button--borderless'
 
-    #{element}.button(class='#{button_style}')&attributes({ href: params.href, type: params.type })
+    //- @output
+    #{element}.button(class=button_style)&attributes({ href: params.href, type: params.type, role: params.role })
         - if (icon)
-            ins(class='spacing-right--half  #{icon_class}  #{icon_class}-#{icon}')
+            +fa-icon({name: icon, extras: {'class': 'spacing-right--half'}})
         block
 
 
 
 mixin sectionStart
-    .row.viewport-framing.page__section(class=magazineLike == true ? 'page__section--magazine-like' : '')
-        #main-content.main-content--default(role="main")
+    section.row.viewport-framing.page__section(class=magazineLike == true ? 'page__section--magazine-like' : '')
+        #main-content.main-content--default(role="main", aria-label="Conteúdo Principal")
             - if (!suppressTitle)
                 .page__title-container(class=magazineLike == true ? 'section__title-container--magazine-like' : '')
-                    h2.section__title !{pageTitle}
+                    h2.section__title= pageTitle
                     - if (titleComplement)
-                        !{titleComplement}
+                        | !{titleComplement}
             .page__content
                 block
 
@@ -40,36 +62,45 @@ mixin sectionStart
 mixin tabList(id)
     - var navName = id || 'main-content-tab';
     .nav-tab(role="navigation")
-        ul.tab-list(role="tablist", id='#{navName}')
+        ul.tab-list(role="tablist", id=navName)
             block
 
 
 mixin tabItem(tab_name, current)
     - if (current == true)
         li.nav__item.tab__item.nav__current(role="presentation")
-            a.nav__caption.tab__caption(id="#{tab_name}", role="tab", aria-controls="tab-#{tab_name}", aria-selected="true", href="#tab-#{tab_name}")
+            a.nav__caption.tab__caption(id=tab_name, role="tab", aria-controls="tab-#{tab_name}", aria-selected="true", href="#tab-#{tab_name}")
                 block
     - else
         li.nav__item.tab__item(role="presentation")
-            a.nav__caption.tab__caption(id="#{tab_name}", role="tab", aria-controls="tab-#{tab_name}", aria-selected="false", href="#tab-#{tab_name}")
+            a.nav__caption.tab__caption(id=tab_name, role="tab", aria-controls="tab-#{tab_name}", aria-selected="false", href="#tab-#{tab_name}")
                 block
 
 
 
 mixin person(given_name, family_name, occupation, photo_src, photo_alt)
     .person__picture
-        img(src="#{photo_src}", alt="#{photo_alt}", style="width: 120px;")
+        img(src=photo_src, alt=photo_alt, style="width: 120px;")
     .person__info
         .person__name
             | <span class="person__given-name">#{given_name}</span> <span class="person__family-name">#{family_name}</span>
         .person__job-title
-            span #{occupation}
+            span= occupation
 
 
 
 mixin calendarLike(day, month)
-    - var _listOfMonths = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
     - var _month = _listOfMonths[month-1]
     .calendar-like
-        .calendar-like__day #{day}
-        .calendar-like__month #{_month.substr(0,3)}
+        .calendar-like__day= day
+        .calendar-like__month= _month.substr(0,3)
+
+
+
+mixin separator
+    ins.separator(role="separator",aria-hidden="true")
+
+
+mixin timestamp2full(date)
+    - var _fragments = date.split('/')
+    | #{_fragments[0]} de #{_listOfMonths[_fragments[1]-1]] de #{_fragments[2]}

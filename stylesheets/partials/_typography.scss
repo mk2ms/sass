@@ -50,7 +50,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .reading-mode {
-    font-family: $font-secondary;
 
     .article {
         word-spacing: .1em;
@@ -59,25 +58,21 @@ h1, h2, h3, h4, h5, h6 {
 
             &__heading {
                 text-align: center;
-                margin-bottom: $internal-spacing*3;
+                margin-bottom: $internal-spacing;
             }
 
             &__subject {
                 @include small-uppercase-title($font-heading-weight);
-                font-family: $font-primary;
                 letter-spacing: .4em;
                 white-space: nowrap;
             }
 
             &__title {
-                font: {
-                    size: 240%;
-                    family: $font-primary;
-                }
+                font-size: 240%;
                 line-height: 1;
                 padding-left: 10%;
                 padding-right: 10%;
-                margin-top: 1em;
+                margin-top: 0;
             }
 
             &__summary {
@@ -89,9 +84,12 @@ h1, h2, h3, h4, h5, h6 {
                 @include inline-block-box();
                 clear: both;
                 border-top: $border-secondary-setting;
-                font-family: $font-primary;
                 color: $color-neutral;
                 padding: 1em;
+            }
+
+            &__body, &__summary {
+                font-family: $font-secondary;
             }
 
         }

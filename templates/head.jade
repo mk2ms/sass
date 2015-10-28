@@ -9,6 +9,7 @@ mixin makeHead
     // nothing here
 
 head
+    //base(href='http://172.20.5.193:8080')
     meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
     meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1")
     link(href='https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css', rel='stylesheet', type='text/css')
@@ -16,6 +17,6 @@ head
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:700', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic', rel='stylesheet', type='text/css')
     //-link(href='http://fonts.googleapis.com/css?family=Merriweather:400italic', rel='stylesheet', type='text/css')
-    link(href="/stylesheets/vendor/normalize.css", rel="stylesheet")
-    link(href="/stylesheets/style.css", rel="stylesheet")
+    link(href="./stylesheets/vendor/normalize.css", rel="stylesheet")
+    link(href="./stylesheets/style.css", rel="stylesheet")
     +makeTitle
