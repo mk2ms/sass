@@ -1,0 +1,14 @@
+@mixin vertical-list-view($horizontal-padding: 0, $vertical-padding: 0, $vertical-margin: 0) {
+    @include reset-spacing();
+
+    &__item {
+        @if ($horizontal-padding != 0 && $vertical-padding != 0) {
+            @include solid-box($vertical-padding $horizontal-padding);
+        }
+        @if ($vertical-margin != 0) {
+            margin-top:     $vertical-margin;
+            margin-bottom:  $vertical-margin;
+        }
+    }
+
+}
