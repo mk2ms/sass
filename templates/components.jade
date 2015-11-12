@@ -2,10 +2,16 @@
 - var icon_class = 'fa'
 - var _listOfMonths = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
 
+
 mixin fa-icon(params)
-    - params = params || {}
-    ins(class='#{icon_class} #{icon_class}-#{params.name}')
-    //&attributes(params.extras)
+    - var classes = [icon_class]
+    - if (typeof params === 'object' && typeof params !== null)
+        - params = params || {}
+        - classes.push(icon_class+"-"+params.name)
+        ins(class=classes)&attributes(params.extras)
+    - else
+        - classes.push(icon_class+"-"+params)
+        ins(class=classes)
 
 
 
@@ -41,7 +47,7 @@ mixin button(params)
     //- @output
     #{element}.button(class=button_style)&attributes({ href: params.href, type: params.type, role: params.role })
         - if (icon)
-            +fa-icon({name: icon, extras: {'class': 'spacing-right--half'}})
+            +fa-icon({name: icon, extras: { class: 'spacing-right--half'}})
         block
 
 

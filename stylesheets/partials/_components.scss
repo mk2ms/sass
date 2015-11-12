@@ -5,14 +5,13 @@
     }
     @include vertical-spacing($vertical-spacing);
   */
-    .widget__title {
-        font: {
-            size: 87.5%;
-            weight: $font-heading-weight;
-        }
-        letter-spacing: 0;
-        margin-bottom: $internal-spacing/2;
+    font: {
+        size: 87.5%;
+        weight: $font-heading-weight;
     }
+    letter-spacing: 0;
+    margin-bottom: $internal-spacing/2;
+
 }
 
 
@@ -102,7 +101,9 @@
 }
 
 .widget {
-    @include widget;
+    &__title {
+        @include widget;
+    }
 }
 
 
@@ -273,10 +274,11 @@ $menu-backgroundcolor: darken($color-label, 7);
 
     .tab__item {
         border-left: $border-default-setting;
-    }
 
-    .tab__item:first-child {
-        border: none;
+        &:first-child {
+            border: none;
+        }
+
     }
 
 
@@ -286,50 +288,40 @@ $menu-backgroundcolor: darken($color-label, 7);
 /*---------------------------*\
    #BREADCRUMB
 \*---------------------------*/
+.breadcrumb {
 
-    .breadcrumb__item {
+    &__item {
         @include solid-box(.7em .5em .7em 0);
         font-size: 81.25%;
     }
 
-        /*.breadcrumb__item::after,*/
-        .breadcrumb__item:after, {
-            /*content: '\f054';
-            font: {
-                family: FontAwesome;
-            }
-            margin-top:  .3em;
-            */
+    &__item {
+        color: $color-label;
+
+        &:after {
             content: "/";
             float: right;
             margin-left: .7em;
             font-weight: $font-strong-weight;
         }
 
-    .breadcrumb__item {
-        color: $color-label;
+        &.nav__current:after {
+            display: none;
+        }
+
     }
 
-    .breadcrumb__item.nav__current:after {
-        display: none;
-    }
-
+    /* Breadcrumb root element with "Home" icon
     /*.breadcrumb__root:before {
         content: "\f015";
         font-family: FontAwesome, sans-serif;
         color: $color-primary;
     }*/
 
-.nav-root {
-    /*
-    content: ">>";
-    float: left;
-    margin-right: $internal-spacing/2;
-      */
 }
 
 
-// Vertical navigation
+
 
 .toolbar {
     @include inline-block-box();
@@ -349,7 +341,7 @@ $menu-backgroundcolor: darken($color-label, 7);
    #LISTS
 \*---------------------------*/
 
-.def-list, .icon-list, .tab-list, .date-list, .common-list {
+.def-list, .icon-list, .tab-list, .date-list, .common-list, .list-view {
     @include reset-spacing();
     list-style-type: none;
 }
@@ -391,18 +383,18 @@ $menu-backgroundcolor: darken($color-label, 7);
     &__thumbnail {
        width: 25%;
     }
-    
+
     &__title {
         font: {
             size: 125%;
             weight: $font-heading-weight;
         }
     }
-    
+
     &__section {
         @include small-uppercase-title(800);
     }
-    
+
     &__timestamp {
         font-size: em(14);
     }
@@ -412,6 +404,24 @@ $menu-backgroundcolor: darken($color-label, 7);
     }
 
 }
+
+.list-view {
+    @include vertical-list-view(0, $internal-spacing, 0);
+    /*margin-top: $internal-spacing;
+    margin-bottom: $internal-spacing*/;
+
+    &__item {
+        border-top: $border-default-setting;
+
+        &:first-child {
+            border-top: none;
+        }
+
+    }
+
+}
+
+
 
 
 
@@ -554,7 +564,7 @@ hr {
     }
 
     &__label {
-        font-weight: 600;
+        font-weight: $font-feature-weight;
 
         &--checkbox, &--radio {
             @include inline-block-box();
@@ -562,6 +572,10 @@ hr {
             padding-bottom: .5em;
         }
 
+    }
+
+    &__legend {
+        font-weight: $font-feature-weight;
     }
 
 }

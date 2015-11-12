@@ -9,18 +9,178 @@ html(lang='pt-br')
 
     body
         .center-container.size--1
-            h1= pageTitle
 
-            form
-                .wrapper
-                    label.form__label--checkbox(for='checkbox1')
-                        input#checkbox1.input-checkbox(name='checkbox1', type='checkbox')
-                        | Clique aqui para selecionar The node-sass project has proven to be popular, and we've taken it into the main Sass GitHub repo. Check out its package page here, and there's a dedicated twitter account for updates.
-                .wrapper
-                    label.form__label--checkbox(for='checkbox2')
-                        input#checkbox2.input-checkbox(name='checkbox2', type='checkbox')
-                        | Segunda opção
-                .wrapper
-                    label.form__label--checkbox(for='checkbox3')
-                        input#checkbox3.input-checkbox(name='checkbox3', type='checkbox')
-                        | Terceira opção
+            h1= pageTitle
+            h2 Subtítulo h2
+            h3 Subtítulo h3
+            h4 Subtítulo h4
+            h5 Subtítulo h5
+            h6 Subtítulo h6
+            p Normal paragraph with a <strong>strong</strong> word appearance
+            p Another example of paragraph with numbers like 1989 and 2002 or even 1.602 or yet 24.583,19
+            p Paragraph containing samples of <span class="text--small">.text--small</span> <span class="text--very-small">.text--very-small or .text--x-small</span>
+            p <span class="text--big">.text--big</span> <span class="text--very-big">.text--very-big</span> <span class="text--huge">.text--huge</span>
+            blockquote.blockquote(lang="en")
+                p.blockquote__quotation A block quotation (also known as a long quotation or extract in) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size quotation.
+                .blockquote__author.blockquote__cite Eric Meyer
+
+            //ul.list-view
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 I Procedimento Licitatório Modalidade Concurso
+                            p Concurso Penas Alternativas: Advocacia, Serviço Social e Psicologia
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 IV Concurso Público para Serviços Auxiliares
+                            p Concurso Público: Ingresso na Carreira do Quadro de Servidores
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 III Concurso Público para Serviços Auxiliares
+                            p Concurso Público: Ingresso na Carreira do Quadro de Servidores
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 XXVI Concurso Público para Promotor Substituto
+                            p Concurso Público: Promotor de Justiça Substituto
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 XXV Concurso Público para Promotor Substituto
+                            p Concurso Público: Promotor de Justiça Substituto
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 XXIV Concurso Público para Promotor de Justiça Substituto
+                            p Concurso Público: Promotor de Justiça Substituto
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 XXIII Concurso Público para Promotor Substituto
+                            p Concurso Público: Promotor de Justiça Substituto
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 XXII Concurso Público para Promotor Substituto
+                            p Concurso Público: Promotor de Justiça Substituto
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 XIX Concurso Público para Promotor Substituto
+                            p Concurso Público: Promotor de Justiça Substituto
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 XX Concurso para Promotor de Justiça Substituto
+                            p Concurso Público: Promotor de Justiça Substituto
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 XXI Concurso Público para Promotor Substituto
+                            p Concurso Público: Promotor de Justiça Substituto
+                li.list-view__item
+                    .media-item
+                        .media__subject
+                            +fa-icon({name: 'play'})
+                        .media__content
+                            h4 I Processo Seletivo de Técnicos na Área de TI
+                            p Processo Seletivo Simplificado: Contratação temporária de técnicos na área de Tecnologia da Informação
+
+
+            ul.list-view(style='margin: 80px 0')
+                li.list-view__item.media-item
+                    .media__subject
+                        +fa-icon('envelope')
+                    .media__content
+                        p.date= '22 de outubro de 2015 - '
+                            +tag('Aviso')
+                        h4 V Concurso Público para Serviços Auxiliares
+                        p Aviso nº 030/2015-PGJ, de 21.10.2015- CONVOCAÇÃO Opção de Comarca
+                li.list-view__item.media-item
+                    .media__subject(style='color: yellowgreen')
+                        +fa-icon('envelope')
+                    .media__content
+                        p.date= '22 de outubro de 2015 - '
+                            +tag('Aviso')
+                        h4 V Concurso Público para Serviços Auxiliares
+                        p Aviso nº 029/2015-PGJ, de 21.10.2015 - CONVOCAÇÃO para inspeção médica e posse
+                li.list-view__item.media-item
+                    .media__subject
+                        +fa-icon('envelope')
+                    .media__content
+                        p.date= '22 de outubro de 2015 - '
+                            +tag('Aviso')
+                        h4 V Concurso Público para Serviços Auxiliares
+                        p NOMEAÇÃO - Portaria nº 2339/2015-PGJ, de 21.10.2015
+                //li.list-view__item Concurso para Estagiários
+                //li.list-view__item Concurso Público: Promotor de Justiça Substituto
+                //li.list-view__item Concurso Público: Ingresso na Carreira do Quadro de Servidores
+                //li.list-view__item Concurso Penas Alternativas: Advocacia, Serviço Social e Psicologia
+                //li.list-view__item Processo Seletivo Simplificado: Contratação temporária de técnicos na área de Tecnologia da Informação
+
+                //li.list-view__item
+                    h3 Green Manalishi (With two pronged craw)
+                    p 05:46 - The Fleetwood Mac
+                //li.list-view__item
+                    h3 The Second
+                    p 04:11 - Steppenwolf
+                    .tags-container
+                        span.tag Rock 'n Roll
+                        span.tag Rock 60s
+                        span.tag Psicodélico
+
+            form(action='thisone',method='post')
+                fieldset.solid-box
+                    legend.form__legend Selecione uma opção
+                    .wrapper
+                        label.form__label--checkbox(for='checkbox1')
+                            input#checkbox1.input-checkbox(name='checkbox1', type='checkbox')
+                            | Clique aqui para selecionar The node-sass project has proven to be popular, and we've taken it into the main Sass GitHub repo. Check out its package page here, and there's a dedicated twitter account for updates.
+                    .wrapper
+                        label.form__label--checkbox(for='checkbox2')
+                            input#checkbox2.input-checkbox(name='checkbox2', type='checkbox')
+                            | Segunda opção
+                    .wrapper
+                        label.form__label--checkbox(for='checkbox3')
+                            input#checkbox3.input-checkbox(name='checkbox3', type='checkbox')
+                            | Terceira opção
+                    .wrapper
+                        label.form__label--checkbox(for='radiobox1')
+                            input#radiobox1.input-checkbox(name='radiobox1', type='radio')
+                            | Primeiro radio button
+
+                h3 Botões
+
+                +button Normal
+                +button({icon: 'check'}) Botão com ícone
+                +button({inverted: true}) Botão invertido (fundo-borda)
+                +button({style: 'success'}) Botão de ação sucesso
+                +button({style: 'neutral'}) Botão estilo neutro
+                +button({style: 'warning'}) Botão de alerta
+                +button({style: 'error', icon: 'apple'}) Botão de erro
+                +button({borderless: true}) Botão sem borda
+                +button({el: 'b'}) Botão usando elemento #{'<button>'}

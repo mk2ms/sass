@@ -6,36 +6,15 @@ block vars
 
 block content
     ul.common-list.list--news
-        - each noticia in results
-            - if (noticia.descricao != '')
-                li.media-item.list__item.news__item
-                    .media__subject.size--5
-                        p.news__date-published
-                            time(datetime=noticia.data+'T00:00'): +timestamp2full(noticia.data)
-                        p.text--small
-                            +fa-icon({name: 'clock-o', extras: ''})
-                            | 12h00
-                    .media__content
-                        h3.news__headline
-                            a(href="/noticias/"+noticia.id)= noticia.titulo
-                        - if (noticia.imagens.length > 0)
-                            .news__picture
-                                img(src="http://www.mpms.mp.br/portal/imagens/"+noticia.imagens[0].link).news__photo
-                        - if (noticia.descricao != '')
-                            .news__partial
-                                p= noticia.descricao.replace(/(<([^>]+)>)/ig,"").substr(0, 250) + '...'
-                                    a(href='/noticias/'+noticia.id) continuar lendo
-                        - if (noticia.tags != undefined && noticia.tags.length > 0)
-                            .news__tags.tags__container
-                                span.text--x-small= 'Palavras-chave: '
-                                - each tag in noticia.tags.split(';')
-                                    +tag(tag, '?tag='+tag)
+
         li.media-item.list__item.news__item
             .media__subject.size--5
                 p.news__date-published
                     time(datetime="2015-08-31T12:00").
                         31 de Agosto de 2015
-                p.text--small <ins class="fa fa-clock-o"></ins> 12h00
+                p.text--small
+                    +fa-icon('clock-o')
+                    | 12h00
             .media__content
                 h3.news__headline
                     a(href="/noticias/2015/08/promotor-de-justia-de-ms-participa-de-lanamento-do-livro-revisao-direito-administrativo")
