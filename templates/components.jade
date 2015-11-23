@@ -33,16 +33,16 @@ mixin button(params)
     //- @borderless :   Can be true or false to add a borderless class to the button
 
     - params = params || {}
-    - var button_style = params.style ? 'button--'+params.style : ''
+    - var button_style = params.style ? ['button--'+params.style] : []
     - var icon = params.icon
     - var element = 'a'
 
     - if (params.el == 'b')
         -   element = 'button'
     - if (params.inverted == true)
-        -   button_style += ' button--inverted'
+        -   button_style.push('button--inverted')
     - if (params.borderless == true)
-        -   button_style += ' button--borderless'
+        -   button_style.push('button--borderless')
 
     //- @output
     #{element}.button(class=button_style)&attributes({ href: params.href, type: params.type, role: params.role })
@@ -109,4 +109,4 @@ mixin separator
 
 mixin timestamp2full(date)
     - var _fragments = date.split('/')
-    | #{_fragments[0]} de #{_listOfMonths[_fragments[1]-1]] de #{_fragments[2]}
+    | #{_fragments[0]} de #{_listOfMonths[_fragments[1]-1]} de #{_fragments[2]}
