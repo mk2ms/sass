@@ -421,9 +421,52 @@ $menu-backgroundcolor: darken($color-label, 7);
 
 }
 
+.list-view--nospaced {
+
+    &__item {
+        @include reset-spacing;
+    }
+
+}
+
+.menu-list {
+
+    &__section {
+        font-size: em(12);
+        font-weight: $font-heading-weight;
+        margin-bottom: $internal-spacing/2;
+        text-align: right;
+        text-transform: uppercase;
+    }
+
+    &__caption {
+        @include solid-box($internal-spacing/2 $internal-spacing $internal-spacing/2 $internal-spacing/4);
+        display: block;
+        text-decoration: none;
+        position: relative;
+
+        &:after {
+            /*@include arrow("right", 0.5em, $color-label);*/
+            content: "\f105";
+            font-family: "FontAwesome";
+            font-size: em(20);
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -.5em;
+        }
+
+    }
+
+    @at-root .menu__label-title {
+        font-weight: $font-feature-weight;
+    }
+    @at-root .menu__label-description {
+        font-size: em(12);
+    }
 
 
-
+}
 
 
 //TODO move to the 'base' section

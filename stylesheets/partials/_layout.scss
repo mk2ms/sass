@@ -1,3 +1,5 @@
+// TODO Arrumar a ordem das classes de espaçamento vertical, incluindo as no helpers para resolver especificidade. Refatorar componentes que utulizam mixins deste arquivo
+
 // Mixin adds inline-block display attribute
 // Fix IE7 bug, adding hacks (only if $ie-compatibility value is set equal 1 in main _variables.css file)
 @mixin reset-spacing() {

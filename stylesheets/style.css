@@ -307,7 +307,7 @@ h1 {
     font-size: 125%;
     font-style: italic;
     line-height: 1.3;
-    quotes: "“" "”" "‘" "’"; }
+    quotes: "ÔÇ£" "ÔÇØ" "ÔÇÿ" "ÔÇÖ"; }
     .blockquote__quotation:before {
       content: open-quote; }
     .blockquote__quotation:after {
@@ -550,6 +550,35 @@ h1 {
     .list-view__item:first-child {
       border-top: none; }
 
+.list-view--nospaced__item {
+  margin: 0;
+  padding: 0; }
+
+.menu-list__section {
+  font-size: 75%;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: right;
+  text-transform: uppercase; }
+.menu-list__caption {
+  padding: 10px 20px 10px 5px;
+  display: block;
+  text-decoration: none;
+  position: relative; }
+  .menu-list__caption:after {
+    /*@include arrow("right", 0.5em, $color-label);*/
+    content: "\f105";
+    font-family: "FontAwesome";
+    font-size: 125%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -.5em; }
+.menu__label-title {
+  font-weight: 700; }
+.menu__label-description {
+  font-size: 75%; }
+
 .button {
   display: inline-block;
   *display: inline;
@@ -585,9 +614,9 @@ h1 {
   background-color: #fff;
   color: #00A160; }
 .button--success:focus, .button--success:hover {
-  border-color: #00ee8e;
+  border-color: #00ed8e;
   background-color: white;
-  color: #00ee8e;
+  color: #00ed8e;
   outline: none; }
 
 .button--error, .button--error:visited {
@@ -634,8 +663,8 @@ h1 {
   background-color: #00A160;
   color: #fff; }
 .button--inverted.button--success:focus, .button--inverted.button--success:hover {
-  border-color: #00ee8e;
-  background-color: #00ee8e;
+  border-color: #00ed8e;
+  background-color: #00ed8e;
   color: white;
   outline: none; }
 .button--inverted.button--error, .button--inverted.button--error:visited {

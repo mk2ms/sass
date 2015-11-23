@@ -1,0 +1,95 @@
+extends portal
+
+mixin menuitem
+    li.list-view__item.list-view--nospaced__item
+        block
+
+mixin menuitem__label(params, current)
+    - params = params || {}
+    - var element = (current == true) ? "div":"a"
+    - if (element == "a")
+        #{element}.menu-list__caption(href=params.href)
+            block
+    - else
+        #{element}.menu-list__caption.menu-list__caption--current
+            block
+
+mixin menusection
+    p.menu-list__section
+        block
+
+
+block vars
+    //- pageTitle="Concorrência"
+    - pageTitle="Licitação"
+    //- pathWay=[{label:"Licitação", path:"/licitacao"}]
+    - magazineLike = true
+
+block content
+
+    .media-item
+        .media__subject.size--5.spacing-right--2x
+
+            .menu-list
+                +menusection Menu
+                ul.list-view.list-view--nospaced
+                    +menuitem
+                        +menuitem__label({href:"/concorrencia"}, true)
+                            .menu__label-title
+                                //+fa-icon({name: 'legal', extras: { class: 'spacing-right--half'}})
+                                | Concorrência
+                                span.counter= " (53)"
+                    +menuitem
+                        +menuitem__label({href:"/convite"})
+                            .menu__label-title
+                                //+fa-icon({name: 'envelope-square', extras: { class: 'spacing-right--half'}})
+                                | Convite
+                    +menuitem
+                        +menuitem__label({href:"/leilao"})
+                            .menu__label-title Leilão
+                            .menu__label-description (Teste de descrição)
+                    +menuitem
+                        +menuitem__label({href:"/pregao"})
+                            .menu__label-title Pregão
+                    +menuitem
+                        +menuitem__label({href:"/tomada-de-preco"})
+                            .menu__label-title Tomada de Preço
+                    +menuitem
+                        +menuitem__label({href:"/fornecedores-suspensos"})
+                            .menu__label-title Fornecedores Suspensos
+                    +menuitem
+                        +menuitem__label({href:"/atas-registros-de-precos"})
+                            .menu__label-title Atas de Registro de Preços
+
+        .media__content
+
+            h3.section__title Concorrência
+            .horizontal-alignment--right
+                form.text--normal.form.form--spaced-fields(action="")
+                    label.form__label(for="f-year") Selecione o ano:
+                    select#f-year.form__input.select-box(name="f-year")
+                        - var i = 2004
+                        - while (i <= 2015)
+                            option(value=i)= i
+                            - i++
+                    +button({el: 'b', type: "submit", inverted: true, icon: 'filter'}) Filtrar
+
+            ul.list-view.vertical-spacing--2x
+                li.media-item.list-view__item
+                    .media__subject.size--7.horizontal-alignment--right
+                        p 03/2015
+                        p.post-list__section: +timestamp2full("10/12/2015")
+                    .media__content
+                        p: a(href="link") Contratação de empresa para construção de 1 (um) algibe, com capacidade aproximada de 18m3 e 1 (uma) estrutura de concreto armado para reservatório elevado, com capacidade de 6m3, na sede da Procuradoria-Geral de Justiça, incluindo o fornecimento dos materiais necessários.
+                li.media-item.list-view__item
+                    .media__subject.size--7.horizontal-alignment--right
+                        p 02/2015
+                        p.post-list__section: +timestamp2full("05/10/2015")
+                    .media__content
+                        p: a(href="link") Contratação de empresa para execução de serviços de reforma do edifício-sede das Promotorias de Justiça de Coxim-MS, incluindo o fornecimento dos materiais necessários.
+                li.media-item.list-view__item
+                    .media__subject.size--7.horizontal-alignment--right
+                        p 01/2015
+                        p.post-list__section: +timestamp2full("06/07/2015")
+                    .media__content
+                        p: a(href="link") Contratação de empresa para construção de muro, execução e readequação de calçada externa da Procuradoria-Geral de Justiça, em Campo Grande-MS, incluindo o fornecimento dos materiais necessários.
