@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheets/vendor/normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MPMS Portal</title>
+</head>
+<body>
+<div id="top-of-the-page" class="header  page__header">
+    <div id="utility-bar" class="row solid-box--half">
+        <div class="size--1 center-container">
+
+            <div id="accessibility-panel" class="toolbar" role="toolbar">
+                <a href="/mapa-do-site" class="button" role="button">
+                    <ins class="fa  fa-sitemap"></ins>
+                    <span class="caption">Mapa do Site</span>
+                </a>
+                <ins class="separator" role="separator" aria-hidden="true"></ins>
+                <!--                <button id="accessibility-fontSizeUp" title="Aumentar o tamanho do texto">
+                                    <ins class="fa  fa-font"></ins>
+                                    <ins class="fa  fa-plus"></ins>
+                                </button>
+                                <button id="accessibility-fontSizeDown" title="Diminuir o tamanho do texto">
+                                    <ins class="fa  fa-font"></ins>
+                                    <ins class="fa  fa-minus"></ins>
+                                </button>-->
+                <button id="accessibility-highContrast" class="button" title="Modo alto-contraste">
+                    <ins class="fa  fa-adjust"></ins> Alto contraste
+                </button>
+            </div>
+
+            <div id="social-media-panel" class="toolbar" role="toolbar">
+                <!--<a href="/contato" class="button" role="button">
+                    <ins class="fa  fa-envelope"></ins>
+                    <span class="caption">Fale Conosco</span>
+                </a>-->
+                <!--<ins class="separator" role="separator" aria-hidden="true"></ins>
+                <a href="/facebook" class="button suppressed-caption" role="button" title="Facebook">
+                    <ins class="fa  fa-facebook-official"></ins>
+                    <span class="caption">Facebook</span>
+                </a>
+                <a href="/twitter" class="button suppressed-caption" role="button" title="Twitter">
+                    <ins class="fa  fa-twitter"></ins>
+                    <span class="caption">Twitter</span>
+                </a>
+                <a href="/youtube" class="button suppressed-caption" role="button" title="Youtube">
+                    <ins class="fa  fa-youtube"></ins>
+                    <span class="caption">Youtube</span>
+                </a>-->
+            </div>
+            <div id="main-search" class="form--search">
+                <form action="/pesquisar" name="main-search" role="search" class="search__main-form">
+                    <label for="main-search-term" title="Palavra-chave" aria-label="Palavra-chave"><ins class="fa fa-search"></ins></label>
+                    <input type="search" name="q" autocomplete="off" id="main-search-term" size="25" placeholder="digite aqui" class="search__keyword"><button type="submit" class="button  button--neutral  button--inverted">Buscar</button>
+                </form>
+                <div class="search__powered-by-google"><img src="https://www.google.com/cse/images/google_custom_search_smwide.gif" alt="Google"></div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="size--1  center-container" id="nav-access-keys">
+            <div class="toolbar" role="toolbar">
+                <a href="#main-content" accesskey="1">Ir para o conteúdo <span class="hotkey">Alt</span>+<span class="hotkey">1</span></a>
+                <a href="#main-menu" accesskey="2">Ir para o menu <span class="hotkey">2</span></a>
+                <a href="#main-search" accesskey="3">Ir para a busca <span class="hotkey">3</span></a>
+                <a href="#main-footer" accesskey="4">Ir para o rodapé <span class="hotkey">4</span></a>
+            </div>
+        </div>
+        <div class="vertical-spacing--2x  size--1  center-container">
+            <h1>
+                <img src="logotipo.png" alt="" />
+            </h1>
+
+
+        </div>
+    </div>
+
+</div>
+<div class="row  slot-nav">
+    <div role="navigation">
+        <!--<nav></nav>-->
+        <ul class="main-nav  nav" role="menubar">
+            <li class="nav__item  first-level  nav-root  nav__current" role="menuitem"><span class="nav__caption">Principal</span></li>
+            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#2">Institucional</a></li>
+            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#3">Procuradorias</a></li>
+            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#4">Promotorias</a></li>
+            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#5">Atos e Normas</a></li>
+            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#6">Licitação</a></li>
+            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#7">Links</a></li>
+            <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#8">Intranet</a></li>
+            <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><span class="nav__caption">Mais</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row vertical-spacing--2x">
+    <div class="size--1  center-container">
+        <div id="main-content" class="[vertical-spacing--2x]" role="main">
+            <div class="grid__container">
+                <div class="grid__item  percentage-grid--2-3">
+                    <div class="wrapper" style="padding-right: 60px;">
+                        <div class="grid__container  mpms-news ">
+                            <div class="grid__item  percentage-grid--100">
+                                <div class="wrapper">
+                                    <div class="mpms-news__item">
+                                        <div class="mpms-news__figure">
+                                            <img src="http://www.mpms.mp.br/portal/imagens/image5653.jpg" style="width: 100%">
+                                        </div>
+                                    <!--<img src="http://i1.kym-cdn.com/photos/images/original/000/002/080/mmm_pizza.gif" style="width: 100%">-->
+                                        <div class="mpms-news__labels">
+                                            <h3 class="mpms-news__title">Procurador-Geral de Justiça do Estado recebe a visita do futuro Defensor Público-Geral do Estado</h3>
+                                            <p class="mpms-news__description">O Procurador-Geral de Justiça do Estado de Mato Grosso do Sul, Humberto de Matos Brittes, recebeu, na tarde de segunda-feira (1º/6), a visita do Defensor Público Luciano Montalli, que na oportunidade formalizou convite para a sua posse no cargo de Defensor Público-Geral do Estado para o biênio 2015/2017. <a href="#continue">Leia mais...</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="grid__item  percentage-grid&#45;&#45;50">
+                                <div class="wrapper">
+                                    <img src="http://www.mpms.mp.br/portal/imagens/image5650.jpg" style="width: 100%;">
+                                    &lt;!&ndash;<img src="http://i.imgur.com/AEj7sPm.gif" style="width: 100%;">&ndash;&gt;
+                                    <h3 class="mpms-news__title">Procuradora de Justiça prestigia abertura de evento em comemoração ao Mês do Meio Ambiente</h3>
+                                    <p class="mpms-news__description">Na segunda-feira (1º/6) foi realizada, no Auditório do Instituto de Meio Ambiente de Mato Grosso do Sul (Imasul), a abertura da extensa agenda em comemoração ao Mês do Meio Ambiente. Com a participação do governador Reinaldo Azambuja, foram entregues licenças ambientais, bem como assinada a autorização para aquisição de bens...</p>
+                                </div>
+                            </div>-->
+                            <div class="grid__item  percentage-grid--100">
+                                <div class="widget  wrapper">
+                                    <h2 class="widget__title"><span class="caption">Mais destaques</span></h2>
+                                    <ul>
+                                        <li><a href="/noticas/2">Promotor de Justiça de MS lança livro sobre Direito Civil, da "Coleção Jurídica Revisaço"</a></li>
+                                        <li><a href="/noticas/3">Plenário do Supremo Tribunal Federal aprova mais duas súmulas vinculantes</a></li>
+                                        <li><a href="/noticas/1">Efeitos de condenação não podem ser impostos em transação penal</a></li>
+                                    </ul>
+                                    <div class="action-bar  vertical-spacing--2x">
+                                        <a href="/noticas/" class="button" role="button">Ver mais notícias</a>
+                                        <a href="/noticas/" class="button  button--success" role="button">Success</a>
+                                        <a href="/noticas/" class="button  button--warning" role="button">Warning</a>
+                                        <a href="/noticas/" class="button  button--error" role="button">Error</a>
+                                        <a href="/noticas/" class="button  button--borderless" role="button">Borderless</a>
+                                        <a href="/noticas/" class="button  button--neutral" role="button">Neutral</a>
+                                        <a href="/noticas/" class="button  button--inverted" role="button">Inverted</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="wrapper">
+
+                            <div class="nav-tab" role="navigation">
+                                <ul id="main-content-tab" class="tab-list" role="tablist">
+                                    <li role="presentation" class="nav__item  tab__item  nav__current"><a class="nav__caption  tab__caption" role="tab" aria-controls="section&#45;&#45;1" aria-selected="true" href="#section&#45;&#45;1" id="tab-section&#45;&#45;1">Tab-label</a></li>
+                                    <li role="presentation" class="nav__item  tab__item"><a class="nav__caption  tab__caption" role="tab" aria-controls="section&#45;&#45;2" aria-selected="false" href="#section&#45;&#45;2" id="tab-section&#45;&#45;2">Another One</a></li>
+                                    <li role="presentation" class="nav__item  tab__item"><a class="nav__caption  tab__caption" role="tab" aria-controls="section&#45;&#45;3" aria-selected="false" href="#section&#45;&#45;3" id="tab-section&#45;&#45;3">Comments</a></li>
+                                </ul>
+                            </div>
+
+                            <div id="main-content-tab-container" class="article">
+                                <div id="section&#45;&#45;1">
+                                    <h3 class="subcontent__title">Título #1</h3>
+                                    Conteúdo deste container ou aba.
+                                </div>
+                                <div id="section&#45;&#45;2">
+                                    <h3 class="subcontent__title">Título #2</h3>
+                                    Conteúdo deste container ou aba.
+                                </div>
+                                <div id="section&#45;&#45;3">
+                                    <h3 class="subcontent__title">Título #3</h3>
+                                    <div class="article">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque consequatur deserunt dignissimos eaque enim eos, explicabo impedit maiores nemo nulla provident quaerat quas quisquam recusandae repudiandae ut velit voluptates!</p>
+                                        <p>Aliquam dolor doloremque fuga laudantium molestiae nemo obcaecati odit officiis provident quaerat quas, sequi soluta sunt? Aliquam aut obcaecati omnis! Doloribus, nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusamus autem dignissimos doloribus ducimus excepturi hic impedit in ipsum nesciunt odio officiis placeat quae reiciendis saepe sunt, veniam, voluptate!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="grid__item  percentage-grid--1-3  sidebar">
+                    <div class="wrapper">
+                        <div class="widget">
+                            <h2 class="widget__title"><span class="caption">Diário Oficial</span></h2>
+
+                            <div class="media-item  icon-item">
+                                <div class="media__subject">
+                                    <!--<img src="https://diariomunicipal.org/static/img/icons/apple-touch-icon-144x144.png" alt="Diário Oficial" height="64" />-->
+                                    <ins class="fa  fa-4x  fa-file-text-o"></ins>
+                                </div>
+                                <div class="media__content">
+                                    <p>Publicação Nº 1059</p>
+                                    <a class="button  button--inverted" href="#download/"><ins class="fa  fa-download  spacing-right--half"></ins>Baixar arquivo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget">
+                            <h2 class="widget__title"><span class="caption">Atividades Realizadas em 2015</span></h2>
+                            <ul class="def-list">
+                                <li class="list-item  def-list__item">
+                                    <div class="def__title"><span class="text--very-big">1.112</span></div>
+                                    <div class="def__description">Ações Civis Públicas Ajuizadas</div>
+                                </li>
+                                <li class="list-item  def-list__item">
+                                    <div class="def__title"><span class="text--very-big">11.041</span></div>
+                                    <div class="def__description">Denúncias Oferecidas</div>
+                                </li>
+                                <li class="list-item  def-list__item">
+                                    <div class="def__title"><span class="text--very-big">125.374</span></div>
+                                    <div class="def__description">Manifestações Realizadas no ano</div>
+                                </li>
+                                <li class="list-item  def-list__item">
+                                    <div class="def__title"><span class="text--very-big">207</span></div>
+                                    <div class="def__description">Sessões do Tribunal do Júri</div>
+                                </li>
+                                <li class="list-item  def-list__item">
+                                    <div class="def__title"><span class="text--very-big">141</span></div>
+                                    <div class="def__description">Termos de Ajustamento de condutas</div>
+                                </li>
+                            </ul>
+                            <div class="footnotes">
+                                <p class="footnotes__note"><strong>Fonte:</strong> Dados de 01/01/2015 até 15/06/2015 @ 09:00:09</p>
+                            </div>
+                        </div>
+                        <div class="widget" id="area-cidadao">
+                            <h3 class="widget__title"><span class="caption">Cidadão</span></h3>
+                            <ul class="icon-list">
+                                <li class="list__item">
+                                    <div class="icon__img  media__subject"><img width="60" src="../temp/system-entidades-big-icon.png" alt=""/></div>
+                                    <div class="icon__caption  media__content"><span class="caption">Lei de Acesso a Informação (LAI)</span></div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="icon__img  media__subject"><img width="60" src="../temp/system-sd-big-icon.png" alt=""/></div>
+                                    <div class="icon__caption  media__content">
+                                        <span class="caption">Lei de Responsabilidade Fiscal (LRF)</span>
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="icon__img  media__subject"><img width="60" src="../temp/system-simp-big-icon.png" alt=""/></div>
+                                    <div class="icon__caption  media__content"><span class="caption">Ouvidoria</span></div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="icon__img  media__subject"><img width="60" src="../temp/system-spo-big-icon.png" alt=""/></div>
+                                    <div class="icon__caption  media__content"><span class="caption">Entidades Beneficiárias - TAC</span></div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="icon__img  media__subject"></div>
+                                    <div class="icon__caption  media__content"><span class="caption">Consulta de Procedimentos</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer row" id="main-footer" role="contentinfo">
+    <div id="guia-do-site">
+        <h2>Guia</h2>
+    </div>
+</div>
+</body>
+</html>

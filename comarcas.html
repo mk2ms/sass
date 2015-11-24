@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <!-- configuration-->
+  <head>
+    <!--base(href='http://172.20.5.193:8080')-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic,900" rel="stylesheet" type="text/css">
+    <link href="./stylesheets/vendor/normalize.css" rel="stylesheet">
+    <link href="./stylesheets/style.css" rel="stylesheet">
+      <title> Comarca de Campo Grande  - Minist&eacute;rio P&uacute;blico de Mato Grosso do Sul</title>
+  </head>
+  <body>
+      <header id="top-of-the-page" role="banner" class="header page__header">
+        <div id="utility-bar" class="row solid-box--half viewport-framing">
+          <div class="center-container">
+            <div id="accessibility-panel" role="toolbar" class="toolbar">
+                <a class="button" href="/mapa-do-site"><ins class="fa fa-sitemap spacing-right--half"></ins><span class="caption">Mapa do Site</span>
+                </a><ins role="separator" aria-hidden="true" class="separator"></ins>
+              <button id="accessibility-highContrast" title="Modo alto contraste" class="button"><ins class="fa fa-adjust spacing-right--half"></ins><span class="caption">Alto contraste</span></button>
+            </div>
+            <div id="main-search" class="form--search">
+              <form action="/pesquisar" name="main-search" role="search" class="search__main-form">
+                <label title="Palavra-chave" for="main-search-term" aria-label="Palavra-chave"><ins class="fa fa-search"></ins></label>
+                <input id="main-search-term" type="search" name="q" autocomplete="off" size="25" placeholder="digite aqui" class="search__keyword">
+                <button type="submit" class="button button--neutral button--inverted">Buscar</button>
+              </form>
+              <!--.search__powered-by-googleimg(src="https://www.google.com/cse/images/google_custom_search_smwide.gif", alt="Google")
+              -->
+            </div>
+          </div>
+        </div>
+        <div class="row viewport-framing">
+          <div id="nav-access-keys" class="center-container">
+            <div role="toolbar" class="toolbar"><a href="#main-content" accesskey="1">Ir para o conte�do<span class="hotkey">Alt+</span><span class="hotkey">1</span></a><a href="#main-menut" accesskey="2">Ir para para o menu<span class="hotkey">Alt+</span><span class="hotkey">2</span></a><a href="#main-searc" accesskey="3">Ir para para a busca<span class="hotkey">Alt+</span><span class="hotkey">3</span></a><a href="#main-footer" accesskey="4">Ir para para o rodap�<span class="hotkey">Alt+</span><span class="hotkey">4</span></a><a href="#breadcrumb" accesskey="b">Ir para para breadcrumb<span class="hotkey">Alt+</span><span class="hotkey">b</span></a></div>
+          </div>
+        </div>
+        <div class="viewport-framing center-container">
+          <h1 class="logotipo"><a href="." title="Ministério Público de Mato Grosso do Sul"><img src="logotipo.png" alt="Logotipo do Minist&amp;eacute;rio P&amp;uacute;blico de Mato Grosso do Sul" class="logotipo-src"></a></h1>
+        </div>
+      </header>
+      <div class="row slot-nav">
+        <nav role="navigation">
+          <ul class="main-nav  nav" role="menubar">
+          <li class="nav__item  first-level  nav-root" role="menuitem"><a href="/" class="nav__caption">Principal</a></li>
+          <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="/quem-somos">Institucional</a></li>
+          <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><a class="nav__caption" href="#">Procuradorias</a></li>
+          <li class="nav__item  first-level  nav__current" role="menuitem" aria-haspopup="true"><span class="nav__caption">Promotorias</span></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#5">Atos e Normas</a></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#6">Licita&ccedil;&atilde;o</a></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="/links">Links</a></li>
+          <li class="nav__item  first-level" role="menuitem"><a class="nav__caption" href="#8">Intranet</a></li>
+          <li class="nav__item  first-level" role="menuitem" aria-haspopup="true"><span class="nav__caption" tabindex="0">Mais</span></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="row slot-breadcrumb">
+        <div id="breadcrumb" role="navigation" aria-label="breadcrumbs" class="breadcrumb">
+          <ol itemscope="" itemtype="http://schema.org/BreadcrumbList" class="main-breadcrumb nav">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" rel="index up" class="breadcrumb__item nav__item breadcrumb__root"><a itemprop="name" href="/main/" class="nav__caption">Principal</a>
+              <meta itemprop="position" content="1">
+            </li>
+            <li rel="up" class="breadcrumb__item nav__item">&nbsp;<a itemprop="name" href="/main/promotorias" class="nav__caption">Promotorias</a>
+              <meta itemprop="position" content="2">
+            </li>
+            <li class="breadcrumb__item nav__item nav__current">&nbsp;<span title="Comarca de Campo Grande" class="nav__caption">Comarca de Campo Grande</span>
+              <meta itemprop="position" content="3">
+            </li>
+          </ol>
+        </div>
+      </div>
+      <section class="row viewport-framing page__section page__section--magazine-like">
+        <div id="main-content" role="main" aria-label="Conteúdo Principal" class="main-content--default">
+          <div class="page__title-container section__title-container--magazine-like">
+            <h2 class="section__title">Comarca de Campo Grande</h2><p><a class="text--no-underline" href="/promtorias/entrancia-especial/"><ins class="fa fa-dot-circle-o"></ins> Entrância Especial</a></p><hr/><p class="text--small">Municípios e distritos atendidos: Campo Grande, Rochedinho e Anhanduí</p>
+          </div>
+          <div class="page__content">
+            <h3 class="section__sub-title">Lista de promotorias</h3>
+            <div class="grid__container vertical-spacing--2x">
+              <!--.grid__item.percentage-grid--1-4
+              .wrapper
+                  .widget
+                      form.form.form--spaced-fields(action="")
+                          label.form__label(for="q-promotorias-keyword") Palavra-chave
+                          input#q-promotorias-keyword.form__input.input-text.any--full-wide(type="text", name="q-promotorias-keyword")
+                          select.form__input.select-box.any--full-wide(name="q-promotorias-by")
+                              option(value="1") por nome de promotor
+                              option(value="2") por nome de comarca
+                          .form__footer.horizontal-alignment--right
+                              +button({el: 'b', type: "submit", style: 'neutral', inverted: true, icon: 'search'}) Buscar
+                          .action-bar.vertical-spacing
+                              +button({href: "/mapa-de-comarcas", icon: 'map-marker'}) Mapa de Comarcas
+              -->
+              <div class="grid__item percentage-grid--1-2">
+                <div class="wrapper">
+                  <h4 class="section__sub-title">Cível <span class="counter">(11)</span></h4>
+                  <ul class="list--no-bullets list--spaced">
+                    <li data-id="60" class="list__item">
+                      <h5><a href="/promotorias/campo-grande/1a-promotoria-de-justica-de-campo-grande">1ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="person">Titular: Juliane Cristina Gomes</div>
+                    </li>
+                    <li data-id="62" class="list__item">
+                      <h5><a href="/promotorias/campo-grande/2a-promotoria-de-justica-de-campo-grande">2ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="person">Titular: Kristiam Gomes Simoes</div>
+                    </li>
+                    <li data-id="64" class="list__item">
+                      <h5><a href="/promotorias/campo-grande/3a-promotoria-de-justica-de-campo-grande">3ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="person">Titular: André Antônio Camargo Lorenzoni                                    </p></div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#111">4ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="person">Titular: Silasneiton Gonçalves</div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#111">5ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="person">Titular: Plínio Alessi Júnior</div>
+                      <div class="person">Substituição: Érica Rocha Espíndola</div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#111">6ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="person">Titularidade: Cristina Beraldo de Andrade</div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#111">7ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="person">Titular: Reynaldo Hilst Mattar</div>
+                      <div class="person">Designação: Luiz Antônio Freitas de Almeida</div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#111">8ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="person">Titular: José Luiz Rodrigues</div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#111">9ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="person">Titular: Emy Louise Souza de Almeida Albertini</div>
+                      <div class="person">Substituição: Daniela Cristina Guiotti</div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#111">35ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="person">Titular: Christiane de Alencar</div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#111">45ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="person">Titular: Érica Rocha Espíndola</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid__item percentage-grid--1-2">
+                <div class="wrapper">
+                  <h4 class="section__sub-title">Criminal <span class="counter">(26)</span></h4></h4>
+                  <ul class="list--no-bullets list--spaced">
+                    <li class="list__item">
+                      <h5><a href="#">10ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Marcos Fernandes Sisti</div>
+                        <div class="person">Substituição: Allan Thiago Barbosa Arakaki</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">11ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Grazia Strobel da Silva Gaifatto</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">12ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Rodrigo Yshida Brandão</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">13ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Pedro Arthur de Figueiredo</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">14ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Rodrigo Jacobina Stephanini</div>
+                        <div class="person">Designação: Camila Augusta Calarge Doreto</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">15ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Rogério Augusto Calábria de Araújo</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">16ª Promotoria de Justiça De Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Luciana Moreira Schenk</div>
+                        <div class="person">Substituição: Allan Thiago Barbosa Arakaki</div>
+                        <div class="person">Substituição: Júlio Bilemjian Ribeiro</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">17ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Clóvis Amauri Smaniotto</div>
+                        <div class="person">Substituição: Allan Thiago Barbosa Arakaki</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">18ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Fábio Ianni Goldfinger</div>
+                        <div class="person">Substituição: Allan Thiago Barbosa Arakaki</div>
+                        <div class="person">Substituição: Livia Carla Guadanhim Bariani</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">19ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Eduardo José Rizkallah</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">20ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Douglas Oldegardo Cavalheiro dos Santos</div>
+                        <div class="person">Substituição: Humberto Lapa Ferri</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">21ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Marcos Roberto Dietz</div>
+                        <div class="person">Substituição: Gerson Eduardo de Araújo</div>
+                        <div class="person">Designação: Luiz Antônio Freitas de Almeida</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">22ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Bianka Karina Barros da Costa</div>
+                        <div class="person">Substituição: Paula da Silva Santos Volpe</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">23ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Regina Dornte Broch</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">24ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Tathiana Correa Pereira da Silva Façanha</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">47ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Renzo Siufi</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">48ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Ana Lara Camargo de Castro</div>
+                        <div class="person">Substituição: Renzo Siufi</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">50ª Promotoria de Justiça De Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Jiskia Sandri Trentin</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">61ª Promotoria de Justiça De Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Sílvio Amaral Nogueira de Lima</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">62ª Promotoria de Justiça De Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Candy Hiroki Cruz Marques Moreira</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">63ª Promotoria de Justiça De Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Ricardo Benito Crepaldi</div>
+                        <div class="person">Substituição: Renata Ruth Fernandes Goya Marinho</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">64ª Promotoria de Justiça De Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Cristiane Amaral Cavalcante</div>
+                        <div class="person">Substituição: Renata Ruth Fernandes Goya Marinho</div>
+                        <div class="person">Designação: Sílvio Amaral Nogueira de Lima</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">65ª Promotoria de Justiça De Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Fernando Jorge Manvailer Esgaib</div>
+                        <div class="person">Coadjuvar: Helen Neves Dutra da Silva</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">66ª Promotoria de Justiça De Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Helen Neves Dutra da Silva</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">68ª Promotoria de Justiça De Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Celso Antônio Botelho de Carvalho</div>
+                        <div class="person">Substituição: Fernando Martins Zaupa</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">69ª Promotoria de Justiça De Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Paulo César Zeni</div>
+                        <div class="person">Substituição: Fernando Martins Zaupa</div>
+                        <div class="person">Designação: Luiz Antônio Freitas de Almeida</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">72ª Promotoria de Justiça De Campo Grande - Casa da Mulher Brasileira</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Luciana do Amaral Rabelo</div>
+                        <div class="person">Substituição: Ana Lara Camargo de Castro</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="grid__container">
+              <div class="grid__item percentage-grid--1-2">
+                <div class="wrapper">
+                  <h4 class="section__sub-title">Interesses Difusos e Coletivos <span class="counter">(16)</span></h4>
+                  <ul class="list--no-bullets list--spaced">
+                    <li class="list__item">
+                      <h5><a href="#">25ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Consumidor" class="tag">Consumidor</a>
+                        </div>
+                        <div class="person">Titular: Antonio André David Medeiros</div>
+                        <div class="person">Substituição: Fabrício Proença de Azambuja</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">26ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Meio%20Ambiente" class="tag">Meio Ambiente</a>
+                        </div>
+                        <div class="person">Titular: Luz Marina Borges Maciel Pinheiro</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">27ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Inf%C3%A2ncia%20e%20da%20Juventude" class="tag">Infância e da Juventude</a>
+                        </div>
+                        <div class="person">Titular: Sergio Fernando Raimundo Harfouche</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">28ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Inf%C3%A2ncia%20e%20da%20Juventude" class="tag">Infância e da Juventude</a>
+                        </div>
+                        <div class="person">Titular: Vera Aparecida Cardoso Bogalho Frost Vieira</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">29ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Entidades%20de%20Interesse%20Social" class="tag">Entidades de Interesse Social</a><a href="?area=Funda%C3%A7%C3%B5es" class="tag">Fundações</a><a href="?area=Patrim%C3%B4nio%20P%C3%BAblico%20e%20Social" class="tag">Patrimônio Público e Social</a>
+                        </div>
+                        <div class="person">Nenhum promotor titular</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">30ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Entidades%20de%20Interesse%20Social" class="tag">Entidades de Interesse Social</a><a href="?area=Funda%C3%A7%C3%B5es" class="tag">Fundações</a><a href="?area=Patrim%C3%B4nio%20P%C3%BAblico%20e%20Social" class="tag">Patrimônio Público e Social</a>
+                        </div>
+                        <div class="person">Titular: Alexandre Pinto Capiberibe Saldanha</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">31ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Entidades%20de%20Interesse%20Social" class="tag">Entidades de Interesse Social</a><a href="?area=Funda%C3%A7%C3%B5es" class="tag">Fundações</a><a href="?area=Patrim%C3%B4nio%20P%C3%BAblico%20e%20Social" class="tag">Patrimônio Público e Social</a>
+                        </div>
+                        <div class="person">Titular: Henrique Franco Cândia</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">32ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Sa%C3%BAde" class="tag">Saúde</a>
+                        </div>
+                        <div class="person">Titular: Filomena Aparecida Depolito Fluminhan</div>
+                        <div class="person">Substituição: Daniela Cristina Guiotti</div>
+                        <div class="person">Designação: Luiz Antônio Freitas de Almeida</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">33ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Inf%C3%A2ncia%20e%20da%20Juventude" class="tag">Infância e da Juventude</a>
+                        </div>
+                        <div class="person">Titular: Nicolau Bacarji Júnior</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">34ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Meio%20Ambiente" class="tag">Meio Ambiente</a>
+                        </div>
+                        <div class="person">Titular: Alexandre Lima Raslan</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">42ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Meio%20Ambiente" class="tag">Meio Ambiente</a>
+                        </div>
+                        <div class="person">Titular: Andréia Cristina Peres da Silva</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">43ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Consumidor" class="tag">Consumidor</a>
+                        </div>
+                        <div class="person">Titular: Luiz Eduardo Lemos de Almeida</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">44ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Idoso" class="tag">Idoso</a>
+                        </div>
+                        <div class="person">Titular: Cristiane Barreto Nogueira Rizkallah</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">46ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Inf%C3%A2ncia%20e%20da%20Juventude" class="tag">Infância e da Juventude</a>
+                        </div>
+                        <div class="person">Titular: Paulo Henrique Camargo Iunes</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">49ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Entidades%20de%20Interesse%20Social" class="tag">Entidades de Interesse Social</a><a href="?area=Funda%C3%A7%C3%B5es" class="tag">Fundações</a><a href="?area=Patrim%C3%B4nio%20P%C3%BAblico%20e%20Social" class="tag">Patrimônio Público e Social</a>
+                        </div>
+                        <div class="person">Titular: Gevair Ferreira Lima Júnior</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">67ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="tags__container"><a href="?area=Direitos%20Humanos" class="tag">Direitos Humanos</a>
+                        </div>
+                        <div class="person">Titular: Jaceguara Dantas da Silva Passos</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid__item percentage-grid--1-2">
+                <div class="wrapper">
+                  <h4 class="section__sub-title">Promotoria Auxiliar <span class="counter">(18)</span></h4>
+                  <ul class="list--no-bullets list--spaced">
+                    <li class="list__item">
+                      <h5><a href="#">36ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Thalys Franklyn de Souza</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">37ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Alexandre Magno Benites de Lacerda</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">38ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Gerson Eduardo de Araújo</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">39ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Fernando Martins Zaupa</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">40ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Marjorie de Oliveira Zanchetta</div>
+                        <div class="person">Substituição: Daniela Cristina Guiotti</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">41ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Camila Augusta Calarge Doreto</div>
+                        <div class="person">Substituição: Rogério Augusto Calábria de Araújo</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">51ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Livia Carla Guadanhim Bariani</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">52ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Substituição: Renata Ruth Fernandes Goya Marinho</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">53ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Humberto Lapa Ferri</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">54ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Marcos Alex Vera de Oliveira</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">55ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Fabrício Proença de Azambuja</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">56ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Júlio Bilemjian Ribeiro</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">57ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Daniela Cristina Guiotti</div>
+                        <div class="person">Substituição: Filomena Aparecida Depolito Fluminhan</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">58ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Paula da Silva Santos Volpe</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">59ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Eduardo Franco Cândia</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">60ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Luiz Antônio Freitas de Almeida</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">70ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Tiago Di Giulio Freire</div>
+                      </div>
+                    </li>
+                    <li class="list__item">
+                      <h5><a href="#">10ª Promotoria de Justiça de Campo Grande</a></h5>
+                      <div class="descendant-definition">
+                        <div class="person">Titular: Ricardo de Melo Alves</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="action-bar">
+              <p>Total de promotorias: <strong class="count">70</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer id="main-footer" role="contentinfo" class="row page__footer">
+        <!--.row.slot-content-accesskeys.horizontal-alignment--right(style="z-index: 2; position: fixed; bottom: 0; left: 0; right: 0")
+        .viewport-framing.center-container
+            +button({ inverted: true, href:"#top-of-the-page", style: 'neutral', icon: 'arrow-up', role: 'button' }) Voltar ao topo
+        -->
+        <div class="row slot-social-media">
+          <div class="viewport-framing center-container horizontal-alignment--right">
+            <div role="list" class="toolbar vertical-spacing">
+                <a class="button button--borderless" href="fale-conosco"><ins class="fa fa-envelope spacing-right--half"></ins>Fale Conosco
+                </a><ins role="separator" aria-hidden="true" class="separator"></ins>
+                <a class="button button--borderless" href="#facebook"><ins class="fa fa-facebook-square spacing-right--half"></ins>Facebook
+                </a>
+                <a class="button button--borderless" href="#twitter"><ins class="fa fa-twitter spacing-right--half"></ins>Twitter
+                </a>
+                <a class="button button--borderless" href="#youtube"><ins class="fa fa-youtube-play spacing-right--half"></ins>YouTube
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="row slot-institutional">
+          <div class="viewport-framing center-container media-item organization__info">
+            <div class="institutional-info media__subject">
+              <p class="place__name">Procuradoria-Geral de Justi&ccedil;a do Estado de Mato Grosso do Sul</p>
+              <address class="place__address text--small">
+                <p><ins class="fa fa-map-marker"></ins>Rua Pres. Manuel Ferraz de Campos Salles, 214 - Jardim Veraneio - CEP 79031-907 - Campo Grande - MS
+                </p>
+              </address>
+              <p class="place__telephone text--small"><ins class="fa fa-phone"></ins>Telefone: (67) 3318-2000
+              </p>
+            </div>
+            <div class="team-info media__content text--small horizontal-alignment--right"><img src="logotipo.png" alt="Minist&amp;eacute;rio P&amp;uacute;blico de Mato Grosso do Sul" class="footer__main-logotype place__name">
+              <p class="place__name">Secretaria de Tecnologia da Informa&ccedil;&atilde;o - STI</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
