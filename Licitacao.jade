@@ -74,22 +74,27 @@ block content
                             - i++
                     +button({el: 'b', type: "submit", inverted: true, icon: 'filter'}) Filtrar
 
-            ul.list-view.vertical-spacing--2x
-                li.media-item.list-view__item
-                    .media__subject.size--7.horizontal-alignment--right
+            ul.list--spaced.common-list.vertical-spacing--2x
+                li.media-item.list__item
+                    .media__subject.size--10.horizontal-alignment--right
+                        p Número
+                    .media__content
+                        p Descrição
+                li.media-item.list__item
+                    .media__subject.size--10.horizontal-alignment--right
                         p 03/2015
+                    .media__content
                         p.post-list__section: +timestamp2full("10/12/2015")
-                    .media__content
                         p: a(href="link") Contratação de empresa para construção de 1 (um) algibe, com capacidade aproximada de 18m3 e 1 (uma) estrutura de concreto armado para reservatório elevado, com capacidade de 6m3, na sede da Procuradoria-Geral de Justiça, incluindo o fornecimento dos materiais necessários.
-                li.media-item.list-view__item
-                    .media__subject.size--7.horizontal-alignment--right
+                li.media-item.list__item
+                    .media__subject.size--10.horizontal-alignment--right
                         p 02/2015
+                    .media__content
                         p.post-list__section: +timestamp2full("05/10/2015")
-                    .media__content
                         p: a(href="link") Contratação de empresa para execução de serviços de reforma do edifício-sede das Promotorias de Justiça de Coxim-MS, incluindo o fornecimento dos materiais necessários.
-                li.media-item.list-view__item
-                    .media__subject.size--7.horizontal-alignment--right
+                li.media-item.list__item
+                    .media__subject.size--10.horizontal-alignment--right
                         p 01/2015
-                        p.post-list__section: +timestamp2full("06/07/2015")
                     .media__content
+                        p.post-list__section: +timestamp2full("06/07/2015")
                         p: a(href="link") Contratação de empresa para construção de muro, execução e readequação de calçada externa da Procuradoria-Geral de Justiça, em Campo Grande-MS, incluindo o fornecimento dos materiais necessários.
